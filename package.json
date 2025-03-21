@@ -1,17 +1,17 @@
 {
-  "name": "",
+  "name": "The CWL Zone",
   "type": "module",
   "version": "2.2.0",
-  "description": "A minimal Astro blog theme",
-  "author": "FjellOverflow",
+  "description": "The Official CWL Zone Web Site",
+  "author": "thecwlzone",
   "license": "GPL-3.0-only",
-  "homepage": "https://github.com/FjellOverflow/nordlys",
+  "homepage": "https://github.com/thecwlzone/thecwlzone-4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FjellOverflow/nordlys.git"
+    "url": "https://github.com/thecwlzone/thecwlzone-4.0.git"
   },
   "bugs": {
-    "url": "https://github.com/FjellOverflow/nordlys/issues"
+    "url": "https://github.com/thecwlzone/thecwlzone-4.0.git"
   },
   "keywords": [
     "astro",

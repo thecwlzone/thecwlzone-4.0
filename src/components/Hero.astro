@@ -16,7 +16,7 @@ const { gradient, background, logo: showLogo } = Astro.props.frontmatter
 <div class="w-fit">
   <div
     class:list={[
-      'text-accent relative mb-1 w-fit pb-2 text-5xl font-bold tracking-tight sm:mb-2 sm:text-8xl',
+      'text-accent relative mb-1 w-fit pb-2 text-5xl font-bold tracking-tight sm:mb-2 sm:text-7xl',
       {
         'from-accent/100 via-accent/75 to-accent/50 bg-linear-to-r bg-clip-text text-transparent':
           gradient
@@ -31,7 +31,7 @@ const { gradient, background, logo: showLogo } = Astro.props.frontmatter
         showLogo && (
           <Image
             loading="eager"
-            alt="Nordlys logo, a drawing of two gray mountains with green northern lights in the background"
+            alt="The CWL Zone Official Logo"
             src={logo}
             class="h-[48px] w-fit object-scale-down sm:h-24"
           />

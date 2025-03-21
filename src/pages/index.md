@@ -1,6 +1,6 @@
 ---
 layout: '@/layouts/LandingLayout.astro'
-title: Nordlys
+title: The CWL Zone
 background: true
 logo: true
 ---

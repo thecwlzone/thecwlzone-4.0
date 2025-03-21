@@ -1,10 +1,10 @@
 import { defineThemeConfig } from './types'
 
 export default defineThemeConfig({
-  site: 'https://nordlys.fjelloverflow.dev',
-  title: 'Nordlys',
+  site: 'https://www.thecwlzone.com',
+  title: 'The CWL Zone',
   description: 'A minimal Astro blog theme',
-  author: 'FjellOverflow',
+  author: 'FjellOverflow, Lehman',
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
     { label: 'Projects', href: '/projects/' },
@@ -16,6 +16,7 @@ export default defineThemeConfig({
         { label: 'Landing page', href: '/' },
         { label: '404 page', href: '/404' },
         { label: 'Author: FjellOverflow', href: '/authors/FjellOverflow/' },
+        { label: 'Author: Lehman', href: '/authors/Lehman/' },
         { label: 'Tag: documentation', href: '/tags/documentation/' }
       ]
     }
@@ -23,7 +24,7 @@ export default defineThemeConfig({
   footerItems: [
     {
       icon: 'tabler--brand-github',
-      href: 'https://github.com/FjellOverflow/nordlys',
+      href: 'https://github.com/thecwlzone/thecwlzone-4.0',
       label: 'Github'
     },
     {
