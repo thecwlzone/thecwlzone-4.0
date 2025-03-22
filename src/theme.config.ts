@@ -3,8 +3,8 @@ import { defineThemeConfig } from './types'
 export default defineThemeConfig({
   site: 'https://www.thecwlzone.com',
   title: 'The CWL Zone',
-  description: 'A minimal Astro blog theme',
-  author: 'FjellOverflow, Lehman',
+  description: 'The 4.0 version of The CWL Zone web site',
+  author: 'Lehman',
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
     { label: 'Projects', href: '/projects/' },
@@ -38,7 +38,7 @@ export default defineThemeConfig({
   locale: 'en',
   mode: 'dark',
   modeToggle: true,
-  colorScheme: 'scheme-mono',
+  colorScheme: 'scheme-aurora',
   openGraphImage: undefined,
   postsPerPage: 4,
   projectsPerPage: 3,
