@@ -5,7 +5,10 @@ background: true
 logo: true
 ---
 
-A minimal Astro blog theme.\
-Ideal for a personal [blog](/posts/) and showcasing a [projects](/projects/) portfolio.\
-Fully customizable, dark mode & built-in color schemes.\
-Read more in the [about](/about/) section.
+<center>The Official Website of</center>
+
+<center><strong>Christopher W Lehman</strong></center>
+
+<center>Welcome!</center>
+
+Read more about me in the [about](/about/) section.
