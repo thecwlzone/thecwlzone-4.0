@@ -4,7 +4,7 @@ export default defineThemeConfig({
   site: 'https://www.thecwlzone.com',
   title: 'The CWL Zone',
   description: 'The 4.0 version of The CWL Zone web site',
-  author: 'Lehman',
+  author: 'Christopher W Lehman',
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
     { label: 'Projects', href: '/projects/' },
