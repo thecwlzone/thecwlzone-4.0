@@ -10,6 +10,7 @@ export default defineThemeConfig({
     { label: 'Projects', href: '/projects/' },
     { label: 'Tags', href: '/tags/' },
     { label: 'About', href: '/about/' },
+    { label: 'Contact', href: '/contact/' },
     {
       label: 'Other pages',
       children: [
