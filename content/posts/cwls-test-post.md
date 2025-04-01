@@ -5,8 +5,7 @@ description: How to add new posts
 publishedDate: 2025-03-21
 tags:
   - documentation
+showToC: false
 ---
-![Nordlys logo](src/assets/logo.svg)
+
 How does this stuff really work?
-
-
