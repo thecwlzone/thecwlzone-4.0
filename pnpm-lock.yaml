@@ -38,6 +38,9 @@ importers:
       astro:
         specifier: ^5.5.5
         version: 5.5.5(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
+      astro-htaccess:
+        specifier: ^0.2.3
+        version: 0.2.3(astro@5.5.5(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0))
       mdast-util-to-string:
         specifier: ^4.0.0
         version: 4.0.0
@@ -1183,6 +1186,11 @@ packages:
   astro-eslint-parser@1.2.1:
     resolution: {integrity: sha512-3oqANMjrvJ+IE5pwlUWsH/4UztmYf/GTL0HPUkWnYBNAHiGVGrOh2EbegxS5niAwlO0w9dRYk0CkCPlJcu8c3Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  astro-htaccess@0.2.3:
+    resolution: {integrity: sha512-9Rraech/5sZi+3V7SsPdhNzoVdh4iLN/nQ0RACylqPs1+s6k025MKnYHuO7AUjXD0gD9iZcpDX/N3r54N15Zeg==}
+    peerDependencies:
+      astro: '>= 4.0.0 < 6'
 
   astro@5.5.5:
     resolution: {integrity: sha512-fdnnK5dhWNIQT/cXzvaGs9il4T5noi4jafobdntbuNOrRxI1JnOxDfrtBadUo6cknCRCFhYrXh4VndCqj1a4Sg==}
@@ -5288,6 +5296,10 @@ snapshots:
       semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
+
+  astro-htaccess@0.2.3(astro@5.5.5(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)):
+    dependencies:
+      astro: 5.5.5(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
 
   astro@5.5.5(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0):
     dependencies:

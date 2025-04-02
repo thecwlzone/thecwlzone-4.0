@@ -7,9 +7,11 @@ import codeHeadersPlugin from './src/plugins/codeHeadersPlugin'
 import readingTimePlugin from './src/plugins/readingTimePlugin'
 import config from './src/theme.config'
 
+import htaccessIntegration from 'astro-htaccess'
+
 export default defineConfig({
   site: config.site,
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), htaccessIntegration()],
 
   markdown: {
     shikiConfig: {
