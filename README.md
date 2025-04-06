@@ -6,12 +6,10 @@
 
 # The CWL Zone Web Site Version 4.0
 
-Currently under construction...
-
 ## Features
 
 - [Astro](https://astro.build/) framework
-- [TailWind CSS 4](ihttps://tailwindcss.com/)
+- [TailWind CSS 4](https://tailwindcss.com/)
 - The [Nordlys](https://astro.build/themes/details/nordlys/) theme
 - Words of wisdom from the author
 
