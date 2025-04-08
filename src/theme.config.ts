@@ -7,19 +7,10 @@ export default defineThemeConfig({
   author: 'Christopher W Lehman',
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
-    { label: 'Projects', href: '/projects/' },
+    // { label: 'Projects', href: '/projects/' },
     { label: 'Tags', href: '/tags/' },
     { label: 'About', href: '/about/' },
-    { label: 'Contact', href: '/contact/' },
-    {
-      label: 'Other pages',
-      children: [
-        { label: 'Landing page', href: '/' },
-        { label: '404 page', href: '/404' },
-        { label: 'Author: Lehman', href: '/authors/Lehman/' },
-        { label: 'Tag: documentation', href: '/tags/documentation/' }
-      ]
-    }
+    { label: 'Contact', href: '/contact/' }
   ],
   footerItems: [
     {
