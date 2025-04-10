@@ -1,6 +1,6 @@
 ---
 author: Lehman
-title: 'Wear A Mask Outdoors? No Need.'
+title: Wear A Mask Outdoors? No Need.
 description: Common sense prevails...
 publishedDate: 2021-04-08
 tags:
