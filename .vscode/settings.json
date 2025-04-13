@@ -53,4 +53,8 @@
     "html",
     "css",
   ],
+  "workbench.editor.autoLockGroups": {
+    "workbench.editor.chatSession": false
+  },
+  "workbench.editor.showTabs": "none",
 }
