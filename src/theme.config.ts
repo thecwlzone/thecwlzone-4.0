@@ -8,6 +8,7 @@ export default defineThemeConfig({
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
     // { label: 'Projects', href: '/projects/' },
+    { label: 'Photo Gallery', href: '/gallery/' },
     { label: 'Tags', href: '/tags/' },
     { label: 'About', href: '/about/' },
     { label: 'Contact', href: '/contact/' }
