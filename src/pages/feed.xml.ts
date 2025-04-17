@@ -9,12 +9,16 @@ export async function GET() {
     title: config.title,
     description: config.description,
     site: config.site,
+    xmlns: {
+      media: 'http://search.yahoo.com/mrss/',
+      atom: 'http://www.w3.org/2005/Atom'
+    },
+    customData: `<atom:link href="${config.site}rss.xml" rel="self" type="application/rss+xml" />`,
     items: posts.map(({ data, id }) => ({
       link: `posts/${id}/`,
       title: data.title,
       description: data.description,
       pubDate: new Date(data.publishedDate)
-    })),
-    customData: `<language>${config.locale}</language>`
+    }))
   })
 }
