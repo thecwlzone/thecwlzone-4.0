@@ -9,6 +9,7 @@ export async function GET() {
     title: config.title,
     description: config.description,
     site: config.site,
+    stylesheet: '/styles.xsl',
     xmlns: {
       media: 'http://search.yahoo.com/mrss/',
       atom: 'http://www.w3.org/2005/Atom'
