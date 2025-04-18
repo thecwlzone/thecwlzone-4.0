@@ -13,7 +13,8 @@ export async function GET() {
       media: 'http://search.yahoo.com/mrss/',
       atom: 'http://www.w3.org/2005/Atom'
     },
-    customData: `<atom:link href="${config.site}rss.xml" rel="self" type="application/rss+xml" />`,
+    customData: `<atom:link href="${config.site}rss.xml" rel="self" type="application/rss+xml"
+      language>${config.locale}/>`,
     items: posts.map(({ data, id }) => ({
       link: `posts/${id}/`,
       title: data.title,
