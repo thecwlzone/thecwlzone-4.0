@@ -5,7 +5,7 @@ description: COVID case data for Colorado
 publishedDate: 2022-01-11
 tags:
   - social-commentary
-  - health
+  - medical
 ---
 
 After almost two years of masking, lockdowns, business closures, "vaccinations" and perpetual fearmongering, here is the case data for Colorado:
