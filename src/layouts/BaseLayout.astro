@@ -79,12 +79,6 @@ const openGraphImageUrl = new URL(resolveImageUrl(openGraphImage), Astro.site)
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={openGraphImageUrl} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={titleWithSuffix} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={openGraphImageUrl} />
-
     {
       preloadFonts.map((font) => (
         <link

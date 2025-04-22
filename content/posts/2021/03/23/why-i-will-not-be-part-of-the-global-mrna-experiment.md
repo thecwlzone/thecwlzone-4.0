@@ -4,7 +4,7 @@ title: Why I Will Not Be Part of the Global mRNA Experiment
 description: Thre is no justification for accepting an experimental injection
 publishedDate: 2021-03-23
 tags:
-  - 'medical'
+  - medical
 showToC: true
 ---
 

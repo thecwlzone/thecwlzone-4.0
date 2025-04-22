@@ -6,6 +6,7 @@ description: Cochrane review on useless masking
 tags:
   - medical
   - social-commentary
+showToC: false
 ---
 
 How many more mask studies need to be done before the mandates finally end up in the dust bin of history? I'm sure tired of beating this dead horse, but OK, one last time...

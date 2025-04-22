@@ -8,7 +8,7 @@ tags:
 showToC: false
 ---
 
-Brew notes [here](https://www.thecwlzone.com/blog/homebrew-project-3-scottish-ale/)
+Brew notes [here](/posts/2022/03/10/homebrew-project-3-scottish-ale/)
 
 ![scottish ale image](@/assets/images/posts/scottish_ale-1.jpeg)
 
