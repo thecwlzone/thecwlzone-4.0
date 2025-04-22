@@ -4,7 +4,7 @@ title: Shell and Terminal Tweaks
 description: Some Mac-centric tips and tricks
 publishedDate: 2020-02-27
 tags:
-  - software development
+  - software-development
 showToC: false
 ---
 

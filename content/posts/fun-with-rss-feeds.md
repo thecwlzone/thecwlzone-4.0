@@ -4,7 +4,7 @@ title: Fun With RSS Feeds
 description: Various tweaks, and changing to a new reader
 publishedDate: 2025-04-21
 tags:
-  - software development
+  - software-development
 showToC: false
 ---
 

@@ -57,4 +57,5 @@
     "workbench.editor.chatSession": false
   },
   "workbench.editor.showTabs": "none",
+  "vscode-neovim.neovimClean": true,
 }

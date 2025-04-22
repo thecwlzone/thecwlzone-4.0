@@ -3,7 +3,8 @@ import { defineThemeConfig } from './types'
 export default defineThemeConfig({
   site: 'https://www.thecwlzone.com',
   title: 'The CWL Zone',
-  description: 'The 4.0 version of The CWL Zone web site',
+  description:
+    'The 4.0 version of The CWL Zone website, a static site created by the Astro framework.',
   author: 'Christopher W Lehman',
   navbarItems: [
     { label: 'Blog', href: '/posts/' },
