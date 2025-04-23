@@ -1,12 +1,4 @@
-<div text-align: center>
-  <p>
-    <a href="https://www.thecwlzone.com">
-      <img alt="logo" src="./public/favicon.svg" height="64">
-    </a>
-  </p>
-</div>
-
-# The CWL Zone Website Version 4.0
+# The [CWL Zone Website](https://www.thecwlzone.com) Version 4.0
 
 ## Features
 
