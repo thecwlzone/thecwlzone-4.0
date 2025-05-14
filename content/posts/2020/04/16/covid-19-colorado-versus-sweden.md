@@ -13,7 +13,7 @@ Our local Progressive rag, the [Colorado Springs Independent](https://www.csindy
 
 > For those who say we should have rejected such strict measures, [look to Sweden](https://www.cnn.com/2020/04/10/europe/sweden-lockdown-turmp-intl/index.html), which did exactly that and has seen its numbers of those infected and those who have died skyrocket.
 >
-> https://www.csindy.com/coloradosprings/opinion-the-scary-reopening/Content?oid=21649937
+> [CS Indy](https://www.csindy.com/coloradosprings/opinion-the-scary-reopening/Content?oid=21649937)
 
 "Skyrocket"? I don't think so. Let's look at the data, and while we're at it, let's compare Sweden's infection rate to Colorado's.
 
