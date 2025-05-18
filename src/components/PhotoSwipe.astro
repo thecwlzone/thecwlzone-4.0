@@ -1,0 +1,62 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image, getImage } from 'astro:assets'
+
+interface Props {
+  imageFolder: string
+}
+
+const { imageFolder } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/content/albums/*/*'
+)
+const imagePaths = Object.keys(images).filter((imagePath) => {
+  return imagePath.startsWith(`/src/content/albums/${imageFolder}/`)
+})
+---
+
+<div
+  id="gallery"
+  class="container mx-auto grid grid-cols-2 gap-2 px-2 pb-2 md:grid-cols-3"
+>
+  {
+    imagePaths.map(async (imagePath) => {
+      let image = images[imagePath]()
+      let optimizedImage = await getImage({
+        src: image,
+        width: 1920
+      })
+
+      return (
+        <a
+          href={optimizedImage.src}
+          data-pswp-width={optimizedImage.attributes.width}
+          data-pswp-height={optimizedImage.attributes.height}
+          class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
+        >
+          <Image
+            src={image}
+            alt={`Image`}
+            format="avif"
+            quality={50}
+            class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
+            loading="lazy"
+          />
+        </a>
+      )
+    })
+  }
+</div>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+  import 'photoswipe/style.css'
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe')
+  })
+
+  lightbox.init()
+</script>
