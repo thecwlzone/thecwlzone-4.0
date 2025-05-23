@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
     "@fontsource/ibm-plex-sans": "^5.2.5",
@@ -39,7 +39,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.6",
-    "astro": "^5.7.13",
+    "astro": "^5.8.0",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
     "medium-zoom": "^1.1.0",
