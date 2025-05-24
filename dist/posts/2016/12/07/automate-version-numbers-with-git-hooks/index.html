@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en" class="scheme-aurora"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><link rel="canonical" href="https://www.thecwlzone.com/posts/2016/12/07/automate-version-numbers-with-git-hooks/"><meta name="generator" content="Astro v5.8.0"><title>Automate Version Numbers with Git Hooks | The CWL Zone</title><meta name="title" content="Automate Version Numbers with Git Hooks | The CWL Zone"><meta name="description" content="Versioning your commits"><meta name="author" content="Lehman"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Automate Version Numbers with Git Hooks" href="https://www.thecwlzone.com/feed.xml"><meta property="og:title" content="Automate Version Numbers with Git Hooks | The CWL Zone"><meta property="og:description" content="Versioning your commits"><meta property="og:url" content="https://www.thecwlzone.com/posts/2016/12/07/automate-version-numbers-with-git-hooks/"><meta property="og:image" content="https://www.thecwlzone.com/posts/2016/12/07/automate-version-numbers-with-git-hooks.png"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-400-normal.CDDApCn2.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-500-normal.6ng42L7E.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-600-normal.CuJfVYMP.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-700-normal.Bxkt5Cjx.woff2" crossorigin="anonymous"><meta property="article:published_time" content="2016-12-07T00:00:00.000Z"><script data-default-mode="dark">
+  window.mode ??= (() => {
+    const defaultMode = document.currentScript.getAttribute('data-default-mode')
+    const storageKey = 'mode'
+    const store =
+      typeof localStorage !== 'undefined'
+        ? localStorage
+        : { getItem: () => null, setItem: () => {} }
+
+    const mediaMatcher = window.matchMedia('(prefers-color-scheme: light)')
+
+    mediaMatcher.addEventListener('change', () => {
+      applyMode(mode.getMode())
+    })
+
+    function applyMode(mode) {
+      document.documentElement.dataset.mode = mode
+      document.documentElement.style.colorScheme = mode
+    }
+
+    function setMode(mode = defaultMode) {
+      store.setItem(storageKey, mode)
+      applyMode(mode)
+    }
+
+    function getMode() {
+      return store.getItem(storageKey) || defaultMode
+    }
+
+    return { setMode, getMode }
+  })()
+
+  mode.setMode(mode.getMode())
+</script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CtSceO8m.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
+.prose code:not(.astro-code code):not(.astro-code-header code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+</style>
+<link rel="stylesheet" href="/_astro/index.DHZ8ssML.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" width="24" height="24" decoding="async"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+Back to all posts
+</a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#git-client-side-hooks" class="no-underline hover:underline" aria-label="Git Client-Side Hooks">
+                                Git Client-Side Hooks
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#the-version-file" class="no-underline hover:underline" aria-label="The Version File">
+                                The Version File
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#build-the-hook-file-and-put-it-under-version-control" class="no-underline hover:underline" aria-label="Build the Hook File and Put It Under Version Control">
+                                Build the Hook File and Put It Under Version Control
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#add-links-to-the-hook-files" class="no-underline hover:underline" aria-label="Add Links to the Hook Files">
+                                Add Links to the Hook Files
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#build-the-script-to-alter-the-version-file" class="no-underline hover:underline" aria-label="Build the Script to Alter the Version File">
+                                Build the Script to Alter the Version File
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#optional---build-a-script-to-create-the-link" class="no-underline hover:underline" aria-label="Optional - Build a Script to Create the Link">
+                                Optional - Build a Script to Create the Link
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#done" class="no-underline hover:underline" aria-label="Done">
+                                Done
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#exception-to-the-rule" class="no-underline hover:underline" aria-label="Exception to the Rule">
+                                Exception to the Rule
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#next-up" class="no-underline hover:underline" aria-label="Next Up">
+                                Next Up
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div>  </div> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Automate Version Numbers with Git Hooks</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/ruby-and-rails/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">ruby-and-rails</span> </a><a class="clickable no-underline" href="/tags/software-development/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">software-development</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2016-12-07T00:00:00.000Z">Dec 6, 2016</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">5 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#git-client-side-hooks" class="no-underline hover:underline" aria-label="Git Client-Side Hooks">
+                                Git Client-Side Hooks
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#the-version-file" class="no-underline hover:underline" aria-label="The Version File">
+                                The Version File
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#build-the-hook-file-and-put-it-under-version-control" class="no-underline hover:underline" aria-label="Build the Hook File and Put It Under Version Control">
+                                Build the Hook File and Put It Under Version Control
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#add-links-to-the-hook-files" class="no-underline hover:underline" aria-label="Add Links to the Hook Files">
+                                Add Links to the Hook Files
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#build-the-script-to-alter-the-version-file" class="no-underline hover:underline" aria-label="Build the Script to Alter the Version File">
+                                Build the Script to Alter the Version File
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#optional---build-a-script-to-create-the-link" class="no-underline hover:underline" aria-label="Optional - Build a Script to Create the Link">
+                                Optional - Build a Script to Create the Link
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#done" class="no-underline hover:underline" aria-label="Done">
+                                Done
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#exception-to-the-rule" class="no-underline hover:underline" aria-label="Exception to the Rule">
+                                Exception to the Rule
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                              <a href="#next-up" class="no-underline hover:underline" aria-label="Next Up">
+                                Next Up
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div>  </div> </div><article data-pagefind-body> <h2 id="introduction">Introduction</h2>
+<p>It’s not unusual for me to push a dozen or more commits to my <a href="http://rubyonrails.org/">Rails</a> project repo in a single day. “Commit early and often” is the mantra, at least for developers using <a href="https://git-scm.com/">Git</a> as the repo engine. If your git commit also kicks off a deployment to somewhere (we have <a href="https://jenkins.io/index.html">Jenkins</a> detect a commit and start a Capistrano deployment to our integration machine), how do you track what version of the code is running “in the wild”?</p>
+<p>Oftentimes there is a VERSION constant in the code that can be manually updated when a new “official” release is to be promoted to production. If that’s the case, can we leverage VERSION to track “non-release-worthy” commits as well? Git has a feature called git “hooks” that will allow us to run OS commands and scripts at various points in the Git lifecycle. Git hooks will allow us to automatically increment the VERSION constant on every commit. Here’s how we did it…</p>
+<h2 id="git-client-side-hooks">Git Client-Side Hooks</h2>
+<p>Here’s the Git bible</p>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks</a></p>
+<p>This article will be confined to only client-side hook activities.</p>
+<p>In your Rails app root location, the .git directory has a “hooks” directory that should look like this:</p>
+<p><img alt="git_hooks_dir" width="1024" height="579" loading="lazy" decoding="async" src="/_astro/git_hooks_dir.DSCweibu_1BrQHR.webp" ></p>
+<p>The pre-commit link will not be in your directory, we’ll create that later. But take a look at the sample files, you will get a feel for what can be done with Git hooks.</p>
+<p>To activate one of the sample files, copy it to a new file without using the .sample filetype, and then make the file executable:</p>
+<div style="--code-header-color:#393a34;--code-header-color-dark:#dbd7cacc;--code-header-bg:#ffffff;--code-header-bg-dark:#000"><div class="astro-code-header"><div class="flex gap-2"><span class="lang-icon iconify tabler--terminal text-2xl"></span></div><button title="Copy code" aria-label="Copy code" class="flex items-center"><span aria-hidden="true" class="copy-btn"></span></button></div><pre class="astro-code astro-code-themes vitesse-light vitesse-black" style="background-color:#ffffff;--shiki-dark-bg:#000;color:#393a34;--shiki-dark:#dbd7cacc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">cp</span><span style="color:#B56959;--shiki-dark:#C98A7D"> pre-rebase.sample</span><span style="color:#B56959;--shiki-dark:#C98A7D"> pre-rebase</span><span style="color:#B56959;--shiki-dark:#C98A7D"> chmod</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ugo+x</span><span style="color:#B56959;--shiki-dark:#C98A7D"> pre-rebase</span></span></code></pre></div>
+<h2 id="the-version-file">The Version File</h2>
+<p>There are probably better ways to do this, but as mentioned earlier we have simply added a version file to the Rails hierarchy and manually modified the VERSION constant prior to every release to production. This works well enough for releases that track typical Agile two week iteration/release cycles, but we may have to revisit that concept as we move closer to continuous deployment. For now, though, the version file looks like this:</p>
+<p><img alt="version_file" width="1024" height="743" loading="lazy" decoding="async" src="/_astro/version_file.DYC-Hp6D_Z1v9qHa.webp" ></p>
+<p>The “minor” part of the version number is “9” in the string “1.0.9”</p>
+<h2 id="build-the-hook-file-and-put-it-under-version-control">Build the Hook File and Put It Under Version Control</h2>
+<p>The pre-commit hook file needs to do two things: 1) run a script that alters version.rb, and 2) add the altered file to the git commit list. The code to do that is shown below.</p>
+<p>Note that the .git directory does not git, er, get committed to the master branch, nor are client-side hooks copied when a repo is cloned, so how do you distribute the hook file to the rest of the development team? Put it under version control, and the best way to do that is to create it in the Rails directory structure and then link to it in .git/hooks. We decided to add a git_hooks directory under lib to store the hook file.</p>
+<p><img alt="libgit_hooks" width="1024" height="743" loading="lazy" decoding="async" src="/_astro/libgit_hooks.Btkz72Pp_1KOets.webp" ></p>
+<h2 id="add-links-to-the-hook-files">Add Links to the Hook Files</h2>
+<p>Now add a link in .git/hooks to the file.</p>
+<div style="--code-header-color:#393a34;--code-header-color-dark:#dbd7cacc;--code-header-bg:#ffffff;--code-header-bg-dark:#000"><div class="astro-code-header"><div class="flex gap-2"><span class="lang-icon iconify tabler--terminal text-2xl"></span></div><button title="Copy code" aria-label="Copy code" class="flex items-center"><span aria-hidden="true" class="copy-btn"></span></button></div><pre class="astro-code astro-code-themes vitesse-light vitesse-black" style="background-color:#ffffff;--shiki-dark-bg:#000;color:#393a34;--shiki-dark:#dbd7cacc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#998418;--shiki-dark:#B8A965">cd</span><span style="color:#B56959;--shiki-dark:#C98A7D"> .git/hooks</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ln</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -s</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ../../lib/git</span><span style="color:#A65E2B;--shiki-dark:#C99076">\_</span><span style="color:#B56959;--shiki-dark:#C98A7D">hooks/pre-commit</span></span></code></pre></div>
+<h2 id="build-the-script-to-alter-the-version-file">Build the Script to Alter the Version File</h2>
+<p>We convert the VERSION string to integer, bump the minor number and convert back to string. Then we use sed to alter the file with the new VERSION value. There are other approaches of course, including using the Ruby File class, or use Ruby itself on the command line to alter the file. We use sed, so there is one additional statement to remove the backup (*.bak) file that sed likes to create.</p>
+<p><img alt="alter_version_script" width="1024" height="743" loading="lazy" decoding="async" src="/_astro/alter_version_script.KBgnFaOf_Zqz8QG.webp" ></p>
+<h2 id="optional---build-a-script-to-create-the-link">Optional - Build a Script to Create the Link</h2>
+<p>You may have team members that do not have a Linux sys admin background, so links might be a bit of a mystery to them. You can create a small Ruby script to create the link with the Rails runner. We get a list of all hook files in lib/git_hooks and create links as required.</p>
+<p><img alt="install_script" width="1024" height="743" loading="lazy" decoding="async" src="/_astro/install_script.5T5OQR6T_Z2i9rpO.webp" ></p>
+<div style="--code-header-color:#393a34;--code-header-color-dark:#dbd7cacc;--code-header-bg:#ffffff;--code-header-bg-dark:#000"><div class="astro-code-header"><div class="flex gap-2"><span class="lang-icon iconify tabler--terminal text-2xl"></span></div><button title="Copy code" aria-label="Copy code" class="flex items-center"><span aria-hidden="true" class="copy-btn"></span></button></div><pre class="astro-code astro-code-themes vitesse-light vitesse-black" style="background-color:#ffffff;--shiki-dark-bg:#000;color:#393a34;--shiki-dark:#dbd7cacc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">bundle</span><span style="color:#B56959;--shiki-dark:#C98A7D"> exec</span><span style="color:#B56959;--shiki-dark:#C98A7D"> rails</span><span style="color:#B56959;--shiki-dark:#C98A7D"> runner</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ./script/install</span><span style="color:#A65E2B;--shiki-dark:#C99076">\_</span><span style="color:#B56959;--shiki-dark:#C98A7D">git</span><span style="color:#A65E2B;--shiki-dark:#C99076">\_</span><span style="color:#B56959;--shiki-dark:#C98A7D">hooks.rb</span></span></code></pre></div>
+<h2 id="done">Done</h2>
+<p>That’s it. Now every time we do a <code>git commit -m &#x3C;Message></code> the version.rb file gets hacked by sed which bumps the minor version number by 1, the altered file is added to the commit list and the git commit process completes as usual.</p>
+<h2 id="exception-to-the-rule">Exception to the Rule</h2>
+<p>This solution is not perfect. If you are using git “properly”, i.e. you create a local feature branch, rebase with master and then merge your feature branch with local master and then push to the repo, you will pick up a new copy of version.rb from master if another team member has pushed a commit to master. This normally does not cause any merge conflicts, but your push to master will “inherit” the latest version number from the master branch. Under these conditions, you may want to manually update version.rb, especially if your local feature branch contains significant changes that you want to track with a unique minor version number. Otherwise you can just let it go, and basically you will have more than one update to master under the same minor version number. We have decided to live with that quirk for now, especially since we still need to address major version numbering and a production release branch strategy.</p>
+<h2 id="next-up">Next Up</h2>
+<p>That takes care of minor versioning for continuous integration, but what do we want to do about “official” releases to production, especially if your team is closing in on a continuous deployment strategy? I’ll address that in a future post. Cheers!</p> </article>  <script data-astro-rerun>
+  function setupHeadingAnchors() {
+    const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+    for (const heading of headings) {
+      if (heading.classList.contains('no-anchor')) continue
+      heading.classList.add('group')
+      const link = document.createElement('a')
+      link.innerText = '#'
+      link.className =
+        'heading-link hidden group-hover:inline-block ml-3 no-underline'
+      link.href = '#' + heading.id
+      link.ariaHidden = 'true'
+      heading.appendChild(link)
+    }
+  }
+
+  setupHeadingAnchors()
+</script>   </div>  </main> <div class="flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-3"> <div class="flex flex-col items-start"> <a href="/posts/2016/12/16/review-netgear-ac1200-wifi-router/" class="clickable"> <div class="flex items-center justify-start gap-1"> <span class="iconify tabler--arrow-left text-xl"></span> <span>Next post</span> </div> <span class="mt-2 text-lg sm:text-xl">Review - NetGear AC1200 WiFi Router</span> </a> </div> <div class="col-start-3 flex flex-col items-end"> <a href="/posts/2016/11/29/why-i-am-leaving-twitter-behind/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg sm:text-xl">Why I Am Leaving Twitter Behind</span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2025 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
+  function setupCopyCodeButtons() {
+    document.querySelectorAll('.astro-code-header > button').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const code =
+          btn.parentNode?.parentNode?.querySelector('.astro-code code')
+
+        const icon = btn.querySelector('span')
+
+        await navigator.clipboard.writeText(code.innerText)
+
+        icon.className = 'copy-success'
+
+        setTimeout(() => {
+          icon.className = 'copy-btn'
+        }, 1000)
+      })
+    })
+  }
+
+  setupCopyCodeButtons()
+</script> <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_0_lang.Rz_fyBje.js"></script>  </body></html>
