@@ -4,7 +4,7 @@ title: Integrating OpenID with Authlogic
 description: And creating an account
 publishedDate: 2009-09-24
 tags:
-  - information-technlogy
+  - information-technology
   - ruby-and-rails
 showToC: false
 ---
