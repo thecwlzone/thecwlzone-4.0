@@ -5,7 +5,7 @@ description: web browser survey
 publishedDate: 2019-11-18
 tags:
   - information-technology
-showToC: false
+showToC: true
 ---
 
 I find myself running three different web browsers, which is borderline ridiculous, I know. Here's a quick summary of what and why...

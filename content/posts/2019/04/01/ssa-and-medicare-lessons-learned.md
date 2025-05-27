@@ -5,7 +5,7 @@ description: Descent into SSA Hell
 publishedDate: 2019-04-01
 tags:
   - whatever
-showToC: false
+showToC: true
 ---
 
 The transition to retirement means lots of interaction with the Social Security Administration and Medicare. It hasn't gone well...

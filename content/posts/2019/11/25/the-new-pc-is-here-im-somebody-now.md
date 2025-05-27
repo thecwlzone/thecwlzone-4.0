@@ -5,7 +5,7 @@ description: The latest purchase from Dell
 publishedDate: 2019-11-25
 tags:
   - information-technology
-showToC: false
+showToC: true
 ---
 
 The old Dell machine was getting pretty sluggish, and now that Microsoft has announced end-of-life for Windows 7, it was time to look at an upgrade.

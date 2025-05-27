@@ -13,7 +13,7 @@ Last week there was a fair amount of buzz about Wordpress security issues. Here'
 
 Two things jump out at me here: 1) Wordpress is being described as a "self-hosted" application, and 2) [upgrading Wordpress](http://codex.wordpress.org/Upgrading_WordPress) is surprisingly clumsy, given the assumption in 1).
 
-That's not entirely fair - there is an "automatic" upgade path, but it presupposes that you have the necessary access permissions to whatever server is running Wordpress, which may not be true if you are running from an ISP. The manual upgrade gets tricky: install a new version of Wordpress, move your custom files over to the new version, run the upgrade script, oh and do backups before you start in case you forget something.
+That's not entirely fair - there is an "automatic" upgrade path, but it presupposes that you have the necessary access permissions to whatever server is running Wordpress, which may not be true if you are running from an ISP. The manual upgrade gets tricky: install a new version of Wordpress, move your custom files over to the new version, run the upgrade script, oh and do backups before you start in case you forget something.
 
 I tweeted a few days ago about how the Wordpress subversion upgrade didn't work - it turns out I may not have done things correctly. If you [install Wordpress via svn](http://codex.wordpress.org/Installing/Updating_WordPress_with_Subversion), the initial install looks like:
 

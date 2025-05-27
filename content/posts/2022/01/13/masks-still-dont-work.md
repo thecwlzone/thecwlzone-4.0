@@ -5,6 +5,7 @@ description: masks still don't work
 publishedDate: 2022-01-13
 tags:
   - medical
+showToC: false
 ---
 
 Dr. Scott Gottlieb, resident Regime Physician at CNN was interviewed on CBS News Face the Nation on January 2nd, 2020. (Link in the References section.)

@@ -5,6 +5,7 @@ publishedDate: 2023-03-08
 description: Cochrane Mask Review Author Interview
 tags:
   - medical
+showToC: false
 ---
 
 I talked about the latest mask review [earlier](https://www.thecwlzone.com/blog/and-they-still-dont-work/ 'earlier'), and here's another [link](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD006207.pub6/full 'link') to the actual study.

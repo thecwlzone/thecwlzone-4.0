@@ -6,7 +6,7 @@ publishedDate: 2019-12-11
 tags:
   - information-technology
   - ruby-and-rails
-showToC: false
+showToC: true
 ---
 
 I spent the weekend troubleshooting random losses of our Internet connectivity. (On Monday morning, my wireless ISP moved our satellite device to a more "stable" sector of its network and changed the signal carrier frequency. The changes seem to be working so far.) My main tool was ping, and since ping is available on Windows, Mac and Linux, I thought I would share the knowledge.
@@ -15,27 +15,27 @@ I spent the weekend troubleshooting random losses of our Internet connectivity. 
 
 In all cases you need to open a terminal window. For Windows 10, that's the Windows PowerShell. For Mac it's an iTerm window and for Linux it's a shell terminal window.
 
-### Windows and Linux Syntax
+## Windows and Linux Syntax
 
 `ping -n n remote_IP_address`
 
-### macOS Syntax
+## macOS Syntax
 
 `ping -c n remote_IP_address`
 
 where _n_ is the number of pings to send. If you don't supply a ping count number, ping runs until you enter `<control>C`
 
-### Ping switches (i.e. command line options)
+## Ping switches (i.e. command line options)
 
 The **\-c** switch (macOS) is followed by the number of ping requests. Use **\-n** for Windows and Linux.
 
 The **\-q** switch (quiet) suppresses the individual ping request outputs and displays only the summary.
 
-### Remote IPs to Use
+## Remote IPs to Use
 
 You need the IP address of a remote server to send the ping request. You can use [Google's DNS](https://en.wikipedia.org/wiki/Google_Public_DNS) server at **8.8.8.8** or [Cloudflare's](https://www.cloudflare.com/) DNS server at **1.1.1.1** - if those servers are down, the Web is totally FUBAR'ed, and we all have a different set of problems. You can just about be assured that those two IP addresses will be available and will respond to your ping request.
 
-### Syntax Examples
+## Syntax Examples
 
 Send 10 ping requests to Google from macOS
 
@@ -45,7 +45,7 @@ Send 10 ping requests from a Windows or Linux machine to Cloudflare, and just sh
 
 `ping -q -n 10 1.1.1.1`
 
-### Understanding the Results
+## Understanding the Results
 
 For any ping attempt, what you want to see in the statistics section is the phrase `0.0% packet loss`. That means every ping request was sent and received without error. Packet loss greater than zero indicates a problem. A 100% packet loss means you are off the air completely. Here's an example of a working connection:
 
@@ -62,7 +62,7 @@ PING 1.1.1.1 (1.1.1.1): 56 data bytes
 round-trip min/avg/max/stddev = 15.617/21.619/29.145/4.690 ms
 ```
 
-### Ruby Script
+## Ruby Script
 
 And because I'm a Rubyist, I had to create a bit of code:
 

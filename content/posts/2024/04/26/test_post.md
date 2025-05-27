@@ -1,10 +1,11 @@
 ---
 author: Lehman
-title: "Test Post"
+title: 'Test Post'
 publishedDate: 2024-04-26
 description: Test Post
 tags:
-  - "whatever"
+  - 'whatever'
+showToC: false
 ---
 
 Is this thing on? Can you hear me in the back?
