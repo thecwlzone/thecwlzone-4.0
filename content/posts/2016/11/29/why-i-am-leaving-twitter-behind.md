@@ -41,7 +41,7 @@ When I was in my twenties and thirties I also believed that government - if it 
 
 Not only Twitter, but social media in general is really addictive, isn't it? So many apps, so little time, and Holy Crap, I haven't checked my email in the last 5 minutes!
 
-And really, at this point in my life, I am feeling the need to simplify, to wind down a bit, to stop chasing URLs and start taking more time to enjoy the ranch, to play with the cats, to talk to the wife, you know, to do more of the \_important\* things in life.
+And really, at this point in my life, I am feeling the need to simplify, to wind down a bit, to stop chasing URLs and start taking more time to enjoy the ranch, to play with the cats, to talk to the wife, you know, to do more of the *important* things in life.
 
 ## Postscript - Real Men Give Credit Where Credit Is Due
 
