@@ -47,7 +47,7 @@ This is the tricky, magical git command:
 
 ## Pull the contents into the NFSN /home/public directory
 
-Log into your nfsn account, `cd` into /home/public. This is moment where you replace your site's current content with your new Astro-created content.
+Log into your nfsn account, `cd` into /home/public. This is the moment where you replace your site's current content with your new Astro-created content.
 
 Delete everything under /home/public - this is the scary part... (Note 4)
 
