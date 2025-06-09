@@ -8,9 +8,11 @@ tags:
 showToC: true
 ---
 
-_The Astro framework has almost two dozen deployment strategies "baked in", but if you are using an "off brand" hosting company, you need to roll your own. Here's how I deployed an Astro blog site to NearlyFreeSpeech.net_
-
 ## Introduction
+
+The Astro framework has almost two dozen deployment strategies "baked in", but if you are using an "off brand" hosting company, you need to roll your own. Here's how I deployed an Astro blog site to NearlyFreeSpeech.net.
+
+## Using the Astro Framework
 
 I was looking for a way to freshen up my personal web site. I had been using [Middleman](https://middlemanapp.com/) for a long time, but it was starting to look a bit stale. Then I discovered [Astro](https://astro.build/). With a wealth of example [themes](https://astro.build/themes/) available to get me started, I decided to make the transition.
 
