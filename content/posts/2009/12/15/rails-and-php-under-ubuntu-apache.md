@@ -28,7 +28,7 @@ The Apache directory structure under Ubuntu contains a number of files to isolat
 
 After running passenger-install-apache2-module, the contents of passenger.load should look like:
 
-```code
+```plaintext
 LoadModule passenger_module /usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so PassengerRoot /usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.5
 PassengerRuby /usr/local/bin/ruby
 ```
