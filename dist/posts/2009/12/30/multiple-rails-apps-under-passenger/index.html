@@ -38,23 +38,23 @@
 Back to all posts
 </a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8">  </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Multiple Rails Apps Under Passenger</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/information-technology/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">information-technology</span> </a><a class="clickable no-underline" href="/tags/ruby-and-rails/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">ruby-and-rails</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2009-12-30T00:00:00.000Z">Dec 29, 2009</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">1 min read </span> </div> <article data-pagefind-body> <p>My development server is on a home LAN behind a firewall, and I don’t want to make it a DNS sub-domain. I have directed my router to issue fixed IP addresses through DHCP, so I can use the IP address as part of the URL.</p>
 <p>Setting up multiple Rails applications is pretty easy, but if you want to mix the Rails environments (developement / test / production / custom), you need to use <code>&#x3C;Directory></code> to configure each Rails app:</p>
-<div style="--code-header-color:#393a34;--code-header-color-dark:#dbd7cacc;--code-header-bg:#ffffff;--code-header-bg-dark:#000"><div class="astro-code-header"><div class="flex gap-2"><span class="lang-icon iconify tabler--dots text-5xl"></span></div><button title="Copy code" aria-label="Copy code" class="flex items-center"><span aria-hidden="true" class="copy-btn"></span></button></div><pre class="astro-code astro-code-themes vitesse-light vitesse-black" style="background-color:#ffffff;--shiki-dark-bg:#000;color:#393a34;--shiki-dark:#dbd7cacc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;VirtualHost *:80></span></span>
-<span class="line"><span>  DocumentRoot /var/www/public</span></span>
-<span class="line"><span>  &#x3C;Directory /var/www/public/RailsApp1></span></span>
-<span class="line"><span>    RailsEnv development</span></span>
-<span class="line"><span>    RailsBaseURI /RailsApp1</span></span>
-<span class="line"><span>  &#x3C;/Directory></span></span>
-<span class="line"><span>  &#x3C;Directory /var/www/public/RailsApp2></span></span>
-<span class="line"><span>    RailsEnv production</span></span>
-<span class="line"><span>    RailsBaseURI /RailsApp2</span></span>
-<span class="line"><span>  &#x3C;/Directory></span></span>
-<span class="line"><span>  ErrorLog /var/log/localhost-error_log</span></span>
-<span class="line"><span>  PassengerPoolIdleTime 0</span></span>
-<span class="line"><span>  &#x3C;Directory /var/www/public/RailsApp1/blog></span></span>
-<span class="line"><span>    AllowOverride All</span></span>
-<span class="line"><span>    PassengerEnabled off</span></span>
-<span class="line"><span>  &#x3C;/Directory></span></span>
-<span class="line"><span>&#x3C;/VirtualHost></span></span></code></pre></div>
+<div style="--code-header-color:#393a34;--code-header-color-dark:#dbd7cacc;--code-header-bg:#ffffff;--code-header-bg-dark:#000"><div class="astro-code-header"><div class="flex gap-2"><span class="lang-icon iconify tabler--dots text-5xl"></span></div><button title="Copy code" aria-label="Copy code" class="flex items-center"><span aria-hidden="true" class="copy-btn"></span></button></div><pre class="astro-code astro-code-themes vitesse-light vitesse-black" style="background-color:#ffffff;--shiki-dark-bg:#000;color:#393a34;--shiki-dark:#dbd7cacc; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="apache"><code><span class="line"><span style="color:#999999;--shiki-dark:#444444">&#x3C;</span><span style="color:#59873A;--shiki-dark:#80A665">VirtualHost</span><span style="color:#B56959;--shiki-dark:#C98A7D"> *:80</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">  DocumentRoot</span><span style="color:#393A34;--shiki-dark:#DBD7CACC"> /var/www/public</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /var/www/public/RailsApp1</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">    RailsEnv development</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">    RailsBaseURI /RailsApp1</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;/</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /var/www/public/RailsApp2</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">    RailsEnv production</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">    RailsBaseURI /RailsApp2</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;/</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">  ErrorLog</span><span style="color:#393A34;--shiki-dark:#DBD7CACC"> /var/log/localhost-error_log</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">  PassengerPoolIdleTime </span><span style="color:#2F798A;--shiki-dark:#4C9A91">0</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /var/www/public/RailsApp1/blog</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">    AllowOverride</span><span style="color:#393A34;--shiki-dark:#DBD7CACC"> All</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CACC">    PassengerEnabled </span><span style="color:#59873A;--shiki-dark:#80A665">off</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">  &#x3C;/</span><span style="color:#59873A;--shiki-dark:#80A665">Directory</span><span style="color:#999999;--shiki-dark:#444444">></span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#444444">&#x3C;/</span><span style="color:#59873A;--shiki-dark:#80A665">VirtualHost</span><span style="color:#999999;--shiki-dark:#444444">></span></span></code></pre></div>
 <p>By using <code>&#x3C;Directory></code> you can change the behavior of each of your Rails applications as needed, including the ability to disable Passenger for non-Rails code (such as the blog shown in the example).</p> </article>  <script data-astro-rerun>
   function setupHeadingAnchors() {
     const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))

@@ -12,7 +12,7 @@ I installed Ruby 1.9.1 from the [Ruby site](http://www.ruby-lang.org/en/download
 
 I decided to switch between the two Ruby versions by constructing shell aliases to change the $PATH variable, as shown below. The syntax is the bash shell.
 
-```bash
+```shell
 [cwl@Fedorahost ~]$ alias old_ruby
 alias old_ruby='export PATH=/usr/kerberos/bin:/usr/lib/ccache: \
 /usr/bin:/usr/local/bin:/bin:/usr/bin:/usr/games:/home/cwl/bin'

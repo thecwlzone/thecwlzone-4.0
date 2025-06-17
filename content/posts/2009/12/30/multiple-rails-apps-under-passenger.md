@@ -13,7 +13,7 @@ My development server is on a home LAN behind a firewall, and I don't want to ma
 
 Setting up multiple Rails applications is pretty easy, but if you want to mix the Rails environments (developement / test / production / custom), you need to use `<Directory>` to configure each Rails app:
 
-```plaintext
+```apache
 <VirtualHost *:80>
   DocumentRoot /var/www/public
   <Directory /var/www/public/RailsApp1>

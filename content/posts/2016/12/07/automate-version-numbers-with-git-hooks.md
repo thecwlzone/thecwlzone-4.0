@@ -31,7 +31,7 @@ The pre-commit link will not be in your directory, we'll create that later. But 
 
 To activate one of the sample files, copy it to a new file without using the .sample filetype, and then make the file executable:
 
-```bash
+```shell
 cp pre-rebase.sample pre-rebase chmod ugo+x pre-rebase
 ```
 
@@ -55,7 +55,7 @@ Note that the .git directory does not git, er, get committed to the master branc
 
 Now add a link in .git/hooks to the file.
 
-```bash
+```shell
 cd .git/hooks ln -s ../../lib/git\_hooks/pre-commit
 ```
 
@@ -71,7 +71,7 @@ You may have team members that do not have a Linux sys admin background, so link
 
 ![install_script](@/assets/images/posts/install_script.png)
 
-```bash
+```shell
 bundle exec rails runner ./script/install\_git\_hooks.rb
 ```
 
