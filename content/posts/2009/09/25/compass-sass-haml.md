@@ -12,7 +12,7 @@ I'm working on a project that is using the latest Rails markup buzz, namely Comp
 
 I found that the best approach seems to be to install all the required gems manually before doing anything else. That is:
 
-```shell
+```shellsession
 gem sources --add http://gems.github.com/
 sudo gem install haml
 sudo gem install chriseppstein-compass
@@ -23,7 +23,7 @@ Installing HAML also installs SASS, which is pretty convenient. Then install the
 
 For Rails integration, you can either build a new Rails project, or you can choose to update an existing project. I tried both commands:
 
-```shell
+```shellsession
 rails myrailsappnamehere -m http://www.compass-style.org/rails/installer
 rake rails:template LOCATION=http://www.compass-style.org/rails/installer
 ```

@@ -26,7 +26,6 @@ I am normally working on more than one application at any given time, so I need 
 Setting up multiple tmuxinator [yaml](http://yaml.org) files like so:
 
 ```shell
-
 project_name: my_project
 project_root: ~/Sites/my_project
 pre_window: rvm use ruby-2.2.3@my_project

@@ -12,7 +12,7 @@ Although the Rails [ActionMailer](http://api.rubyonrails.org/classes/ActionMaile
 
 The Fedora code base pretty much sets up sendmail out of the box, but with ISP's possibly blocking port 25, and router configs, etc. etc, things can get confusing. The basic test from the Linux command line:
 
-```shell
+```shellsession
 cat mailtest.txt | /usr/lib/sendmail -v me@somewhere.com
 ```
 

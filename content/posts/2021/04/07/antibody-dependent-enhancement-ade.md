@@ -31,11 +31,11 @@ A few more excerpts form the Lee _et. al._ paper:
 > No definitive role for ADE in human coronavirus diseases has been established.
 >
 > _Lee et. al._ - ADE in human coronavirus infections
-
+>
 > Evidence for vaccine-induced ADE in animal models of SARS-CoV is conflicting, and raises potential safety concerns.
 >
 > _Lee et. al._ - Risk of ADE for SARS-CoV-2 vaccines
-
+>
 > ADE has been observed in SARS, MERS and other human respiratory virus infections including RSV and measles, which suggests a real risk of ADE for SARS-CoV-2 vaccines and antibody-based interventions. However, clinical data has not yet fully established a role for ADE in human COVID-19 pathology.
 >
 > _Lee et. al._ - Conclusion

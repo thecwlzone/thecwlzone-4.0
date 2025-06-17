@@ -16,7 +16,7 @@ Then do the usual Wordpress setup [ritual](http://codex.wordpress.org/Installing
 
 If you're running Phusion Passenger, you need to tell Passenger to ignore the Wordpress stuff:
 
-```shell
+```nginx
 VirtualHost *:80
 DocumentRoot /var/www/public
 RailsEnv development

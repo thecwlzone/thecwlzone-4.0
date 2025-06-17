@@ -49,7 +49,7 @@ Send 10 ping requests from a Windows or Linux machine to Cloudflare, and just sh
 
 For any ping attempt, what you want to see in the statistics section is the phrase `0.0% packet loss`. That means every ping request was sent and received without error. Packet loss greater than zero indicates a problem. A 100% packet loss means you are off the air completely. Here's an example of a working connection:
 
-```shell
+```shellsession
 ~ ping -c 5 1.1.1.1
 PING 1.1.1.1 (1.1.1.1): 56 data bytes
 64 bytes from 1.1.1.1: icmp_seq=0 ttl=51 time=15.617 ms

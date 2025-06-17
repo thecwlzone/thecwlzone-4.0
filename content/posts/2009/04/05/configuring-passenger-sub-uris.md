@@ -16,7 +16,7 @@ Passenger sub-URIs allow you to run multiple Rails aplications under one Apache 
 
 - Modify the Apache httpd.conf file. **DocumentRoot** was changed as shown in Step 1. Then add a virtual host block:
 
-```shell
+```apache
 VirtualHost *:80
 ServerName 192.168.1.3
 DocumentRoot /var/www/public

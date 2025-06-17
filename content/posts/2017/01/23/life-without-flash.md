@@ -16,7 +16,7 @@ Whilst thrashing around a [DAP'ed SOHO](/posts/2017/01/09/dap-ed), I ended up ac
 
 Somehow I managed to install a rogue application called SurfBuyer. No, I won't link to it. Was it somehow "bundled" as part of the Flash install? Like I said, I can't prove that, so the prosecution rests. In any event, I burnt a couple hours rooting this thing out of OS X. Here's [a good guide](https://www.pcrisk.com/removal-guides/10643-surfbuyer-adware-mac) for doing that on the Mac. In addition, I found this Linux command to be helpful as well:
 
-```shell
+```shellsession
 sudo find . -name &amp;quot;\*SurfBuyer\*&amp;quot; -type f -exec ls -la {} \\;
 ```
 

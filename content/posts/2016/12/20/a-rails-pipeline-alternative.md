@@ -34,7 +34,7 @@ The demo worked flawlessly, except that I needed to create the public/javascript
 
 Running
 
-```shell
+```shellsession
 popped up the "Yay! You're on Rails!" page. Success!
 ```
 
@@ -44,7 +44,7 @@ popped up the "Yay! You're on Rails!" page. Success!
 
 - There is a node_modules directory in Rails root:
 
-```shell
+```shellsession
 du -hs node\_modules 74M node\_modules
 ```
 
