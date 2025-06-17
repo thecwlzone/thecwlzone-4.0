@@ -40,6 +40,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.3",
+    "astro-ai-robots-txt": "^0.1.2",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
     "medium-zoom": "^1.1.0",

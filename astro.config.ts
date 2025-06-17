@@ -9,9 +9,11 @@ import config from './src/theme.config'
 
 import htaccessIntegration from 'astro-htaccess'
 
+import aiRobotsTxt from 'astro-ai-robots-txt'
+
 export default defineConfig({
   site: config.site,
-  integrations: [mdx(), sitemap(), htaccessIntegration()],
+  integrations: [mdx(), sitemap(), htaccessIntegration(), aiRobotsTxt()],
 
   markdown: {
     shikiConfig: {
