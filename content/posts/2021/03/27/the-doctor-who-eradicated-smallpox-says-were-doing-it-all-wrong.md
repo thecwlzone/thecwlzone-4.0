@@ -56,7 +56,7 @@ But it was attempted anyway, world-wide.
 
 Some school districts are still closed, one year later, [and the kids are suffering](https://www.aier.org/article/the-dangers-of-keeping-the-schools-closed/).
 
-> It has been recommended that individuals maintain a distance of 3 feet or more during a pandemic so as to diminish the number of contacts with people who may be infected. The efficacy of this measure is unknown. 
+> It has been recommended that individuals maintain a distance of 3 feet or more during a pandemic so as to diminish the number of contacts with people who may be infected. The efficacy of this measure is unknown.
 >
 > **_Maintaining Personal Distance_**
 
