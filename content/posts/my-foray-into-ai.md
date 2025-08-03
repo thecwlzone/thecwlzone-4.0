@@ -16,7 +16,7 @@ My AI skills are 20 years out of date, focusing on neural network and expert sys
 
 ## Current Software and Hardware Limitations
 
-This AI stuff wants to use a boatload of compute resources, well beyond my current capabilities. My 8 year old MacBook Air (circa 2017) is running an obsolete OS (Monterey 12.7.6) with only 8 GB of RAM, and with no longer any viable support from the ][HomeBrew](https://brew.sh/) community. Other than that, it's a fine machine, yuk yuk.
+This AI stuff wants to use a boatload of compute resources, well beyond my current capabilities. My 8 year old MacBook Air (circa 2017) is running an obsolete OS (Monterey 12.7.6) with only 8 GB of RAM, and with no longer any viable support from the [HomeBrew](https://brew.sh/) community. Other than that, it's a fine machine, yuk yuk.
 
 I'm supporting this site using the [Astro Framework](https://astro.build/) and [Visual Studio Code](https://code.visualstudio.com/) running on a [Ubuntu 24.04.2](https://ubuntu.com/blog/tag/ubuntu-24-04-lts) image hosted on the Mac using [VMware Fusion Player Version 13.5.2](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) (also obsolete). Ugly, but serviceable for web site development, but useless for any AI R&D.
 
