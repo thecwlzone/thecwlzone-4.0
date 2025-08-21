@@ -52,6 +52,6 @@ I think I know what caused this - upgrading satori from version 15 to version 16
 
 I'm glad Copilot knew what this meant, because I was totally lost. And then the fix - adding [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) - OK, [What Does It All Mean Mr. Natural?](https://www.pinterest.com/pin/334040497343905532/)
 
-I'm blown away that a fix was found so quickly - I would have spent a lof of time on [StackOverflow](https://stackoverflow.com/questions) trying to find a solution, but the reality is this: _I don't know what went wrong, and I don't understand the fix_. Now this is not a big deal for a retired guy's personal web site, but what if this code was part of, oh, I dunno, a fuel monitoring system for commercial aircraft. Just push the fix and put your trust in the integration testing? **Hah!**
+I'm blown away that a fix was found so quickly - I would have spent a lot of time on [StackOverflow](https://stackoverflow.com/questions) trying to find a solution, but the reality is this: _I don't know what went wrong, and I don't understand the fix_. Now this is not a big deal for a retired guy's personal web site, but what if this code was part of, oh, I dunno, a fuel monitoring system for commercial aircraft. Just push the fix and put your trust in the integration testing? **Hah!**
 
 This is the big risk I see with AI-enhanced software development - if the software fails, [who ya gonna call](https://en.wikipedia.org/wiki/Ghostbusters)?
