@@ -39,7 +39,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.3",
+    "astro": "^5.13.5",
     "astro-ai-robots-txt": "^0.1.2",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
@@ -47,7 +47,7 @@
     "pagefind": "^1.3.0",
     "photoswipe": "^5.4.4",
     "reading-time": "^1.5.0",
-    "satori": "^0.16.2",
+    "satori": "^0.18.1",
     "sharp": "^0.34.3",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.12"
@@ -55,8 +55,8 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@iconify/tailwind4": "^1.0.6",
-    "@typescript-eslint/parser": "^8.40.0",
-    "commit-and-tag-version": "^12.5.2",
+    "@typescript-eslint/parser": "^8.41.0",
+    "commit-and-tag-version": "^12.6.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.3.1",
@@ -71,7 +71,7 @@
     "stylelint-config-recommended": "^17.0.0",
     "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.40.0"
+    "typescript-eslint": "^8.41.0"
   },
   "packageManager": "pnpm@10.15.0",
   "pnpm": {
