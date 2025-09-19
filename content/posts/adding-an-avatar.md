@@ -15,8 +15,12 @@ After a bit of hacking on a photo from our [Yellowstone](/gallery/yellowstone) t
 
 It turns out Gravatar has a nice API for working with profiles. The only trick is to create a SHA265 hash from the email address, and then reference the URL as an image. Here's a bit of Ruby to create the hash string:
 
-```ruby
+```ruby title="Create an Avatar Hash Value" collapse={2-5}
 #!/usr/bin/env ruby
+
+# I'm adding some comments here
+# so that I can demonstrate the collapse feature
+# of Expressive Code
 
 require 'digest'
 require 'uri'

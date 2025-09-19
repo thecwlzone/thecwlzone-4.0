@@ -32,89 +32,79 @@
 
   mode.setMode(mode.getMode())
 </script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
-.prose code:not(.astro-code code):not(.astro-code-header code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
 </style>
-<link rel="stylesheet" href="/_astro/index.CwAbyVvO.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+<link rel="stylesheet" href="/_astro/index.DZz715di.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
 Back to all posts
 </a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
                                 Introduction
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#current-software-and-hardware-limitations" class="no-underline hover:underline" aria-label="Current Software and Hardware Limitations">
+                <a href="#current-software-and-hardware-limitations" class="no-underline hover:underline toc-el" aria-label="Current Software and Hardware Limitations">
                                 Current Software and Hardware Limitations
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#a-quick-chatbot-survey" class="no-underline hover:underline" aria-label="A Quick Chatbot Survey">
+                <a href="#a-quick-chatbot-survey" class="no-underline hover:underline toc-el" aria-label="A Quick Chatbot Survey">
                                 A Quick Chatbot Survey
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#chatbot-selection-criteria" class="no-underline hover:underline" aria-label="Chatbot Selection Criteria">
+                <a href="#chatbot-selection-criteria" class="no-underline hover:underline toc-el" aria-label="Chatbot Selection Criteria">
                                 Chatbot Selection Criteria
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#testing-criteria" class="no-underline hover:underline" aria-label="Testing Criteria">
+                <a href="#testing-criteria" class="no-underline hover:underline toc-el" aria-label="Testing Criteria">
                                 Testing Criteria
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-contenders" class="no-underline hover:underline" aria-label="The Contenders">
+                <a href="#the-contenders" class="no-underline hover:underline toc-el" aria-label="The Contenders">
                                 The Contenders
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">My Foray Into AI</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/artificial-intelligence/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">artificial-intelligence</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2025-08-02T00:00:00.000Z">Aug 1, 2025</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">3 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          </ul> </details>  </div>  </div> <script type="module">function i(){const o={},r=new IntersectionObserver(c=>{for(const e of c){const t=e.target.querySelector("h2,h3,h4,h5")?.id;t&&(o[t]=e.intersectionRatio)}document.querySelectorAll(".toc-el").forEach(e=>e.classList.remove("underline"));const n=Math.max(...Object.values(o)),[s]=Object.entries(o).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${s}"]`).forEach(e=>e.classList.add("underline"))},{threshold:[.33,.66,1]});document.querySelectorAll("article section").forEach(c=>r.observe(c))}document.addEventListener("astro:page-load",()=>{i()});</script> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">My Foray Into AI</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/artificial-intelligence/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">artificial-intelligence</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2025-08-02T00:00:00.000Z">Aug 1, 2025</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">3 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
                                 Introduction
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#current-software-and-hardware-limitations" class="no-underline hover:underline" aria-label="Current Software and Hardware Limitations">
+                <a href="#current-software-and-hardware-limitations" class="no-underline hover:underline toc-el" aria-label="Current Software and Hardware Limitations">
                                 Current Software and Hardware Limitations
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#a-quick-chatbot-survey" class="no-underline hover:underline" aria-label="A Quick Chatbot Survey">
+                <a href="#a-quick-chatbot-survey" class="no-underline hover:underline toc-el" aria-label="A Quick Chatbot Survey">
                                 A Quick Chatbot Survey
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#chatbot-selection-criteria" class="no-underline hover:underline" aria-label="Chatbot Selection Criteria">
+                <a href="#chatbot-selection-criteria" class="no-underline hover:underline toc-el" aria-label="Chatbot Selection Criteria">
                                 Chatbot Selection Criteria
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#testing-criteria" class="no-underline hover:underline" aria-label="Testing Criteria">
+                <a href="#testing-criteria" class="no-underline hover:underline toc-el" aria-label="Testing Criteria">
                                 Testing Criteria
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-contenders" class="no-underline hover:underline" aria-label="The Contenders">
+                <a href="#the-contenders" class="no-underline hover:underline toc-el" aria-label="The Contenders">
                                 The Contenders
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div><article data-pagefind-body> <p>I was kinda waiting for the AI feeding frenzy to die down a bit, but I guess that’s not going to happen anytime soon. Soooo…</p>
-<h2 id="introduction">Introduction</h2>
-<p>My AI skills are 20 years out of date, focusing on neural network and expert system tools that were available at that time. I know the basics, but everything else I know is obsolete. Onwards…</p>
-<h2 id="current-software-and-hardware-limitations">Current Software and Hardware Limitations</h2>
-<p>This AI stuff wants to use a boatload of compute resources, well beyond my current capabilities. My 8 year old MacBook Air (circa 2017) is running an obsolete OS (Monterey 12.7.6) with only 8 GB of RAM, and with no longer any viable support from the <a href="https://brew.sh/">HomeBrew</a> community. Other than that, it’s a fine machine, yuk yuk.</p>
-<p>I’m supporting this site using the <a href="https://astro.build/">Astro Framework</a> and <a href="https://code.visualstudio.com/">Visual Studio Code</a> running on a <a href="https://ubuntu.com/blog/tag/ubuntu-24-04-lts">Ubuntu 24.04.2</a> image hosted on the Mac using <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMware Fusion Player Version 13.5.2</a> (also obsolete). Ugly, but serviceable for web site development, but useless for any AI R&#x26;D.</p>
-<p>The <a href="https://system76.com/">System 76</a> laptop I’m lusting after will come with a $2k price tag, which is tough to justify when you are a retired old fart. Plus, I really need to get the wife off of that God-Awful Windows 11 <a href="https://www.pcworld.com/article/2224766/goodbye-bloatware-how-to-clean-out-windows-11s-cruft.html">bloatware</a> first. So for the near-term future I’ll have to confine myself to being a normal schmuck user of the various chatbots available on the web. Sigh…</p>
-<h2 id="a-quick-chatbot-survey">A Quick Chatbot Survey</h2>
-<p>There are a number articles to be found if you search for “best AI chatbots”. This one was pretty good:</p>
-<p><a href="https://zapier.com/blog/best-ai-chatbot/">Zapier Chatbot Review</a></p>
-<p>Interestingly, no reviews mentioned <a href="https://venice.ai/">Venice</a>, a Swiss-based AI chatbot that doesn’t keep any of your data around. I did find a ChatGPT versus Venice comparison here:</p>
-<p><a href="https://runtheprompts.com/resources/venice-ai-info/venice-ai-vs-chatgpt/">Run the Prompts ChatGPT versus Venice</a></p>
-<p>Proton has also just released <a href="https://proton.me/blog/lumo-ai">Lumo</a>, another privacy-centric chatbot that you would expect from the Proton folks.</p>
-<h2 id="chatbot-selection-criteria">Chatbot Selection Criteria</h2>
-<ul>
+          </ul> </details>  </div>  </div>  </div><article data-pagefind-body> <p>I was kinda waiting for the AI feeding frenzy to die down a bit, but I guess that’s not going to happen anytime soon. Soooo…</p>
+<section><h2 id="introduction">Introduction</h2><p>My AI skills are 20 years out of date, focusing on neural network and expert system tools that were available at that time. I know the basics, but everything else I know is obsolete. Onwards…</p></section>
+<section><h2 id="current-software-and-hardware-limitations">Current Software and Hardware Limitations</h2><p>This AI stuff wants to use a boatload of compute resources, well beyond my current capabilities. My 8 year old MacBook Air (circa 2017) is running an obsolete OS (Monterey 12.7.6) with only 8 GB of RAM, and with no longer any viable support from the <a href="https://brew.sh/">HomeBrew</a> community. Other than that, it’s a fine machine, yuk yuk.</p><p>I’m supporting this site using the <a href="https://astro.build/">Astro Framework</a> and <a href="https://code.visualstudio.com/">Visual Studio Code</a> running on a <a href="https://ubuntu.com/blog/tag/ubuntu-24-04-lts">Ubuntu 24.04.2</a> image hosted on the Mac using <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMware Fusion Player Version 13.5.2</a> (also obsolete). Ugly, but serviceable for web site development, but useless for any AI R&#x26;D.</p><p>The <a href="https://system76.com/">System 76</a> laptop I’m lusting after will come with a $2k price tag, which is tough to justify when you are a retired old fart. Plus, I really need to get the wife off of that God-Awful Windows 11 <a href="https://www.pcworld.com/article/2224766/goodbye-bloatware-how-to-clean-out-windows-11s-cruft.html">bloatware</a> first. So for the near-term future I’ll have to confine myself to being a normal schmuck user of the various chatbots available on the web. Sigh…</p></section>
+<section><h2 id="a-quick-chatbot-survey">A Quick Chatbot Survey</h2><p>There are a number articles to be found if you search for “best AI chatbots”. This one was pretty good:</p><p><a href="https://zapier.com/blog/best-ai-chatbot/">Zapier Chatbot Review</a></p><p>Interestingly, no reviews mentioned <a href="https://venice.ai/">Venice</a>, a Swiss-based AI chatbot that doesn’t keep any of your data around. I did find a ChatGPT versus Venice comparison here:</p><p><a href="https://runtheprompts.com/resources/venice-ai-info/venice-ai-vs-chatgpt/">Run the Prompts ChatGPT versus Venice</a></p><p>Proton has also just released <a href="https://proton.me/blog/lumo-ai">Lumo</a>, another privacy-centric chatbot that you would expect from the Proton folks.</p></section>
+<section><h2 id="chatbot-selection-criteria">Chatbot Selection Criteria</h2><ul>
 <li>
 <p>Price : As in Free. I’m already spending too much on internet, phone and entertainment stuff, I don’t need to add yet another monthly subscription cost into the mix.</p>
 </li>
@@ -124,12 +114,9 @@ Back to all posts
 <li>
 <p>Politically and Socially Unbiased: Just the facts, Ma’am. This may turn out to be a Grail Search.</p>
 </li>
-</ul>
-<h2 id="testing-criteria">Testing Criteria</h2>
-<p>This will vary, and I will probably turn the tests into individual posts for purposes of brevity. My current plan is to test against technical (e.g. software development problems and research), current events analysis, social commentary and general “how-to” topics.</p>
-<h2 id="the-contenders">The Contenders</h2>
-<p>At this point I will probably confine my research to the following chatbots:</p>
-<ul>
+</ul></section>
+<section><h2 id="testing-criteria">Testing Criteria</h2><p>This will vary, and I will probably turn the tests into individual posts for purposes of brevity. My current plan is to test against technical (e.g. software development problems and research), current events analysis, social commentary and general “how-to” topics.</p></section>
+<section><h2 id="the-contenders">The Contenders</h2><p>At this point I will probably confine my research to the following chatbots:</p><ul>
 <li>
 <p><a href="https://chatgpt.com/?openaicom_referred=true">ChatGPT</a>, free version, no login</p>
 </li>
@@ -145,8 +132,7 @@ Back to all posts
 <li>
 <p><a href="https://brave.com/leo/">Leo</a>, free version, the Brave chatbot built into the browser</p>
 </li>
-</ul>
-<p>I will run all tests using the Brave browser, installed on my Ubuntu 24.04.2 OS image running on the Mac. I don’t do mobile - I don’t use my phone for anything except actual phone calls, a bit of texting and 2FA authentication.</p> </article>  <script data-astro-rerun>
+</ul><p>I will run all tests using the Brave browser, installed on my Ubuntu 24.04.2 OS image running on the Mac. I don’t do mobile - I don’t use my phone for anything except actual phone calls, a bit of texting and 2FA authentication.</p></section> </article>  <script data-astro-rerun>
   function setupHeadingAnchors() {
     const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
     for (const heading of headings) {
@@ -164,24 +150,92 @@ Back to all posts
 
   setupHeadingAnchors()
 </script>   </div>  </main> <div class="mb-2 flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-5"> <div class="col-span-5 flex flex-col items-start sm:col-span-2"> <a href="/posts/ai-test-1-unbiased-news-sites/" class="clickable"> <div class="flex items-center justify-start gap-1"> <span class="iconify tabler--arrow-left text-xl"></span> <span>Next post</span> </div> <span class="mt-2 text-lg underline sm:text-xl"> AI Test 1 - Finding Unbiased News and Information Sites </span> </a> </div> <div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"> <a href="/posts/javascript-turns-30/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg underline sm:text-xl"> Javascript Turns 30 </span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2025 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
-  function setupCopyCodeButtons() {
-    document.querySelectorAll('.astro-code-header > button').forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const code =
-          btn.parentNode?.parentNode?.querySelector('.astro-code code')
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
 
-        const icon = btn.querySelector('span')
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
 
-        await navigator.clipboard.writeText(code.innerText)
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
 
-        icon.className = 'copy-success'
+            const languageIcon = iconMap[language]
 
-        setTimeout(() => {
-          icon.className = 'copy-btn'
-        }, 1000)
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
       })
-    })
   }
 
-  setupCopyCodeButtons()
+  setupCodeBlockIcons()
 </script> <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_0_lang.Rz_fyBje.js"></script>  </body></html>

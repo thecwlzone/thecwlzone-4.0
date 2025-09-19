@@ -32,178 +32,140 @@
 
   mode.setMode(mode.getMode())
 </script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
-.prose code:not(.astro-code code):not(.astro-code-header code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
 </style>
-<link rel="stylesheet" href="/_astro/index.CwAbyVvO.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+<link rel="stylesheet" href="/_astro/index.DZz715di.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
 Back to all posts
 </a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#justification" class="no-underline hover:underline" aria-label="Justification">
+                <a href="#justification" class="no-underline hover:underline toc-el" aria-label="Justification">
                                 Justification
                               </a>
                               <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#i-am-in-good-health" class="no-underline hover:underline" aria-label="I am in good health">
+                <a href="#i-am-in-good-health" class="no-underline hover:underline toc-el" aria-label="I am in good health">
                                 I am in good health
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody" class="no-underline hover:underline" aria-label="The recovery rate from the COVID virus is > 95% for just about everybody.">
+                <a href="#the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody" class="no-underline hover:underline toc-el" aria-label="The recovery rate from the COVID virus is > 95% for just about everybody.">
                                 The recovery rate from the COVID virus is > 95% for just about everybody.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-fatality-rate-is-comparable-to-a-bad-flu-season" class="no-underline hover:underline" aria-label="The fatality rate is comparable to a bad flu season.">
+                <a href="#the-fatality-rate-is-comparable-to-a-bad-flu-season" class="no-underline hover:underline toc-el" aria-label="The fatality rate is comparable to a bad flu season.">
                                 The fatality rate is comparable to a bad flu season.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#there-are-effective-treatments-for-covid-already-available" class="no-underline hover:underline" aria-label="There are effective treatments for COVID already available.">
+                <a href="#there-are-effective-treatments-for-covid-already-available" class="no-underline hover:underline toc-el" aria-label="There are effective treatments for COVID already available.">
                                 There are effective treatments for COVID already available.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system" class="no-underline hover:underline" aria-label="They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.">
+                <a href="#they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system" class="no-underline hover:underline toc-el" aria-label="They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.">
                                 They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-pharma-companies-are-immune-pun-intended-from-liability" class="no-underline hover:underline" aria-label="The Pharma companies are immune (pun intended) from liability.">
+                <a href="#the-pharma-companies-are-immune-pun-intended-from-liability" class="no-underline hover:underline toc-el" aria-label="The Pharma companies are immune (pun intended) from liability.">
                                 The Pharma companies are immune (pun intended) from liability.
                               </a>
                               
                             </li>
           </ul>
                             </li><li class="mt-1 mb-1">
-                              <a href="#conclusion" class="no-underline hover:underline" aria-label="Conclusion">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
                                 Conclusion
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#disclaimer" class="no-underline hover:underline" aria-label="Disclaimer">
+                <a href="#disclaimer" class="no-underline hover:underline toc-el" aria-label="Disclaimer">
                                 Disclaimer
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#references" class="no-underline hover:underline" aria-label="References">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
                                 References
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Why I Will Not Be Part of the Global mRNA Experiment</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/medical/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">medical</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2021-03-23T00:00:00.000Z">Mar 22, 2021</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">5 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          </ul> </details>  </div>  </div> <script type="module">function i(){const o={},r=new IntersectionObserver(c=>{for(const e of c){const t=e.target.querySelector("h2,h3,h4,h5")?.id;t&&(o[t]=e.intersectionRatio)}document.querySelectorAll(".toc-el").forEach(e=>e.classList.remove("underline"));const n=Math.max(...Object.values(o)),[s]=Object.entries(o).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${s}"]`).forEach(e=>e.classList.add("underline"))},{threshold:[.33,.66,1]});document.querySelectorAll("article section").forEach(c=>r.observe(c))}document.addEventListener("astro:page-load",()=>{i()});</script> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Why I Will Not Be Part of the Global mRNA Experiment</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/medical/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">medical</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2021-03-23T00:00:00.000Z">Mar 22, 2021</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">5 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#justification" class="no-underline hover:underline" aria-label="Justification">
+                <a href="#justification" class="no-underline hover:underline toc-el" aria-label="Justification">
                                 Justification
                               </a>
                               <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#i-am-in-good-health" class="no-underline hover:underline" aria-label="I am in good health">
+                <a href="#i-am-in-good-health" class="no-underline hover:underline toc-el" aria-label="I am in good health">
                                 I am in good health
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody" class="no-underline hover:underline" aria-label="The recovery rate from the COVID virus is > 95% for just about everybody.">
+                <a href="#the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody" class="no-underline hover:underline toc-el" aria-label="The recovery rate from the COVID virus is > 95% for just about everybody.">
                                 The recovery rate from the COVID virus is > 95% for just about everybody.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-fatality-rate-is-comparable-to-a-bad-flu-season" class="no-underline hover:underline" aria-label="The fatality rate is comparable to a bad flu season.">
+                <a href="#the-fatality-rate-is-comparable-to-a-bad-flu-season" class="no-underline hover:underline toc-el" aria-label="The fatality rate is comparable to a bad flu season.">
                                 The fatality rate is comparable to a bad flu season.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#there-are-effective-treatments-for-covid-already-available" class="no-underline hover:underline" aria-label="There are effective treatments for COVID already available.">
+                <a href="#there-are-effective-treatments-for-covid-already-available" class="no-underline hover:underline toc-el" aria-label="There are effective treatments for COVID already available.">
                                 There are effective treatments for COVID already available.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system" class="no-underline hover:underline" aria-label="They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.">
+                <a href="#they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system" class="no-underline hover:underline toc-el" aria-label="They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.">
                                 They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#the-pharma-companies-are-immune-pun-intended-from-liability" class="no-underline hover:underline" aria-label="The Pharma companies are immune (pun intended) from liability.">
+                <a href="#the-pharma-companies-are-immune-pun-intended-from-liability" class="no-underline hover:underline toc-el" aria-label="The Pharma companies are immune (pun intended) from liability.">
                                 The Pharma companies are immune (pun intended) from liability.
                               </a>
                               
                             </li>
           </ul>
                             </li><li class="mt-1 mb-1">
-                              <a href="#conclusion" class="no-underline hover:underline" aria-label="Conclusion">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
                                 Conclusion
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#disclaimer" class="no-underline hover:underline" aria-label="Disclaimer">
+                <a href="#disclaimer" class="no-underline hover:underline toc-el" aria-label="Disclaimer">
                                 Disclaimer
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#references" class="no-underline hover:underline" aria-label="References">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
                                 References
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div><article data-pagefind-body> <h2 id="justification">Justification</h2>
-<h3 id="i-am-in-good-health">I am in good health</h3>
-<p>Good DNA, vigorous regular exercise, vitamin and mineral supplements and a (mostly) non-junk food diet have kept me in pretty good condition. I believe I can continue to rely on my healthy innate immune system for now.</p>
-<h3 id="the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody">The recovery rate from the COVID virus is > 95% for just about everybody.</h3>
-<p>The fatality rate is derived from CDC data on this page, but it’s pretty obscure reading. <a href="https://metrics.stanford.edu/people/john-ioannidis">Dr. John Ioannides</a> of Stanford University confirms the number (7). In any event, fatalities in Colorado are NOT across the board by age (1):</p>
-<p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="719" src="/_astro/CO-COVID-deaths-by-age.SREKd35C_Z24lLzx.webp" ></p>
-<p>Really old folks are getting hammered, and it’s no joke in my age group (70 - 79). But still, the odds are good that you can become ill and recover, thereby acquiring a natural immunity. Also note that the overall fatality rate in Colorado is trending toward zero.</p>
-<h3 id="the-fatality-rate-is-comparable-to-a-bad-flu-season">The fatality rate is comparable to a bad flu season.</h3>
-<p>The 24/7 non-stop media hysteria notwithstanding, the COVID fatality rate is lower than one might expect. Here’s the Colorado COVID data from March 19th, 2021 (1) :</p>
-<p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="905" src="/_astro/COVID-CO-03-19-2021.CNtUmftr_PQq1S.webp" ></p>
-<p>With a state population of 5.7 million that’s a fatality rate of 0.11 per cent, or 108 deaths per 100,000 people.</p>
-<p>By way of comparison, here’s the Colorado fatality statistics for influenza and pneumonia in 2009 (2):</p>
-<p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="846" src="/_astro/CO-Mortality-2009.CBMCXvoQ_2fDdP7.webp" ></p>
-<p>COVID has been a bad flu season in Colorado.</p>
-<h3 id="there-are-effective-treatments-for-covid-already-available">There are effective treatments for COVID already available.</h3>
-<p>Where to start here - HCQ, Ivermectin, Vitamin D / Vitamin C / zinc, Hydrogen Peroxide Nebulization. (<a href="https://duckduckgo.com/">DuckDuckGo</a> searches for these topics are left as an exercise for the reader.) They all have one thing in common: they are inexpensive, readily available, and they do very little to boost your doctor’s financial holdings. Results of some of these treatments are summarized <a href="https://www.primarydoctor.org/covid-19-is-a-lack-of-nutrients">here</a> and (8).</p>
-<blockquote>
+          </ul> </details>  </div>  </div>  </div><article data-pagefind-body> <section><h2 id="justification">Justification</h2><section><h3 id="i-am-in-good-health">I am in good health</h3><p>Good DNA, vigorous regular exercise, vitamin and mineral supplements and a (mostly) non-junk food diet have kept me in pretty good condition. I believe I can continue to rely on my healthy innate immune system for now.</p></section><section><h3 id="the-recovery-rate-from-the-covid-virus-is--95-for-just-about-everybody">The recovery rate from the COVID virus is > 95% for just about everybody.</h3><p>The fatality rate is derived from CDC data on this page, but it’s pretty obscure reading. <a href="https://metrics.stanford.edu/people/john-ioannidis">Dr. John Ioannides</a> of Stanford University confirms the number (7). In any event, fatalities in Colorado are NOT across the board by age (1):</p><p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="719" src="/_astro/CO-COVID-deaths-by-age.SREKd35C_Z24lLzx.webp" ></p><p>Really old folks are getting hammered, and it’s no joke in my age group (70 - 79). But still, the odds are good that you can become ill and recover, thereby acquiring a natural immunity. Also note that the overall fatality rate in Colorado is trending toward zero.</p></section><section><h3 id="the-fatality-rate-is-comparable-to-a-bad-flu-season">The fatality rate is comparable to a bad flu season.</h3><p>The 24/7 non-stop media hysteria notwithstanding, the COVID fatality rate is lower than one might expect. Here’s the Colorado COVID data from March 19th, 2021 (1) :</p><p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="905" src="/_astro/COVID-CO-03-19-2021.CNtUmftr_PQq1S.webp" ></p><p>With a state population of 5.7 million that’s a fatality rate of 0.11 per cent, or 108 deaths per 100,000 people.</p><p>By way of comparison, here’s the Colorado fatality statistics for influenza and pneumonia in 2009 (2):</p><p><img alt="image" loading="lazy" decoding="async" fetchpriority="auto" width="1024" height="846" src="/_astro/CO-Mortality-2009.CBMCXvoQ_2fDdP7.webp" ></p><p>COVID has been a bad flu season in Colorado.</p></section><section><h3 id="there-are-effective-treatments-for-covid-already-available">There are effective treatments for COVID already available.</h3><p>Where to start here - HCQ, Ivermectin, Vitamin D / Vitamin C / zinc, Hydrogen Peroxide Nebulization. (<a href="https://duckduckgo.com/">DuckDuckGo</a> searches for these topics are left as an exercise for the reader.) They all have one thing in common: they are inexpensive, readily available, and they do very little to boost your doctor’s financial holdings. Results of some of these treatments are summarized <a href="https://www.primarydoctor.org/covid-19-is-a-lack-of-nutrients">here</a> and (8).</p><blockquote>
 <p>Healthcare is primarily a business. Any commonly used agent/therapy must generate substantial and even unconscionable revenue for the pharmaceutical companies, the hospitals, and the physicians, or it will never be used or even properly investigated. More likely, it will be suppressed.</p>
 <p>Dr. Thomas E. Levy MD (4)</p>
-</blockquote>
-<p>A note about the <a href="https://www.cdc.gov/">CDC</a> here: ostensibly a government organization, many CDC employees and members hold vaccine patents (6). The <a href="https://www.cdcfoundation.org/">CDC Foundation</a>, a 501 (c) (3) entity, receives grants from the Bill and Melinda Gates Foundation, all of the major vaccine companies and all of the major pharmaceutical companies, among many others (3, 5). So what is more likely: the CDC will promote the low-cost virus remedies described above or promote vaccines and prescription drugs?</p>
-<p>We should remember that the main stream media is also heavily funded by Big Pharma. If you played a modified “Bob Game” (9), and took a drink every time a drug commercial was shown, you would be under the table in less than an hour.</p>
-<h3 id="they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system">They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.</h3>
-<p><a href="https://www.mercola.com/">Dr. Joseph Mercola</a> is a controversial figure, but <a href="https://www.lewrockwell.com/2021/03/joseph-mercola/covid-19-vaccines-are-gene-therapy/">this article</a> is a very comprehensive look at the differences between a vaccine and a genetic therapy.</p>
-<p>There is no clear evidence that the injections prevent infection or if people can spread the virus to others after getting the injection.</p>
-<blockquote>
+</blockquote><p>A note about the <a href="https://www.cdc.gov/">CDC</a> here: ostensibly a government organization, many CDC employees and members hold vaccine patents (6). The <a href="https://www.cdcfoundation.org/">CDC Foundation</a>, a 501 (c) (3) entity, receives grants from the Bill and Melinda Gates Foundation, all of the major vaccine companies and all of the major pharmaceutical companies, among many others (3, 5). So what is more likely: the CDC will promote the low-cost virus remedies described above or promote vaccines and prescription drugs?</p><p>We should remember that the main stream media is also heavily funded by Big Pharma. If you played a modified “Bob Game” (9), and took a drink every time a drug commercial was shown, you would be under the table in less than an hour.</p></section><section><h3 id="they-are-not-vaccines-they-are-fast-tracked-gene-therapy-for-the-human-autoimmune-system">They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.</h3><p><a href="https://www.mercola.com/">Dr. Joseph Mercola</a> is a controversial figure, but <a href="https://www.lewrockwell.com/2021/03/joseph-mercola/covid-19-vaccines-are-gene-therapy/">this article</a> is a very comprehensive look at the differences between a vaccine and a genetic therapy.</p><p>There is no clear evidence that the injections prevent infection or if people can spread the virus to others after getting the injection.</p><blockquote>
 <p>“When we start the deployment of this vaccine we will not have sufficient concrete data to prove that this vaccine reduces transmission.”</p>
 <p>Moderna Chief Medical Officer Tal Zaks (11)</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p>“The COVID-19 vaccines developed by Moderna and Pfizer–BioNTech, for example, are extremely effective at preventing symptomatic disease, but it is still unclear whether they protect people from becoming infected, or from spreading the virus to others.”</p>
 <p>Nature News Feature 18 March 2021 (10)</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p>“The World Health Organization (WHO) warned there is no guarantee that <a href="https://childrenshealthdefense.org/defender_category/covid/">COVID-19</a> vaccines will prevent people from being infected with the SARS-CoV-2 virus and transmitting it to other people.”</p>
 <p>GlobalResearch (12)</p>
-</blockquote>
-<p>This may change as we acquire more data, but I have no desire to be part of the ongoing experiment at this time.</p>
-<p>Absolute Risk Reduction (ARR) for the Pfizer injection is 0.7%, the ARR for the Moderna injection is 1.1%</p>
-<p>The 95% risk reduction bandied about by the media and public health officials is an example of misleading math. What really matters is Absolute Risk Reduction. <a href="https://www.globalresearch.ca/hidden-truth-covid-19-vaccines-interview-dr-ronald-b-brown-phd/5739826">This article</a> by <a href="https://publons.com/researcher/1712062/ronald-b-brown-phd/">Dr. Ronald B Brown</a> is heavy reading, but attempts to explain why ARR is the only valid metric. The injections may not be all that effective.</p>
-<h3 id="the-pharma-companies-are-immune-pun-intended-from-liability">The Pharma companies are immune (pun intended) from liability.</h3>
-<p>Vaccine manufacturers have been shielded from liability since 1986, thanks to the <a href="https://en.wikipedia.org/wiki/National_Childhood_Vaccine_Injury_Act">National Childhood Vaccine Injury Act (NCVIA)</a>, but additional protection has been added for the COVID injections:</p>
-<blockquote>
+</blockquote><p>This may change as we acquire more data, but I have no desire to be part of the ongoing experiment at this time.</p><p>Absolute Risk Reduction (ARR) for the Pfizer injection is 0.7%, the ARR for the Moderna injection is 1.1%</p><p>The 95% risk reduction bandied about by the media and public health officials is an example of misleading math. What really matters is Absolute Risk Reduction. <a href="https://www.globalresearch.ca/hidden-truth-covid-19-vaccines-interview-dr-ronald-b-brown-phd/5739826">This article</a> by <a href="https://publons.com/researcher/1712062/ronald-b-brown-phd/">Dr. Ronald B Brown</a> is heavy reading, but attempts to explain why ARR is the only valid metric. The injections may not be all that effective.</p></section><section><h3 id="the-pharma-companies-are-immune-pun-intended-from-liability">The Pharma companies are immune (pun intended) from liability.</h3><p>Vaccine manufacturers have been shielded from liability since 1986, thanks to the <a href="https://en.wikipedia.org/wiki/National_Childhood_Vaccine_Injury_Act">National Childhood Vaccine Injury Act (NCVIA)</a>, but additional protection has been added for the COVID injections:</p><blockquote>
 <p>“Under the PREP Act, companies like Pfizer and Moderna have total immunity from liability if something unintentionally goes wrong with their vaccines.”</p>
 <p>CNBC (13)</p>
-</blockquote>
-<p>Countries without a powerful Big Pharma lobby are being coerced into <a href="https://www.lewrockwell.com/2021/03/joseph-mercola/pfizer-bullies-nations-to-put-up-collateral-for-lawsuits/">fronting money for injury lawsuits</a>.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>No medical procedure is 100% safe or 100% effective. We - <em>as individuals</em> - must do a risk/benefit analysis of every medical procedure that is offered, and make a decision that is best for us. No one else can - or should - make that decision for us.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>I try to study and review from many sources, but I have mainly drawn information from articles published at <a href="http://AIER.org">AIER</a>, <a href="http://lewrockwell.com">LewRockwell</a> and <a href="https://www.globalresearch.ca/">GlobalResearch</a>.</p>
-<p>I am highly suspicious of pronouncements from politicians, public health officials, mainstream media sources and anybody who has a conflict of interest with the American Medical-Pharmaceutical-Vaccine-Industrial Complex.</p>
-<p>Finally, let us always keep one concept firmly in mind:</p>
-<blockquote>
+</blockquote><p>Countries without a powerful Big Pharma lobby are being coerced into <a href="https://www.lewrockwell.com/2021/03/joseph-mercola/pfizer-bullies-nations-to-put-up-collateral-for-lawsuits/">fronting money for injury lawsuits</a>.</p></section></section>
+<section><h2 id="conclusion">Conclusion</h2><p>No medical procedure is 100% safe or 100% effective. We - <em>as individuals</em> - must do a risk/benefit analysis of every medical procedure that is offered, and make a decision that is best for us. No one else can - or should - make that decision for us.</p></section>
+<section><h2 id="disclaimer">Disclaimer</h2><p>I try to study and review from many sources, but I have mainly drawn information from articles published at <a href="http://AIER.org">AIER</a>, <a href="http://lewrockwell.com">LewRockwell</a> and <a href="https://www.globalresearch.ca/">GlobalResearch</a>.</p><p>I am highly suspicious of pronouncements from politicians, public health officials, mainstream media sources and anybody who has a conflict of interest with the American Medical-Pharmaceutical-Vaccine-Industrial Complex.</p><p>Finally, let us always keep one concept firmly in mind:</p><blockquote>
 <p>“For every expert there is an equal and opposite expert.”</p>
 <p> <strong>Jasper Fforde</strong> (14)</p>
-</blockquote>
-<p><em>Caveat Emptor</em></p>
-<h2 id="references">References</h2>
-<ol>
+</blockquote><p><em>Caveat Emptor</em></p></section>
+<section><h2 id="references">References</h2><ol>
 <li>
 <p><a href="https://cohealthviz.dphe.state.co.us/t/HealthInformaticsPublic/views/COHIDFullDeathQuery_StateDemographyPopEstimates/MortalityStatistics?iframeSizedToWindow=true">Colorado Health Information Dataset</a></p>
 </li>
@@ -246,7 +208,7 @@ Back to all posts
 <li>
 <p><a href="https://www.goodreads.com/quotes/360598-for-every-expert-there-is-an-equal-and-opposite-expert">For Every Expert There Is An Equal and Opposite Expert</a></p>
 </li>
-</ol> </article>  <script data-astro-rerun>
+</ol></section> </article>  <script data-astro-rerun>
   function setupHeadingAnchors() {
     const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
     for (const heading of headings) {
@@ -264,24 +226,92 @@ Back to all posts
 
   setupHeadingAnchors()
 </script>   </div>  </main> <div class="mb-2 flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-5"> <div class="col-span-5 flex flex-col items-start sm:col-span-2"> <a href="/posts/2021/03/27/the-doctor-who-eradicated-smallpox-says-were-doing-it-all-wrong/" class="clickable"> <div class="flex items-center justify-start gap-1"> <span class="iconify tabler--arrow-left text-xl"></span> <span>Next post</span> </div> <span class="mt-2 text-lg underline sm:text-xl"> The Doctor Who Eradicated Smallpox Says We&#39;re Doing It All Wrong </span> </a> </div> <div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"> <a href="/posts/2021/01/24/the-changing-landscape-of-the-pandemic/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg underline sm:text-xl"> The Changing Landscape of the Pandemic </span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2025 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
-  function setupCopyCodeButtons() {
-    document.querySelectorAll('.astro-code-header > button').forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const code =
-          btn.parentNode?.parentNode?.querySelector('.astro-code code')
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
 
-        const icon = btn.querySelector('span')
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
 
-        await navigator.clipboard.writeText(code.innerText)
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
 
-        icon.className = 'copy-success'
+            const languageIcon = iconMap[language]
 
-        setTimeout(() => {
-          icon.className = 'copy-btn'
-        }, 1000)
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
       })
-    })
   }
 
-  setupCopyCodeButtons()
+  setupCodeBlockIcons()
 </script> <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_0_lang.Rz_fyBje.js"></script>  </body></html>

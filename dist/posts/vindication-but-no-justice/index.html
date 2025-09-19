@@ -32,105 +32,89 @@
 
   mode.setMode(mode.getMode())
 </script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.B3vRBseb.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
-.prose code:not(.astro-code code):not(.astro-code-header code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
 </style>
-<link rel="stylesheet" href="/_astro/index.CwAbyVvO.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+<link rel="stylesheet" href="/_astro/index.DZz715di.css"></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class l extends HTMLElement{connectedCallback(){const e=this.querySelector("button");if(!e)return;e.setAttribute("aria-label",window.mode.getMode());const o=()=>{const t=window.mode.getMode()==="light"?"dark":"light";window.mode.setMode(t),e.setAttribute("aria-label",t)};e.addEventListener("click",o)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",l);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
 Back to all posts
 </a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
                                 Introduction
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#brownstone-institute-research" class="no-underline hover:underline" aria-label="Brownstone Institute Research">
+                <a href="#brownstone-institute-research" class="no-underline hover:underline toc-el" aria-label="Brownstone Institute Research">
                                 Brownstone Institute Research
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#my-current-working-hypothesis" class="no-underline hover:underline" aria-label="My Current Working Hypothesis">
+                <a href="#my-current-working-hypothesis" class="no-underline hover:underline toc-el" aria-label="My Current Working Hypothesis">
                                 My Current Working Hypothesis
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#conclusion" class="no-underline hover:underline" aria-label="Conclusion">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
                                 Conclusion
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#references" class="no-underline hover:underline" aria-label="References">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
                                 References
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#footnotes" class="no-underline hover:underline" aria-label="Footnotes">
+                <a href="#footnotes" class="no-underline hover:underline toc-el" aria-label="Footnotes">
                                 Footnotes
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Vindication But No Justice</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/medical/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">medical</span> </a><a class="clickable no-underline" href="/tags/political-commentary/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">political-commentary</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2025-04-20T00:00:00.000Z">Apr 19, 2025</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">4 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          </ul> </details>  </div>  </div> <script type="module">function i(){const o={},r=new IntersectionObserver(c=>{for(const e of c){const t=e.target.querySelector("h2,h3,h4,h5")?.id;t&&(o[t]=e.intersectionRatio)}document.querySelectorAll(".toc-el").forEach(e=>e.classList.remove("underline"));const n=Math.max(...Object.values(o)),[s]=Object.entries(o).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${s}"]`).forEach(e=>e.classList.add("underline"))},{threshold:[.33,.66,1]});document.querySelectorAll("article section").forEach(c=>r.observe(c))}document.addEventListener("astro:page-load",()=>{i()});</script> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Vindication But No Justice</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/medical/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">medical</span> </a><a class="clickable no-underline" href="/tags/political-commentary/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">political-commentary</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2025-04-20T00:00:00.000Z">Apr 19, 2025</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">4 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
           <li class="mt-1 mb-1">
-                              <a href="#introduction" class="no-underline hover:underline" aria-label="Introduction">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
                                 Introduction
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#brownstone-institute-research" class="no-underline hover:underline" aria-label="Brownstone Institute Research">
+                <a href="#brownstone-institute-research" class="no-underline hover:underline toc-el" aria-label="Brownstone Institute Research">
                                 Brownstone Institute Research
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#my-current-working-hypothesis" class="no-underline hover:underline" aria-label="My Current Working Hypothesis">
+                <a href="#my-current-working-hypothesis" class="no-underline hover:underline toc-el" aria-label="My Current Working Hypothesis">
                                 My Current Working Hypothesis
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#conclusion" class="no-underline hover:underline" aria-label="Conclusion">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
                                 Conclusion
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#references" class="no-underline hover:underline" aria-label="References">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
                                 References
                               </a>
                               
                             </li><li class="mt-1 mb-1">
-                              <a href="#footnotes" class="no-underline hover:underline" aria-label="Footnotes">
+                <a href="#footnotes" class="no-underline hover:underline toc-el" aria-label="Footnotes">
                                 Footnotes
                               </a>
                               
                             </li>
-          </ul> </details>  </div>  </div> </div><article data-pagefind-body> <h2 id="introduction">Introduction</h2>
-<p>The White House has published a new page on its site, entitled <a href="https://www.whitehouse.gov/lab-leak-true-origins-of-covid-19/">Lab Leak</a> The True Origins of COVID-19.</p>
-<p><strong>Executive Summary: Everything we were told about COVID was a lie.</strong></p>
-<p>Some of us recognized the deception early on. It’s my main motivation for resurrecting my blog entries, because for what it’s worth, I tried to document what was happening as it was happening. As such, it might be of some minor historical value, not that anybody will care about my opinions and observations…</p>
-<p>Now, I’m not the brightest bulb in the package, but as a <a href="https://en.wikipedia.org/wiki/Flower_child">Flower Child of the 1960’s</a> (1), I learned a basic truth early on:</p>
-<p><strong>All Governments lie. All of the time. About everything.</strong></p>
-<p>So when the fear campaign kicked into high gear in Q1 2020, I turned off the TV and started to do my own research.</p>
-<p><strong>Initial findings:</strong> COVID had a fatality rate like a bad flu season, with really old, really sick people as the folks most at risk. <em>The rest of us should have been allowed to function normally.</em></p>
-<p>But we were not given that option. No way in hell. <em>Why not?</em> Why were we subjected to idiotic masking theater, useless social distancing, shutdowns of everything but Walmart and liquor stores, and the worldwide house arrest of healthy people?</p>
-<p>At this point I rely heavily on the amazing research done by some amazing people at the <a href="https://brownstone.org">Brownstone Institute</a>. What follows is a synthesis of their research and my personal experience.</p>
-<h2 id="brownstone-institute-research">Brownstone Institute Research</h2>
-<blockquote>
+          </ul> </details>  </div>  </div>  </div><article data-pagefind-body> <section><h2 id="introduction">Introduction</h2><p>The White House has published a new page on its site, entitled <a href="https://www.whitehouse.gov/lab-leak-true-origins-of-covid-19/">Lab Leak</a> The True Origins of COVID-19.</p><p><strong>Executive Summary: Everything we were told about COVID was a lie.</strong></p><p>Some of us recognized the deception early on. It’s my main motivation for resurrecting my blog entries, because for what it’s worth, I tried to document what was happening as it was happening. As such, it might be of some minor historical value, not that anybody will care about my opinions and observations…</p><p>Now, I’m not the brightest bulb in the package, but as a <a href="https://en.wikipedia.org/wiki/Flower_child">Flower Child of the 1960’s</a> (1), I learned a basic truth early on:</p><p><strong>All Governments lie. All of the time. About everything.</strong></p><p>So when the fear campaign kicked into high gear in Q1 2020, I turned off the TV and started to do my own research.</p><p><strong>Initial findings:</strong> COVID had a fatality rate like a bad flu season, with really old, really sick people as the folks most at risk. <em>The rest of us should have been allowed to function normally.</em></p><p>But we were not given that option. No way in hell. <em>Why not?</em> Why were we subjected to idiotic masking theater, useless social distancing, shutdowns of everything but Walmart and liquor stores, and the worldwide house arrest of healthy people?</p><p>At this point I rely heavily on the amazing research done by some amazing people at the <a href="https://brownstone.org">Brownstone Institute</a>. What follows is a synthesis of their research and my personal experience.</p></section>
+<section><h2 id="brownstone-institute-research">Brownstone Institute Research</h2><blockquote>
 <p>…Covid was not a public health event, although it was presented as such to the world’s population. It was a global operation, coordinated through public-private intelligence and military alliances and invoking laws designed for CBRN (chemical, biological, radiological, nuclear) weapons attacks.</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p><a href="https://brownstone.org/articles/the-covid-dossier/">The COVID Dossier</a></p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p>…our response to the Covid pandemic was led by groups and agencies that are in the business of responding to wars and terrorist threats, not public health crises or disease outbreaks.</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p><a href="https://brownstone.org/articles/governments-national-security-arm-led-the-covid-response/">Government’s National Security Arm Took Charge During the Covid Response</a></p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p>At its core, the Covid response was a military operation. It uncovered the entangled webs of ostensibly distinct structures of military and health operations. The National Security Council sparked the panicked response, the Department of Homeland Security oversaw lockdowns, the Intelligence Community, led by the CIA, censored dissent, and the Department of Defense administered the vaccine push.</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p><a href="https://brownstone.org/articles/covid-response-at-five-years-the-role-of-the-military/">Covid Response at Five Years: The Role of the Military</a></p>
-</blockquote>
-<h2 id="my-current-working-hypothesis">My Current Working Hypothesis</h2>
-<ul>
+</blockquote></section>
+<section><h2 id="my-current-working-hypothesis">My Current Working Hypothesis</h2><ul>
 <li>
 <p>COVID is an engineered virus, created at the Wuhan, China lab, and most likely funded by the Department of Defense (DOD)</p>
 </li>
@@ -143,34 +127,20 @@ Back to all posts
 <li>
 <p>All of the fearmongering was designed to keep as many people as possible locked down until a cure could be rolled out. Quarantine until vaccine.</p>
 </li>
-</ul>
-<blockquote>
+</ul><blockquote>
 <p>When the military and national security agencies took over the response, these guidelines were replaced by a biowarfare paradigm: Quarantine until vaccine. In other words, keep everyone locked down while rapidly developing medical countermeasures. This is a response intended to counter biowarfare and bioterrorism attacks. It is not a public health response and is, in fact, in direct conflict with the scientific and ethical underpinnings of established public health principles.</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p><a href="https://brownstone.org/articles/what-if-there-had-been-no-covid-coup/">What If There Had Been No Covid Coup?</a></p>
-</blockquote>
-<ul>
+</blockquote><ul>
 <li>Ironically, the “cure” was worse than the disease. The filthy COVID injections did not create immunity, did not stop transmission and have injured and killed millions of people worldwide.</li>
-</ul>
-<blockquote>
+</ul><blockquote>
 <p>While the FDA and CDC continue to extol the benefits of the Covid vaccines, they have ignored a growing body of evidence that these products can also be harmful.</p>
-</blockquote>
-<blockquote>
+</blockquote><blockquote>
 <p><a href="https://brownstone.org/articles/big-pharma-continues-to-hide-the-truth/">Big Pharma Continues to Hide the Truth</a></p>
-</blockquote>
-<h2 id="conclusion">Conclusion</h2>
-<p>Thanks to the Lab Leak document we have the names and faces of the principal actors. <em>We know who did this to us.</em> They need to be called to account. Some people are demanding arrest, trial and jail time. I concur, but that may be politically impossible - too much money, influence and power in play. But at the very least, everybody involved in this atrocity should not be pulling a paycheck funded by We The People.</p>
-<h2 id="references">References</h2>
-<p><a href="https://brownstone.org/articles/the-covid-dossier/">The COVID Dossier</a></p>
-<p><a href="https://brownstone.org/articles/governments-national-security-arm-led-the-covid-response/">Government’s National Security Arm Took Charge During the Covid Response</a></p>
-<p><a href="https://brownstone.org/articles/covid-response-at-five-years-the-role-of-the-military/">Covid Response at Five Years: The Role of the Military</a></p>
-<p><a href="https://brownstone.org/articles/covid-response-at-five-years-introduction/">Covid Response at Five Years: Introduction</a></p>
-<p><a href="https://brownstone.org/articles/what-if-there-had-been-no-covid-coup/">What If There Had Been No Covid Coup?</a></p>
-<p><a href="https://brownstone.org/articles/lockdowns-counterterrorism-not-public-health/">Lockdowns Were Counterterrorism, Not Public Health</a></p>
-<p><a href="https://brownstone.org/articles/big-pharma-continues-to-hide-the-truth/">Big Pharma Continues to Hide the Truth</a></p>
-<h2 id="footnotes">Footnotes</h2>
-<p>(1) OK, I was actually a <a href="https://www.marines.mil/">Marine</a>, but we don’t need to go there right now…</p> </article>  <script data-astro-rerun>
+</blockquote></section>
+<section><h2 id="conclusion">Conclusion</h2><p>Thanks to the Lab Leak document we have the names and faces of the principal actors. <em>We know who did this to us.</em> They need to be called to account. Some people are demanding arrest, trial and jail time. I concur, but that may be politically impossible - too much money, influence and power in play. But at the very least, everybody involved in this atrocity should not be pulling a paycheck funded by We The People.</p></section>
+<section><h2 id="references">References</h2><p><a href="https://brownstone.org/articles/the-covid-dossier/">The COVID Dossier</a></p><p><a href="https://brownstone.org/articles/governments-national-security-arm-led-the-covid-response/">Government’s National Security Arm Took Charge During the Covid Response</a></p><p><a href="https://brownstone.org/articles/covid-response-at-five-years-the-role-of-the-military/">Covid Response at Five Years: The Role of the Military</a></p><p><a href="https://brownstone.org/articles/covid-response-at-five-years-introduction/">Covid Response at Five Years: Introduction</a></p><p><a href="https://brownstone.org/articles/what-if-there-had-been-no-covid-coup/">What If There Had Been No Covid Coup?</a></p><p><a href="https://brownstone.org/articles/lockdowns-counterterrorism-not-public-health/">Lockdowns Were Counterterrorism, Not Public Health</a></p><p><a href="https://brownstone.org/articles/big-pharma-continues-to-hide-the-truth/">Big Pharma Continues to Hide the Truth</a></p></section>
+<section><h2 id="footnotes">Footnotes</h2><p>(1) OK, I was actually a <a href="https://www.marines.mil/">Marine</a>, but we don’t need to go there right now…</p></section> </article>  <script data-astro-rerun>
   function setupHeadingAnchors() {
     const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
     for (const heading of headings) {
@@ -188,24 +158,92 @@ Back to all posts
 
   setupHeadingAnchors()
 </script>   </div>  </main> <div class="mb-2 flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-5"> <div class="col-span-5 flex flex-col items-start sm:col-span-2"> <a href="/posts/fun-with-rss-feeds/" class="clickable"> <div class="flex items-center justify-start gap-1"> <span class="iconify tabler--arrow-left text-xl"></span> <span>Next post</span> </div> <span class="mt-2 text-lg underline sm:text-xl"> Fun With RSS Feeds </span> </a> </div> <div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"> <a href="/posts/photo-gallery/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg underline sm:text-xl"> New Feature - A Photo Gallery </span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2025 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
-  function setupCopyCodeButtons() {
-    document.querySelectorAll('.astro-code-header > button').forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const code =
-          btn.parentNode?.parentNode?.querySelector('.astro-code code')
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
 
-        const icon = btn.querySelector('span')
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
 
-        await navigator.clipboard.writeText(code.innerText)
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
 
-        icon.className = 'copy-success'
+            const languageIcon = iconMap[language]
 
-        setTimeout(() => {
-          icon.className = 'copy-btn'
-        }, 1000)
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
       })
-    })
   }
 
-  setupCopyCodeButtons()
+  setupCodeBlockIcons()
 </script> <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_0_lang.Rz_fyBje.js"></script>  </body></html>
