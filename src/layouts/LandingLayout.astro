@@ -31,7 +31,6 @@ const latestPost = (await getPosts())[0]
           class="text-3xl font-semibold tracking-tight text-gray-700/50 sm:text-4xl sm:leading-[46px] dark:text-gray-300/50"
         >
           <slot />
-          <Separator />
           {
             latestPost && frontmatter.showLatestPost && (
               <div class="mt-8 text-center">
