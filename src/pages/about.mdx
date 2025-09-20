@@ -3,15 +3,15 @@ layout: '@/layouts/PageLayout.astro'
 title: About
 activeHeaderLink: About
 ---
+import BlockQuote from '@/components/BlockQuote.astro'
 import Separator from '@/components/layout/Separator.astro'
 import { Image } from 'astro:assets'
 
-<blockquote>
-    <p>The fundamental flaw of Human Nature: People best qualified to govern have no desire to do so, and people who wish to govern are too dangerous to hold positions of power.</p>
-    <p>[Me](/about/)</p>
-</blockquote>
+<BlockQuote>
+The fundamental flaw of Human Nature: People best qualified to govern have no desire to do so, and people who wish to govern are too dangerous to hold positions of power.
 
-<Separator/>
+[Me](/about/)
+</BlockQuote>
 
 ## About Me
 
@@ -56,9 +56,11 @@ I believe that the biggest impediment to human progress is always The State.
 
 I believe in the Golden Rule.
 
-> I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.
+<BlockQuote>
+I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.
 
-> [H. L. Mencken](https://www.brainyquote.com/authors/h-l-mencken-quotes)
+[H. L. Mencken](https://www.brainyquote.com/authors/h-l-mencken-quotes)
+</BlockQuote>
 
 ## Copyright
 
