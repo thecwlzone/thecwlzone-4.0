@@ -15,18 +15,21 @@ After a bit of hacking on a photo from our [Yellowstone](/gallery/yellowstone) t
 
 It turns out Gravatar has a nice API for working with profiles. The only trick is to create a SHA265 hash from the email address, and then reference the URL as an image. Here's a bit of Ruby to create the hash string:
 
-```ruby title="Create an Avatar Hash Value" collapse={2-5}
+```ruby {15-17} title="Create an Avatar Hash Value" collapse={2-7} "SHA256" {"1. You must use a SHA256 hash.":15-16}
 #!/usr/bin/env ruby
 
 # I'm adding some comments here
-# so that I can demonstrate the collapse feature
-# of Expressive Code
+# so that I can demonstrate some of the
+# features of Expressive Code:
+# collapse code section, line numbers,
+# a label, highlight a word
 
 require 'digest'
 require 'uri'
 
 # Assume you manually set the email_address here or get it from user input
 email_address = 'your-email@your-domain.com'.downcase
+
 
 # Create the SHA256 hash
 hash = Digest::SHA256.hexdigest(email_address)
@@ -40,7 +43,7 @@ puts image_src
 
 Then add an image to the file (my [About](/about) page) using the string output from the Ruby script:
 
-```html
+```html title="Use an image tag to point to an avatar"
 <img
   src="https://www.gravatar.com/avatar/hash_value?s=a_size_value"
   alt="an appropriate description"
