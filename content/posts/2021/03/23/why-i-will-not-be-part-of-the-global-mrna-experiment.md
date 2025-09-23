@@ -14,7 +14,7 @@ showToC: true
 
 Good DNA, vigorous regular exercise, vitamin and mineral supplements and a (mostly) non-junk food diet have kept me in pretty good condition. I believe I can continue to rely on my healthy innate immune system for now.
 
-### The recovery rate from the COVID virus is > 95% for just about everybody.
+### The recovery rate from the COVID virus is > 95% for just about everybody
 
 The fatality rate is derived from CDC data on this page, but it's pretty obscure reading. [Dr. John Ioannides](https://metrics.stanford.edu/people/john-ioannidis) of Stanford University confirms the number (7). In any event, fatalities in Colorado are NOT across the board by age (1):
 
@@ -22,7 +22,7 @@ The fatality rate is derived from CDC data on this page, but it's pretty obscure
 
 Really old folks are getting hammered, and it's no joke in my age group (70 - 79). But still, the odds are good that you can become ill and recover, thereby acquiring a natural immunity. Also note that the overall fatality rate in Colorado is trending toward zero.
 
-### The fatality rate is comparable to a bad flu season.
+### The fatality rate is comparable to a bad flu season
 
 The 24/7 non-stop media hysteria notwithstanding, the COVID fatality rate is lower than one might expect. Here's the Colorado COVID data from March 19th, 2021 (1) :
 
@@ -36,9 +36,9 @@ By way of comparison, here's the Colorado fatality statistics for influenza and 
 
 COVID has been a bad flu season in Colorado.
 
-### There are effective treatments for COVID already available.
+### There are effective treatments for COVID already available
 
-Where to start here - HCQ, Ivermectin, Vitamin D / Vitamin C / zinc, Hydrogen Peroxide Nebulization. ([DuckDuckGo](https://duckduckgo.com/) searches for these topics are left as an exercise for the reader.) They all have one thing in common: they are inexpensive, readily available, and they do very little to boost your doctor's financial holdings. Results of some of these treatments are summarized [here](https://www.primarydoctor.org/covid-19-is-a-lack-of-nutrients) and (8).
+Where to start here - HCQ, Ivermectin, Vitamin D / Vitamin C / zinc, Hydrogen Peroxide Nebulization. ([DuckDuckGo](https://duckduckgo.com/) searches for these topics are left as an exercise for the reader.) They all have one thing in common: they are inexpensive, readily available, and they do very little to boost your doctor's financial holdings. Results of some of these treatments are summarized at [PrimaryDoctor](https://www.primarydoctor.org/covid-19-is-a-lack-of-nutrients) and (8).
 
 > Healthcare is primarily a business. Any commonly used agent/therapy must generate substantial and even unconscionable revenue for the pharmaceutical companies, the hospitals, and the physicians, or it will never be used or even properly investigated. More likely, it will be suppressed.
 >
@@ -48,7 +48,7 @@ A note about the [CDC](https://www.cdc.gov/) here: ostensibly a government organ
 
 We should remember that the main stream media is also heavily funded by Big Pharma. If you played a modified "Bob Game" (9), and took a drink every time a drug commercial was shown, you would be under the table in less than an hour.
 
-### They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system.
+### They are not vaccines, they are fast-tracked gene therapy for the human autoimmune system
 
 [Dr. Joseph Mercola](https://www.mercola.com/) is a controversial figure, but [this article](https://www.lewrockwell.com/2021/03/joseph-mercola/covid-19-vaccines-are-gene-therapy/) is a very comprehensive look at the differences between a vaccine and a genetic therapy.
 
@@ -57,11 +57,9 @@ There is no clear evidence that the injections prevent infection or if people ca
 > "When we start the deployment of this vaccine we will not have sufficient concrete data to prove that this vaccine reduces transmission."
 >
 > Moderna Chief Medical Officer Tal Zaks (11)
-
 > "The COVID-19 vaccines developed by Moderna and Pfizer–BioNTech, for example, are extremely effective at preventing symptomatic disease, but it is still unclear whether they protect people from becoming infected, or from spreading the virus to others."
 >
 > Nature News Feature 18 March 2021 (10)
-
 > "The World Health Organization (WHO) warned there is no guarantee that [COVID-19](https://childrenshealthdefense.org/defender_category/covid/) vaccines will prevent people from being infected with the SARS-CoV-2 virus and transmitting it to other people."
 >
 > GlobalResearch (12)
@@ -72,7 +70,7 @@ Absolute Risk Reduction (ARR) for the Pfizer injection is 0.7%, the ARR for the 
 
 The 95% risk reduction bandied about by the media and public health officials is an example of misleading math. What really matters is Absolute Risk Reduction. [This article](https://www.globalresearch.ca/hidden-truth-covid-19-vaccines-interview-dr-ronald-b-brown-phd/5739826) by [Dr. Ronald B Brown](https://publons.com/researcher/1712062/ronald-b-brown-phd/) is heavy reading, but attempts to explain why ARR is the only valid metric. The injections may not be all that effective.
 
-### The Pharma companies are immune (pun intended) from liability.
+### The Pharma companies are immune (pun intended) from liability
 
 Vaccine manufacturers have been shielded from liability since 1986, thanks to the [National Childhood Vaccine Injury Act (NCVIA)](https://en.wikipedia.org/wiki/National_Childhood_Vaccine_Injury_Act), but additional protection has been added for the COVID injections:
 
@@ -98,7 +96,7 @@ Finally, let us always keep one concept firmly in mind:
 >
 >  **Jasper Fforde** (14)
 
-_Caveat Emptor_
+Caveat Emptor
 
 ## References
 
