@@ -39,9 +39,9 @@
     "@fontsource/ibm-plex-sans": "^5.2.8",
     "@iconify-json/tabler": "^1.2.23",
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/typography": "^0.5.18",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.10",
+    "astro": "^5.14.1",
     "astro-expressive-code": "^0.41.3",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
@@ -58,7 +58,7 @@
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@iconify/tailwind4": "^1.0.6",
-    "@typescript-eslint/parser": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.1",
     "commit-and-tag-version": "^12.6.0",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
@@ -74,7 +74,7 @@
     "stylelint-config-recommended": "^17.0.0",
     "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.44.0"
+    "typescript-eslint": "^8.44.1"
   },
   "packageManager": "pnpm@10.17.0",
   "pnpm": {
