@@ -12,6 +12,8 @@ import config from './src/theme.config'
 
 import htaccessIntegration from 'astro-htaccess'
 
+import remarkGfm from 'remark-gfm'
+
 export default defineConfig({
   site: config.site,
   integrations: [
@@ -31,7 +33,7 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [readingTimePlugin, sectionizePlugin]
+    remarkPlugins: [readingTimePlugin, sectionizePlugin, remarkGfm]
   },
 
   vite: {
