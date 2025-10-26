@@ -30,9 +30,9 @@
     "postbuild": "pagefind --site dist"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.7",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/mdx": "^4.3.8",
+    "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
     "@expressive-code/plugin-collapsible-sections": "^0.41.3",
     "@expressive-code/plugin-line-numbers": "^0.41.3",
@@ -40,8 +40,8 @@
     "@iconify-json/tabler": "^1.2.23",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.14",
-    "astro": "^5.14.6",
+    "@tailwindcss/vite": "^4.1.16",
+    "astro": "^5.15.1",
     "astro-expressive-code": "^0.41.3",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
@@ -54,12 +54,12 @@
     "satori": "^0.18.3",
     "sharp": "^0.34.4",
     "tailwind-scrollbar-hide": "^4.0.0",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
     "@iconify/tailwind4": "^1.0.6",
-    "@typescript-eslint/parser": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.2",
     "commit-and-tag-version": "^12.6.0",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
@@ -73,9 +73,9 @@
     "stylelint": "^16.25.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended": "^17.0.0",
-    "type-fest": "^4.41.0",
+    "type-fest": "^5.1.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.1"
+    "typescript-eslint": "^8.46.2"
   },
   "packageManager": "pnpm@10.18.3",
   "pnpm": {
