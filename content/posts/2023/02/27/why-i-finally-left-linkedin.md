@@ -13,9 +13,9 @@ I created my [LinkedIn](https://www.linkedin.com/) account in 2007, and I closed
 
 ![censored stamp](@/assets/images/posts/censored_stamp-1.jpg)
 
-Like almost every other US-based media platform, LinkedIn suppressed anything that challenged or conflicted with the Government Approved Official COVID Narrative (references [here](https://brownstone.org/?s=linkedin)). I try not to support, promote or spend money on organizations that refuse to defend the right to free speech when the going gets rough.
+Like almost every other US-based media platform, LinkedIn suppressed anything that challenged or conflicted with the Government Approved Official COVID Narrative. I try not to support, promote or spend money on organizations that refuse to defend the right to free speech when the going gets rough.
 
-## Hey, I'm Retired!
+## Hey, I'm Retired
 
 ![fishing](@/assets/images/posts/norheimsund_age_retired_fishing.jpg)
 
