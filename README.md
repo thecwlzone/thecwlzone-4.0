@@ -4,7 +4,7 @@
 
 - [Astro](https://astro.build/) framework
 - [TailWind CSS 4](https://tailwindcss.com/)
-- The [Nordlys](https://astro.build/themes/details/nordlys/) theme, version 3.0.0, plus local customizations
+- The [Nordlys](https://astro.build/themes/details/nordlys/) theme, loosely following version 3.2.0, with local customizations
 - A Photo Gallery
 - Words of wisdom from various sages
 - Words of wisdom from the author
