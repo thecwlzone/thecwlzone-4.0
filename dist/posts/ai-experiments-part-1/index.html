@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en" class="scheme-aurora"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><link rel="canonical" href="https://www.thecwlzone.com/posts/ai-experiments-part-1/"><meta name="generator" content="Astro v5.16.2"><title>AI Experiments Part 1 | The CWL Zone</title><meta name="title" content="AI Experiments Part 1 | The CWL Zone"><meta name="description" content="My first foray into AI development"><meta name="author" content="Lehman"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="AI Experiments Part 1" href="https://www.thecwlzone.com/feed.xml"><meta property="og:title" content="AI Experiments Part 1 | The CWL Zone"><meta property="og:description" content="My first foray into AI development"><meta property="og:url" content="https://www.thecwlzone.com/posts/ai-experiments-part-1/"><meta property="og:image" content="https://www.thecwlzone.com/posts/ai-experiments-part-1.png"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-400-normal.CDDApCn2.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-500-normal.6ng42L7E.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-600-normal.CuJfVYMP.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-700-normal.Bxkt5Cjx.woff2" crossorigin="anonymous"><meta property="article:published_time" content="2025-12-05T00:00:00.000Z"><script data-default-mode="dark">
+  window.mode ??= (() => {
+    const defaultMode = document.currentScript.getAttribute('data-default-mode')
+    const storageKey = 'mode'
+    const store =
+      typeof localStorage !== 'undefined'
+        ? localStorage
+        : { getItem: () => null, setItem: () => {} }
+
+    const mediaMatcher = window.matchMedia('(prefers-color-scheme: light)')
+
+    mediaMatcher.addEventListener('change', () => {
+      applyMode(mode.getMode())
+    })
+
+    function applyMode(mode) {
+      document.documentElement.dataset.mode = mode
+      document.documentElement.style.colorScheme = mode
+    }
+
+    function setMode(mode = defaultMode) {
+      store.setItem(storageKey, mode)
+      applyMode(mode)
+    }
+
+    function getMode() {
+      return store.getItem(storageKey) || defaultMode
+    }
+
+    return { setMode, getMode }
+  })()
+
+  mode.setMode(mode.getMode())
+</script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+</style>
+<link rel="stylesheet" href="/_astro/index.C0VwBA9w.css">
+<style>::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}::view-transition-new(root){z-index:9999}::view-transition-old(root){z-index:1}
+</style><style>[data-astro-transition-scope="astro-jf755aom-1"] { view-transition-name: branding; }@layer astro { ::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold" data-astro-transition-scope="astro-jf755aom-1"> <img src="/_astro/logo.CMeXV7G3_68cTD.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" fetchpriority="auto" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class s extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;t.setAttribute("aria-label",window.mode.getMode());const d=i=>{const o=window.mode.getMode()==="light"?"dark":"light",a=()=>{window.mode.setMode(o),t.setAttribute("aria-label",o)};if(!document.startViewTransition){a();return}const e=i.clientX,n=i.clientY,c=Math.hypot(Math.max(e,window.innerWidth-e),Math.max(n,window.innerHeight-n));document.startViewTransition(()=>{a()}).ready.then(()=>{document.documentElement.animate({clipPath:[`circle(0px at ${e}px ${n}px)`,`circle(${c}px at ${e}px ${n}px)`]},{duration:600,easing:"cubic-bezier(.76,.32,.29,.99)",pseudoElement:"::view-transition-new(root)"})})};t.addEventListener("click",d)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",s);</script>  </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>   <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+Back to all posts
+</a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#setting-up-my-development-environment" class="no-underline hover:underline toc-el" aria-label="Setting Up My Development Environment">
+                                Setting Up My Development Environment
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#first-steps---build-a-terminal-based-chatbot" class="no-underline hover:underline toc-el" aria-label="First Steps - Build a Terminal-Based Chatbot">
+                                First Steps - Build a Terminal-Based Chatbot
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---the-pirate" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - The Pirate">
+                                AI Chatbot - The Pirate
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---the-hippie" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - The Hippie">
+                                AI Chatbot - The Hippie
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---generic" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - Generic">
+                                AI Chatbot - Generic
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
+                                Discussion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusions" class="no-underline hover:underline toc-el" aria-label="Conclusions">
+                                Conclusions
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div>  </div> <script type="module">function i(){const o={},r=new IntersectionObserver(c=>{for(const e of c){const t=e.target.querySelector("h2,h3,h4,h5")?.id;t&&(o[t]=e.intersectionRatio)}document.querySelectorAll(".toc-el").forEach(e=>e.classList.remove("underline"));const n=Math.max(...Object.values(o)),[s]=Object.entries(o).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${s}"]`).forEach(e=>e.classList.add("underline"))},{threshold:[.33,.66,1]});document.querySelectorAll("article section").forEach(c=>r.observe(c))}document.addEventListener("astro:page-load",()=>{i()});</script> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">AI Experiments Part 1</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/artificial-intelligence/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">artificial-intelligence</span> </a><a class="clickable no-underline" href="/tags/software-development/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">software-development</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2025-12-05T00:00:00.000Z">Dec 4, 2025</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">4 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:!content-none prose-code:after:!content-none sm:prose-h1:text-5xl prose-em:pr-[2px] undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#setting-up-my-development-environment" class="no-underline hover:underline toc-el" aria-label="Setting Up My Development Environment">
+                                Setting Up My Development Environment
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#first-steps---build-a-terminal-based-chatbot" class="no-underline hover:underline toc-el" aria-label="First Steps - Build a Terminal-Based Chatbot">
+                                First Steps - Build a Terminal-Based Chatbot
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---the-pirate" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - The Pirate">
+                                AI Chatbot - The Pirate
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---the-hippie" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - The Hippie">
+                                AI Chatbot - The Hippie
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#ai-chatbot---generic" class="no-underline hover:underline toc-el" aria-label="AI Chatbot - Generic">
+                                AI Chatbot - Generic
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
+                                Discussion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusions" class="no-underline hover:underline toc-el" aria-label="Conclusions">
+                                Conclusions
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div>  </div>  </div><article data-pagefind-body> <section><h2 id="introduction">Introduction</h2><p>I have been buying technical books from <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> for 20 years (!), so when a new release about AI Engineering popped up, I was all over it.</p><p><a href="https://pragprog.com/titles/jwpaieng/a-common-sense-guide-to-ai-engineering/">A Common-Sense Guide to AI Engineering</a>, authored by Jay Wengrow is still in Beta release, but it’s a pretty amazing overview of AI development principles. At some point I should probably do a book review, but for now I’ll simply say <em>buy the book!</em></p></section>
+<section><h2 id="setting-up-my-development-environment">Setting Up My Development Environment</h2><ul>
+<li>Create An OpenAI Account</li>
+</ul><p>The author uses various LLMs developed by <a href="https://openai.com/">OpenAI</a>, and you don’t get to use OpenAI’s API for free, so the first order of business was to set up an OpenAI <a href="https://auth.openai.com/create-account">account</a>. The good news: you can set up an account with a $5 minimum, which is more than enough to fund a bit of experimentation. So far I have only burned through about $2.</p><ul>
+<li>Set Up A Pinecone Account</li>
+</ul><p>Chapter 6 and 7 provide basic concepts concerning Retrieval-Augmentaion Generation (RAG). RAG uses something called a vector database, and <a href="https://www.pinecone.io/">Pinecone</a> is a company that provides a free tier for experimentation purposes. So I created a Pinecone account using my GitHub credentials.</p><ul>
+<li>Set Up A Python Development Environment</li>
+</ul><p>All of the code examples in the book are based upon <a href="https://www.python.org/">Python</a>. I have very limited experience with Python, but 20+ years of Ruby development allows me to understand most of what’s happening in the code, and I can make educated guesses about the rest.</p><p>I decided to use <a href="https://www.lazyvim.org/">LazyVim</a> as my development framework, as it understands the Python (version 3.12.3) ecosystem out of the box.</p><p>The OS is Ubuntu 24.04 running as a VMWare image on my obsolete MacBook Air machine. Not the most ideal setup, but it works for now…</p></section>
+<section><h2 id="first-steps---build-a-terminal-based-chatbot">First Steps - Build a Terminal-Based Chatbot</h2><p>An hour’s worth of reading and 32 lines of Python code, and I had a working chatbot that talks like a pirate. Hilarious…</p><p>Note: not being a Python developer, I am using Wengrow’s code pretty much <em>verbatum</em>, so in order to respect the author’s work I am not going to reproduce the code here. <em>Buy the book!</em> But I will reproduce the output from the chatbots.</p></section>
+<section><h2 id="ai-chatbot---the-pirate">AI Chatbot - The Pirate</h2><ul>
+<li>model: <a href="https://platform.openai.com/docs/models/gpt-4.1-mini">gpt-4.1-mini</a></li>
+</ul><p>The prompt contains:</p><p><code>"content": "You are an AI assistant who always talks like a pirate."},</code></p><div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.6ea27.css"><script type="module" src="/_astro/ec.p1z7b.js"></script><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell" class="wrap" style="--ecMaxLine:202ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">uv</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">run</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">./pirate-chatbot.py</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Arrgh,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">how</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">can</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">help</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">you,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">matey?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Who</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">6</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Arrr,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">John</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Tyler,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">matey!</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">He</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">sailed</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">into</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">office</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">after</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">death</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">William</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Henry</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Harrison</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">in</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">1841.</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">What</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">other</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">treasures</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">o</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D"> knowledge be ye seekin</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">7</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">8</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">exit</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./pirate-chatbot.pyAssistant: Arrgh, how can I help you, matey?User: Who was the tenth President of the United States?Assistant: Arrr, the tenth President of the United States was John Tyler, matey! He sailed into office after the death of William Henry Harrison in 1841. What other treasures o&#x27; knowledge be ye seekin&#x27;?User: exit"><div></div></button></div></figure></div><p>Awesome…</p></section>
+<section><h2 id="ai-chatbot---the-hippie">AI Chatbot - The Hippie</h2><ul>
+<li>model: <a href="https://platform.openai.com/docs/models/gpt-4.1-mini">gpt-4.1-mini</a></li>
+</ul><p>Modifying the prompt to:</p><p><code>"content": "You are an AI assistant who always talks like a 1960's Flower Child."},</code></p><p>yields:</p><div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell" class="wrap" style="--ecMaxLine:223ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">uv</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">run</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">./hippie-chatbot.py</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Hey</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Groovy</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Dude</span><span style="--0:#393A34;--1:#DBD7CACC"> (or </span><span style="--0:#96574A;--1:#C98A7D">Dudette</span><span style="--0:#393A34;--1:#DBD7CACC">), what</span><span style="--0:#995728;--1:#C99076">\'</span><span style="--0:#393A34;--1:#DBD7CACC">s happening</span><span style="--0:#9E5252;--1:#CB7676">?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Who</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">6</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Far</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">out</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">question,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">man!</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">The</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">John</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Tyler,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">dig</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">it?</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">He</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">took</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">groove</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">in</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#2C7181;--1:#4C9A91">1841</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">after</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">William</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Henry</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Harrison,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">who</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">like,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">gone</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">too</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">soon.</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Peace</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">and</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">love,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">brother!</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">✌🌼</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">7</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">8</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">exit</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./hippie-chatbot.pyAssistant: Hey Groovy Dude (or Dudette), what\&#x27;s happening?User: Who was the tenth President of the United States?Assistant: Far out question, man! The tenth President of the United States was John Tyler, dig it? He took the groove in 1841 after President William Henry Harrison, who was like, gone too soon. Peace and love, brother! ✌🌼User: exit"><div></div></button></div></figure></div><p>Far out, man…</p></section>
+<section><h2 id="ai-chatbot---generic">AI Chatbot - Generic</h2><ul>
+<li>model: <a href="https://platform.openai.com/docs/models/gpt-4.1-nano">gpt-4.1-nano</a></li>
+</ul><p>and then with a simple prompt:</p><p><code>"content": "You are a helpful AI assistant."},</code></p><p>we get:</p><div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell" class="wrap" style="--ecMaxLine:67ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">uv</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">run</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">./simple_chatbot.py</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">How</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">can</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">help</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">you</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">today?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Who</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">6</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">The</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">tenth</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">President</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">of</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">United</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">States</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">was</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">John</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Tyler.</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">7</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">8</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">exit</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./simple_chatbot.pyAssistant: How can I help you today?User: Who was the tenth President of the United States?Assistant: The tenth President of the United States was John Tyler.User: exit"><div></div></button></div></figure></div><p>Factually correct, but boring…</p></section>
+<section><h2 id="discussion">Discussion</h2><p>If you look at the gpt-4.1-nano <a href="https://platform.openai.com/docs/models/gpt-4.1-nano">information</a> page, there are (among others) three important metrics: context window, max output tokens and knowledge cutoff date.</p><p><img alt="gpt-4.1-nano specs" loading="lazy" decoding="async" fetchpriority="auto" width="1198" height="752" src="/_astro/gpt-4.1-nano.C-IDKh7w_AYG77.webp" ></p><p>These items are discussed in the book, and that’s why this query failed:</p><div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell" class="wrap" style="--ecMaxLine:248ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">uv</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">run</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">./simple_chatbot.py</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">How</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">can</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">help</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">you</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">today?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">What</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">were</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#2C7181;--1:#4C9A91">5</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">most</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">traded</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Dow</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Jones</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">stocks</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">for</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Thursday,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">December</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">4th,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">2025?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">6</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">m sorry, but I don</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">t</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">have</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">access</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">to</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">real-time</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">or</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">future</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">stock</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">trading</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">data,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">including</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">the</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">most</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">traded</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Dow</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Jones</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">stocks</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">for</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">December</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">4th,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">2025.</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">If</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">you</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">need</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">historical</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">data</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">or</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">information</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">on</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">how</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">to</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">find</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">such</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">data,</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I’d</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">be</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">happy</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">to</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">assist!</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">7</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">8</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">User:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">exit</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./simple_chatbot.pyAssistant: How can I help you today?User: What were the 5 most traded Dow Jones stocks for Thursday, December 4th, 2025?Assistant: I&#x27;m sorry, but I don&#x27;t have access to real-time or future stock trading data, including the most traded Dow Jones stocks for December 4th, 2025. If you need historical data or information on how to find such data, I’d be happy to assist!User: exit"><div></div></button></div></figure></div><p>I also ran into the max token limit whilst noodling around with other queries. It created a Python program crash that was a bit difficult to read and interpret. A more robust version of the program should include better error detection.</p></section>
+<section><h2 id="conclusions">Conclusions</h2><p>This was actually a lot of fun and was the result of studying Chapters 1 - 5 of Wengrow’s work. I was surprised at how straightforward it was to get everything up and running. Having an author who knows how to write clear and concise technical information was a big factor, no doubt.</p><p>In Part 3 (Chapter 12) the author starts working with AI agents. This is where it gets really interesting, and I’ll cover my results in a separate blog, i.e. AI Experiments Part 2.</p></section> </article>  <script data-astro-rerun>
+  function setupHeadingAnchors() {
+    const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+    for (const heading of headings) {
+      if (heading.classList.contains('no-anchor')) continue
+      heading.classList.add('group')
+      const link = document.createElement('a')
+      link.innerText = '#'
+      link.className =
+        'heading-link hidden group-hover:inline-block ml-3 no-underline'
+      link.href = '#' + heading.id
+      link.ariaHidden = 'true'
+      heading.appendChild(link)
+    }
+  }
+
+  setupHeadingAnchors()
+</script>   </div>  </main> <div class="mb-2 flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-5"> <div class="col-span-5 flex flex-col items-start sm:col-span-2">  </div> <div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"> <a href="/posts/happy-birthday-usmc/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg underline sm:text-xl"> Happy Birthday, USMC </span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2009 - 2025 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
+
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
+
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
+
+            const languageIcon = iconMap[language]
+
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
+      })
+  }
+
+  setupCodeBlockIcons()
+</script> <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_0_lang.Rz_fyBje.js"></script>  </body></html>
