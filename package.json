@@ -34,15 +34,15 @@
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "@expressive-code/plugin-collapsible-sections": "^0.41.4",
-    "@expressive-code/plugin-line-numbers": "^0.41.4",
+    "@expressive-code/plugin-collapsible-sections": "^0.41.5",
+    "@expressive-code/plugin-line-numbers": "^0.41.5",
     "@fontsource/ibm-plex-sans": "^5.2.8",
-    "@iconify-json/tabler": "^1.2.23",
+    "@iconify-json/tabler": "^1.2.26",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.5",
-    "astro-expressive-code": "^0.41.4",
+    "astro": "^5.16.6",
+    "astro-expressive-code": "^0.41.5",
     "astro-htaccess": "^0.2.3",
     "mdast-util-to-string": "^4.0.0",
     "medium-zoom": "^1.1.0",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@iconify/tailwind4": "^1.2.0",
-    "@typescript-eslint/parser": "^8.50.0",
+    "@typescript-eslint/parser": "^8.51.0",
     "commit-and-tag-version": "^12.6.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
@@ -75,7 +75,7 @@
     "stylelint-config-recommended": "^17.0.0",
     "type-fest": "^5.3.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.0"
+    "typescript-eslint": "^8.51.0"
   },
   "packageManager": "pnpm@10.24.0",
   "pnpm": {
