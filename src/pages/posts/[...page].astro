@@ -8,6 +8,9 @@ import config from '@/theme.config'
 import { getPosts } from '@/util/posts'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 
+import { Image } from 'astro:assets'
+import authorImage from '../../assets/images/posts/deepai-thecwlzone-desktop.jpg'
+
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getPosts()
 
@@ -29,6 +32,15 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   <h1>
     {frontmatter.title}
   </h1>
+
+  <Image
+    src={authorImage}
+    alt="An AI generated man sitting in front of The CWL Zone Home Office"
+  />
+  <em>
+    The CWL Zone World Headquarters. The seated man is an AI generated image.
+  </em>
+
   <PostsList posts={page.data} />
 
   <Pagination slot="bottom" page={page} />
