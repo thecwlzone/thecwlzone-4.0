@@ -20,7 +20,7 @@ I asked [Lumo](https://lumo.proton.me/guest) to build me a list of free AI image
 
 I took the home office photo with my Samsung Galaxy A13 5G phone. It created a 2.3 MByte JPG file. The reduced version is shown here:
 
-![The CWL Zone Home Office](@/assets/images/posts/DESK-OF-THECWLZONE_r.JPG)
+![The CWL Zone Home Office](@/assets/images/posts/desk-of-thecwlzone.webp)
 _Original photo of The CWL Zone World Headquarters._
 
 ## The Prompt
@@ -35,7 +35,7 @@ If I could upload and edit the photo without any credentials, I did so. Otherwis
 
 Once the base photo was uploaded, I entered the prompt as shown above. Processing was fast, less than two minutes in all cases.
 
-The altered photo was downloaded and reduced (except as noted). No additional edits were made.
+The altered photo was downloaded and converted to [WebP](https://en.wikipedia.org/wiki/WebP) format using [mogrify](https://imagemagick.org/script/mogrify.php#gsc.tab=0).
 
 ## NoteGPT
 
@@ -43,9 +43,7 @@ The altered photo was downloaded and reduced (except as noted). No additional ed
 
 I used my Google account to login...
 
-The original version is too large for a web page, and the reduced version is too small, but since I don't like the result anyway, I don't care.
-
-![The NoteGPT output](@/assets/images/posts/NOTEGPT-THECWLZONE-DESKTOP.PNG)
+![The NoteGPT output](@/assets/images/posts/notegpt-thecwlzone-desktop.webp)
 
 _Hmm, odd head positioning..._
 
@@ -53,9 +51,7 @@ _Hmm, odd head positioning..._
 
 [Craiyon](https://www.craiyon.com/en) is a bit too artsy-fartsy for me, but I'm guessing it's a pretty valuable tool for people that do imaging as part of a profit stream.
 
-Same problem as the previous - the original version is too large for a web page, and the reduced version is too small, but since I don't like the result anyway, I don't care.
-
-![The Craiyon output](@/assets/images/posts/CRAIYON-THECWLZONE-DESKTOP.PNG)
+![The Craiyon output](@/assets/images/posts/craiyon-thecwlzone-desktop.webp)
 
 _I **did** say "looking at the screens"..._
 
@@ -65,21 +61,17 @@ _I **did** say "looking at the screens"..._
 
 A login was not required for this one...
 
-I used the original rendered result, no image reduction.
-
-![The DeepAI output](@/assets/images/posts/deepai-thecwlzone-desktop.jpeg)
+![The DeepAI output](@/assets/images/posts/deepai-thecwlzone-desktop.webp)
 
 _Hey, not bad..._
 
 ## NightCafe
 
-[NightCafe](https://creator.nightcafe.studio/) is another art-centric site. The free imaging comes with a mandatory watermark, which is reasonable, I suppose...
+[NightCafe](https://creator.nightcafe.studio/) is another art-centric site, and the site was a bit busy for my taste.
 
 A login was not required for this one...
 
-I used the original rendered result, no image reduction.
-
-![The NightCafe output](@/assets/images/posts/nightcafe-thecwlzone-desktop.jpg)
+![The NightCafe output](@/assets/images/posts/nightcafe-thecwlzone-desktop.webp)
 
 _Ugh! I'm not quite **that** bald..._
 

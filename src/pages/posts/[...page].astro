@@ -9,7 +9,7 @@ import { getPosts } from '@/util/posts'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 
 import { Image } from 'astro:assets'
-import authorImage from '../../assets/images/posts/deepai-thecwlzone-desktop.jpg'
+import authorImage from '../../assets/images/posts/deepai-thecwlzone-desktop.webp'
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getPosts()
