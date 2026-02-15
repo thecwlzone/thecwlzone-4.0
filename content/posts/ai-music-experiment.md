@@ -20,7 +20,16 @@ _create a one minute guitar solo that sounds like Jimi Hendrix in mp3 audio form
 
 ## Result 1
 
-Here's the [created audio](/jimi_audio.mp3)
+Here's the created audio:
+
+### Play Audio Result 1
+
+<!-- markdownlint-disable MD033 -->
+<audio controls>
+  <source src="/audio/jimi_audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<!-- markdownlint-restore -->
 
 WTF? What _is_ this, [Barry Manilow](https://en.wikipedia.org/wiki/Barry_Manilow) does Jimi Hendrix? Yuk!
 
@@ -30,7 +39,16 @@ Note that the AI Generator has a button to click on an "Olde" model.
 
 ![image generator prompt](@/assets/images/posts/deepai-music-generator.webp)
 
-OK, trying that, I got [this audio](/jimi_old_audio.mp3).
+OK, trying that, I got this:
+
+### Play Audio Result 2
+
+<!-- markdownlint-disable MD033 -->
+<audio controls>
+  <source src="/audio/jimi_old_audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<!-- markdownlint-restore -->
 
 Still underwhelming, but at least there is some Hendrix-y distortion in the track.
 

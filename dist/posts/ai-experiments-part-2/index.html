@@ -94,7 +94,14 @@ Back to all posts
                 <a href="#running-the-podcast-agent" class="no-underline hover:underline toc-el" aria-label="Running the Podcast Agent">
                                 Running the Podcast Agent
                               </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#play-the-podcast" class="no-underline hover:underline toc-el" aria-label="Play the Podcast">
+                                Play the Podcast
+                              </a>
                               
+                            </li>
+          </ul>
                             </li><li class="mt-1 mb-1">
                 <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
                                 Discussion
@@ -126,7 +133,14 @@ Back to all posts
                 <a href="#running-the-podcast-agent" class="no-underline hover:underline toc-el" aria-label="Running the Podcast Agent">
                                 Running the Podcast Agent
                               </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#play-the-podcast" class="no-underline hover:underline toc-el" aria-label="Play the Podcast">
+                                Play the Podcast
+                              </a>
                               
+                            </li>
+          </ul>
                             </li><li class="mt-1 mb-1">
                 <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
                                 Discussion
@@ -159,7 +173,11 @@ Back to all posts
 </div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">13</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Assistant:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Done.</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">I</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">ve initiated production of a 5-minute single-host podcast summarizing the latest advances in large language model research. The audio file will be created as podcast.mp3. Do you want a written transcript or show notes for the episode as well?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">14</div></div><div class="code">
 </div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">15</div></div><div class="code"><span style="--0:#96574A;--1:#C98A7D">User: no</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">16</div></div><div class="code">
 </div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">17</div></div><div class="code"><span style="--0:#96574A;--1:#C98A7D">Assistant: Understood — no transcript or show notes. The 5-minute podcast production is underway and the file will be podcast.mp3. Tell me if you want edits or a different topic later.</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">18</div></div><div class="code">
-</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">19</div></div><div class="code"><span style="--0:#96574A;--1:#C98A7D">User: exit</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./podcast_chatbot.pyAssistant: What podcast would you like me to create?User: Create a 5 minute podcast summarizing the latest advances in Large Language Model research.Assistant: starting web_query...Assistant: starting extract_text...Assistant: continuing research...Assistant: starting web_query...Assistant: starting extract_text...Assistant: starting create_audio...Assistant: starting create_audio...Assistant: Done. I&#x27;ve initiated production of a 5-minute single-host podcast summarizing the latest advances in large language model research. The audio file will be created as podcast.mp3. Do you want a written transcript or show notes for the episode as well?User: noAssistant: Understood — no transcript or show notes. The 5-minute podcast production is underway and the file will be podcast.mp3. Tell me if you want edits or a different topic later.User: exit"><div></div></button></div></figure></div><p>The podcast can be <a href="/podcast.mp3">downloaded</a> - it’s an MP3 audio format.</p></section>
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">19</div></div><div class="code"><span style="--0:#96574A;--1:#C98A7D">User: exit</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="uv run ./podcast_chatbot.pyAssistant: What podcast would you like me to create?User: Create a 5 minute podcast summarizing the latest advances in Large Language Model research.Assistant: starting web_query...Assistant: starting extract_text...Assistant: continuing research...Assistant: starting web_query...Assistant: starting extract_text...Assistant: starting create_audio...Assistant: starting create_audio...Assistant: Done. I&#x27;ve initiated production of a 5-minute single-host podcast summarizing the latest advances in large language model research. The audio file will be created as podcast.mp3. Do you want a written transcript or show notes for the episode as well?User: noAssistant: Understood — no transcript or show notes. The 5-minute podcast production is underway and the file will be podcast.mp3. Tell me if you want edits or a different topic later.User: exit"><div></div></button></div></figure></div><section><h3 id="play-the-podcast">Play the Podcast</h3><!-- markdownlint-disable MD033 --><audio controls>
+  <source src="/audio/podcast.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<!-- markdownlint-restore --></section></section>
 <section><h2 id="discussion">Discussion</h2><p>This result was one of the more successful tests. In earlier tests I had a couple of program crashes due to <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them">excessive tokens</a> and <a href="https://www.ibm.com/think/topics/context-window">context window</a> overflows. I also had a couple of runs that displayed data in the terminal, but that did not create a podcast. “Why didn’t you create a podcast?”, I asked. “You didn’t tell me to do that.”, was the response. WTF? It’s in the prompt: “You are a podcast producer…” So going forward it was “Create a 5 minute podcast…” Harumph. On a couple of runs the agent said it would tell me when the podcast was completed, but it never actually responded even though the podcast was created. Bottom line: formulating a request needed some thought about the limitations of the tools. Requests that “failed” were things like “tell me about the top 5…”. Better results were obtained with requests along the lines of “create a 5 minute podcast summarizing…”</p><ul>
 <li>
 <p>Podcast quality was impressive - the text-to-speech step seems pretty mature…</p>

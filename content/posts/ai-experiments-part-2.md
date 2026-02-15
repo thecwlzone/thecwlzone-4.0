@@ -71,7 +71,14 @@ Assistant: Understood — no transcript or show notes. The 5-minute podcast prod
 User: exit
 ```
 
-The podcast can be [downloaded](/podcast.mp3) - it's an MP3 audio format.
+### Play the Podcast
+
+<!-- markdownlint-disable MD033 -->
+<audio controls>
+  <source src="/audio/podcast.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<!-- markdownlint-restore -->
 
 ## Discussion
 
