@@ -1,7 +1,7 @@
 ---
 author: Lehman
 title: An AI Music Experiment
-description: We're all rock start now...
+description: We're all rock stars now...
 publishedDate: 2026-02-16
 tags:
   - artificial-intelligence
