@@ -8,7 +8,7 @@ This theme is self-documenting, meaning there are no separate docs; all relevant
 
 ## Issues
 
-You can report bugs or submit feature requests by [opening an issue](https://github.com/FjellOverflow/nordlys/issues/new/choose). Before submitting, please check that a similar issue has not already been filed.
+You can report bugs or submit feature requests by [opening an issue](https://github.com/thecwlzone/thecwlzone-4.0/issues). Before submitting, please check that a similar issue has not already been filed.
 
 ## Pull requests
 
