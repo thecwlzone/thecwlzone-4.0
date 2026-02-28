@@ -14,6 +14,8 @@ import htaccessIntegration from 'astro-htaccess'
 
 import remarkGfm from 'remark-gfm'
 
+import rehypeExternalLinks from 'rehype-external-links'
+
 export default defineConfig({
   site: config.site,
   integrations: [
@@ -33,7 +35,16 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [readingTimePlugin, sectionizePlugin, remarkGfm]
+    remarkPlugins: [readingTimePlugin, sectionizePlugin, remarkGfm],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['noopener', 'noreferrer', 'external']
+        }
+      ]
+    ]
   },
 
   vite: {
