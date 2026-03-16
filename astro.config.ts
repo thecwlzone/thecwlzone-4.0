@@ -10,8 +10,6 @@ import sectionizePlugin from 'remark-sectionize'
 import readingTimePlugin from './src/plugins/readingTimePlugin'
 import config from './src/theme.config'
 
-import htaccessIntegration from 'astro-htaccess'
-
 import remarkGfm from 'remark-gfm'
 
 import rehypeExternalLinks from 'rehype-external-links'
@@ -30,8 +28,7 @@ export default defineConfig({
       plugins: [pluginCollapsibleSections(), pluginLineNumbers()]
     }),
     mdx(),
-    sitemap(),
-    htaccessIntegration()
+    sitemap()
   ],
 
   markdown: {
