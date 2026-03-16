@@ -36,7 +36,10 @@ const projects = defineCollection({
 })
 
 const albums = defineCollection({
-  type: 'data',
+  loader: glob({
+    pattern: '*.yaml',
+    base: './src/content/albums'
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
