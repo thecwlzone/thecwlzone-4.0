@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en" class="scheme-aurora"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><link rel="canonical" href="https://www.thecwlzone.com/posts/astro-6-upgrade-notes/"><meta name="generator" content="Astro v6.0.5"><title>Astro 6 Update Notes | The CWL Zone</title><meta name="title" content="Astro 6 Update Notes | The CWL Zone"><meta name="description" content="Lest I forget..."><meta name="author" content="Lehman"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Astro 6 Update Notes" href="https://www.thecwlzone.com/feed.xml"><meta property="og:title" content="Astro 6 Update Notes | The CWL Zone"><meta property="og:description" content="Lest I forget..."><meta property="og:url" content="https://www.thecwlzone.com/posts/astro-6-upgrade-notes/"><meta property="og:image" content="https://www.thecwlzone.com/posts/astro-6-upgrade-notes.png"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-400-normal.CDDApCn2.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-500-normal.6ng42L7E.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-600-normal.CuJfVYMP.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-700-normal.Bxkt5Cjx.woff2" crossorigin="anonymous"><meta property="article:published_time" content="2026-03-17T00:00:00.000Z"><script data-default-mode="dark">
+  window.mode ??= (() => {
+    const defaultMode = document.currentScript.getAttribute('data-default-mode')
+    const storageKey = 'mode'
+    const store =
+      typeof localStorage !== 'undefined'
+        ? localStorage
+        : { getItem: () => null, setItem: () => {} }
+
+    const mediaMatcher = window.matchMedia('(prefers-color-scheme: light)')
+
+    mediaMatcher.addEventListener('change', () => {
+      applyMode(mode.getMode())
+    })
+
+    function applyMode(mode) {
+      document.documentElement.dataset.mode = mode
+      document.documentElement.style.colorScheme = mode
+    }
+
+    function setMode(mode = defaultMode) {
+      store.setItem(storageKey, mode)
+      applyMode(mode)
+    }
+
+    function getMode() {
+      return store.getItem(storageKey) || defaultMode
+    }
+
+    return { setMode, getMode }
+  })()
+
+  mode.setMode(mode.getMode())
+</script> <script type="module">document.addEventListener("astro:after-swap",()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><style>.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab,rgb(var(--accent)) 15%,transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.h5PhtOxv.css"><style>[data-astro-transition-scope="astro-jf755aom-1"] { view-transition-name: branding; }@layer astro { ::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-jf755aom-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-jf755aom-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"> <header> <a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a> <div class="flex justify-between py-4 sm:py-8"> <a href="/" class="text-accent flex gap-2 text-2xl font-semibold" data-astro-transition-scope="astro-jf755aom-1"> <img src="/_astro/logo.CMeXV7G3_Zm5LbI.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" width="24" height="24"> The CWL Zone </a> <nav class="hidden flex-col justify-end sm:flex"> <ul class="flex gap-6"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> <li class="text-2xl"> <a href="/search/" class="flex items-center" aria-label="Search"> <span class="clickable iconify tabler--search"></span> </a> </li> <li class="text-2xl"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle> <script type="module">class s extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;t.setAttribute("aria-label",window.mode.getMode());const d=i=>{const o=window.mode.getMode()==="light"?"dark":"light",a=()=>{window.mode.setMode(o),t.setAttribute("aria-label",o)};if(!document.startViewTransition){a();return}const e=i.clientX,n=i.clientY,c=Math.hypot(Math.max(e,window.innerWidth-e),Math.max(n,window.innerHeight-n));document.startViewTransition(()=>{a()}).ready.then(()=>{document.documentElement.animate({clipPath:[`circle(0px at ${e}px ${n}px)`,`circle(${c}px at ${e}px ${n}px)`]},{duration:600,easing:"cubic-bezier(.76,.32,.29,.99)",pseudoElement:"::view-transition-new(root)"})})};t.addEventListener("click",d)}}customElements.get("dark-light-toggle")||customElements.define("dark-light-toggle",s);</script> </li> </ul> </nav> <div class="flex items-center justify-center gap-4 text-2xl sm:hidden"> <dark-light-toggle> <button title="Toggle dark & light mode" class="flex items-center"> <span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span> </button> </dark-light-toggle>  <a href="/search/" aria-label="Search"> <span class="clickable iconify tabler--search text-xl"></span> </a> <mobile-nav-toggle> <button class="flex items-center" title="Toggle mobile nav" aria-label="closed"> <span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span> </button> </mobile-nav-toggle> <script type="module">class r extends HTMLElement{connectedCallback(){const s="tabler--x",o="tabler--menu-2",e=document.querySelector("#mobile-nav"),n=this.querySelector("#mobile-nav-icon"),t=this.querySelector("button");if(!e||!n||!t)return;const l=()=>!e.classList.contains("hidden"),c=()=>{e.classList.add("hidden"),n.classList.replace(s,o),t.setAttribute("aria-label","closed")},i=()=>{e.classList.remove("hidden"),n.classList.replace(o,s),t.setAttribute("aria-label","open")},a=()=>{l()?c():i()};t.addEventListener("click",a)}}customElements.get("mobile-nav-toggle")||customElements.define("mobile-nav-toggle",r);</script> </div> </div> <hr class="border-separate border-accent/75 undefined"> <div id="mobile-nav" class="hidden"> <nav class="flex-col justify-end py-6"> <ul class="flex flex-col items-center gap-2"> <li class="flex flex-col justify-center"> <a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self">  <span class="underline"> Blog </span> </a> </li><li class="flex flex-col justify-center"> <a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Photo Gallery </span> </a> </li><li class="flex flex-col justify-center"> <a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Tags </span> </a> </li><li class="flex flex-col justify-center"> <a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> About </span> </a> </li><li class="flex flex-col justify-center"> <a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self">  <span class> Contact </span> </a> </li> </ul> </nav> <hr class="border-separate border-accent/75 undefined"> </div> </header> <div class="mt-4"> <a href="/posts/" class="clickable flex w-fit items-center gap-1"> <span class="iconify tabler--arrow-left text-xl"></span>
+Back to all posts
+</a> </div> <aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"> <div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details open> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#upgrade-steps" class="no-underline hover:underline toc-el" aria-label="Upgrade Steps">
+                                Upgrade Steps
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#other-packages" class="no-underline hover:underline toc-el" aria-label="Other Packages">
+                                Other Packages
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#github-changes" class="no-underline hover:underline toc-el" aria-label="GitHub Changes">
+                                GitHub Changes
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#remaining-issues" class="no-underline hover:underline toc-el" aria-label="Remaining Issues">
+                                Remaining Issues
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusions" class="no-underline hover:underline toc-el" aria-label="Conclusions">
+                                Conclusions
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div> </div> <script type="module">function i(){const o={},r=new IntersectionObserver(c=>{for(const e of c){const t=e.target.querySelector("h2,h3,h4,h5")?.id;t&&(o[t]=e.intersectionRatio)}document.querySelectorAll(".toc-el").forEach(e=>e.classList.remove("underline"));const n=Math.max(...Object.values(o)),[s]=Object.entries(o).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${s}"]`).forEach(e=>e.classList.add("underline"))},{threshold:[.33,.66,1]});document.querySelectorAll("article section").forEach(c=>r.observe(c))}document.addEventListener("astro:page-load",()=>{i()});</script> </div> </aside> <main id="main" class="mt-6 sm:mt-12"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 mb-6 sm:mb-12">    <h1 class="mt-2 mb-2 sm:my-4">Astro 6 Update Notes</h1> <div class="flex gap-6 text-base"> <a class="clickable no-underline" href="/tags/astro-development/"> <span class="iconify align-middle text-xl tabler--tag"></span> <span class="font-normal">astro-development</span> </a> </div> <div class="mt-4"> <span class="opacity-75">Published on <time datetime="2026-03-17T00:00:00.000Z">Mar 16, 2026</time> by</span> <a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">2 min read </span> </div> <div class="mt-8 w-fit rounded-sm border 2xl:hidden"> <div class="overflow-x-hidden p-4"> <div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 undefined">  <h2 class="no-anchor mb-2">Table of Contents</h2> <details> <summary>Show more</summary> <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#upgrade-steps" class="no-underline hover:underline toc-el" aria-label="Upgrade Steps">
+                                Upgrade Steps
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#other-packages" class="no-underline hover:underline toc-el" aria-label="Other Packages">
+                                Other Packages
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#github-changes" class="no-underline hover:underline toc-el" aria-label="GitHub Changes">
+                                GitHub Changes
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#remaining-issues" class="no-underline hover:underline toc-el" aria-label="Remaining Issues">
+                                Remaining Issues
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusions" class="no-underline hover:underline toc-el" aria-label="Conclusions">
+                                Conclusions
+                              </a>
+                              
+                            </li>
+          </ul> </details>  </div> </div>  </div><article data-pagefind-body> <section><h2 id="introduction">Introduction</h2><p>On March 10, the Astro team announced the <a href="https://astro.build/blog/astro-6/" rel="noopener noreferrer external" target="_blank">release</a> of Astro 6, which was a pretty significant upgrade. Before I forget what I did, I better record the proceedings…</p></section>
+<section><h2 id="upgrade-steps">Upgrade Steps</h2><p>The <a href="https://docs.astro.build/en/guides/upgrade-to/v6/" rel="noopener noreferrer external" target="_blank">Astro 6 Upgrade Guide</a> had some good information. Running</p><div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.6ea27.css"><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash" class="wrap" style="--ecMaxLine:25ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">pnpm</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">dlx</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">@astrojs/upgrade</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm dlx @astrojs/upgrade"><div></div></button></div></figure></div><p>installed the necessary Astro packages, but left everything else alone.</p></section>
+<section><h2 id="other-packages">Other Packages</h2><p>I had to remove the <a href="https://github.com/BadMannersXYZ/astro-htaccess" rel="noopener noreferrer external" target="_blank">astro-htaccess</a> package, as it does not support Astro 6 at this time. Since the last change to the package was 2 years ago, I’m assuming it’s basically a stale package. After a <em>git pull</em> on the NFSN public directory I will need to manually copy over my custom .htaccess file from tmp into public. No biggie, but I will have to remember to do that step.</p></section>
+<section><h2 id="github-changes">GitHub Changes</h2><p>A <em>git push</em> failed after the upgrade. The <a href="https://github.com" rel="noopener noreferrer external" target="_blank">GitHub</a> Continuous Integration yaml file needed an explicit reference to <a href="https://nodejs.org/en" rel="noopener noreferrer external" target="_blank">Node</a> version 22. On a whim, I had <a href="https://claude.ai/login" rel="noopener noreferrer external" target="_blank">Claude</a> look at the file, and I got some good suggestions as well as a commentary about what the file does. Impressive, thanks Claude. The new working CI file:</p><div class="expressive-code"><figure class="frame has-title"><figcaption class="header"><span class="title">.github/workflows/ci.yaml</span></figcaption><pre data-language="yaml" class="wrap" style="--ecMaxLine:37ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">---</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Run checks</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#1E754F;--1:#4D9375">on</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:2ch"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code"><span class="indent">  </span><span style="--0:#786713;--1:#B8A965">push</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:2ch"><div class="gutter"><div class="ln" aria-hidden="true">6</div></div><div class="code"><span class="indent">  </span><span style="--0:#786713;--1:#B8A965">workflow_dispatch</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">7</div></div><div class="code">
+</div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">8</div></div><div class="code"><span style="--0:#786713;--1:#B8A965">jobs</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:2ch"><div class="gutter"><div class="ln" aria-hidden="true">9</div></div><div class="code"><span class="indent">  </span><span style="--0:#786713;--1:#B8A965">run-checks</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:4ch"><div class="gutter"><div class="ln" aria-hidden="true">10</div></div><div class="code"><span class="indent">    </span><span style="--0:#786713;--1:#B8A965">runs-on</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">ubuntu-latest</span></div></div><div class="ec-line" style="--ecIndent:4ch"><div class="gutter"><div class="ln" aria-hidden="true">11</div></div><div class="code"><span class="indent">    </span><span style="--0:#786713;--1:#B8A965">steps</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:6ch"><div class="gutter"><div class="ln" aria-hidden="true">12</div></div><div class="code"><span class="indent">      </span><span style="--0:#686868;--1:#838383">-</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Checkout repository</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">13</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">uses</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">actions/checkout@v6</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">14</div></div><div class="code">
+</div></div><div class="ec-line" style="--ecIndent:6ch"><div class="gutter"><div class="ln" aria-hidden="true">15</div></div><div class="code"><span class="indent">      </span><span style="--0:#686868;--1:#838383">-</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Setup pnpm</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">16</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">uses</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">pnpm/action-setup@v4</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">17</div></div><div class="code">
+</div></div><div class="ec-line" style="--ecIndent:6ch"><div class="gutter"><div class="ln" aria-hidden="true">18</div></div><div class="code"><span class="indent">      </span><span style="--0:#686868;--1:#838383">-</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Setup Node.js</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">19</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">uses</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">actions/setup-node@v6</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">20</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">with</span><span style="--0:#686868;--1:#838383">:</span></div></div><div class="ec-line" style="--ecIndent:10ch"><div class="gutter"><div class="ln" aria-hidden="true">21</div></div><div class="code"><span class="indent">          </span><span style="--0:#786713;--1:#B8A965">node-version</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">22</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span></div></div><div class="ec-line" style="--ecIndent:10ch"><div class="gutter"><div class="ln" aria-hidden="true">22</div></div><div class="code"><span class="indent">          </span><span style="--0:#786713;--1:#B8A965">cache</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span><span style="--0:#96574A;--1:#C98A7D">pnpm</span><span style="--0:#96574AFD;--1:#C98A7DD9">'</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">23</div></div><div class="code">
+</div></div><div class="ec-line" style="--ecIndent:6ch"><div class="gutter"><div class="ln" aria-hidden="true">24</div></div><div class="code"><span class="indent">      </span><span style="--0:#686868;--1:#838383">-</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Install dependencies</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">25</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">run</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">pnpm i --frozen-lockfile</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">26</div></div><div class="code">
+</div></div><div class="ec-line" style="--ecIndent:6ch"><div class="gutter"><div class="ln" aria-hidden="true">27</div></div><div class="code"><span class="indent">      </span><span style="--0:#686868;--1:#838383">-</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#786713;--1:#B8A965">name</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Run checks</span></div></div><div class="ec-line" style="--ecIndent:8ch"><div class="gutter"><div class="ln" aria-hidden="true">28</div></div><div class="code"><span class="indent">        </span><span style="--0:#786713;--1:#B8A965">run</span><span style="--0:#686868;--1:#838383">:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">pnpm check</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="---name: Run checkson:  push:  workflow_dispatch:jobs:  run-checks:    runs-on: ubuntu-latest    steps:      - name: Checkout repository        uses: actions/checkout@v6      - name: Setup pnpm        uses: pnpm/action-setup@v4      - name: Setup Node.js        uses: actions/setup-node@v6        with:          node-version: &#x27;22&#x27;          cache: &#x27;pnpm&#x27;      - name: Install dependencies        run: pnpm i --frozen-lockfile      - name: Run checks        run: pnpm check"><div></div></button></div></figure></div></section>
+<section><h2 id="remaining-issues">Remaining Issues</h2><p>I’m seeing this error message when running the local development server:</p><div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash" class="wrap" style="--ecMaxLine:214ch"><code><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">1</div></div><div class="code"><span style="--0:#686868;--1:#838383">[</span><span style="--0:#393A34;--1:#DBD7CACC">vite</span><span style="--0:#686868;--1:#838383">]</span><span style="--0:#393A34;--1:#DBD7CACC"> program reload</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">2</div></div><div class="code"><span style="--0:#686868;--1:#838383">[</span><span style="--0:#393A34;--1:#DBD7CACC">vite</span><span style="--0:#686868;--1:#838383">]</span><span style="--0:#393A34;--1:#DBD7CACC"> An error happened during full reload</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">3</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Failed</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">to</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">load</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">url</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">astro:server-app.js</span><span style="--0:#393A34;--1:#DBD7CACC"> (resolved </span><span style="--0:#96574A;--1:#C98A7D">id:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">astro:server-app.js</span><span style="--0:#393A34;--1:#DBD7CACC">). Does the file exist</span><span style="--0:#9E5252;--1:#CB7676">?</span></div></div><div class="ec-line"><div class="gutter"><div class="ln" aria-hidden="true">4</div></div><div class="code"><span style="--0:#4B7231;--1:#80A665">Error:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">Failed</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">to</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">load</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">url</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">astro:server-app.js</span><span style="--0:#393A34;--1:#DBD7CACC"> (resolved </span><span style="--0:#96574A;--1:#C98A7D">id:</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">astro:server-app.js</span><span style="--0:#393A34;--1:#DBD7CACC">). Does the file exist</span><span style="--0:#9E5252;--1:#CB7676">?</span></div></div><div class="ec-line" style="--ecIndent:4ch"><div class="gutter"><div class="ln" aria-hidden="true">5</div></div><div class="code"><span class="indent">    </span><span style="--0:#4B7231;--1:#80A665">at</span><span style="--0:#393A34;--1:#DBD7CACC"> </span><span style="--0:#96574A;--1:#C98A7D">loadAndTransform</span><span style="--0:#393A34;--1:#DBD7CACC"> (file:///home/clehma203/Sites/thecwlzone-4.0/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.31.1_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:22663:33)</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="[vite] program reload[vite] An error happened during full reloadFailed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?    at loadAndTransform (file:///home/clehma203/Sites/thecwlzone-4.0/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.31.1_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:22663:33)"><div></div></button></div></figure></div><p>I have to manually refresh the localhost:4321 page to see the latest saved changes.</p></section>
+<section><h2 id="conclusions">Conclusions</h2><p>Astro 6 has only been out a week. I’m usually not this aggessive with major upgrades, so the upgrade decision may have been a bit premature. OTOH, the web site is functional in production, so I think I will declare victory.</p></section> </article>  <script data-astro-rerun>
+  function setupHeadingAnchors() {
+    const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+    for (const heading of headings) {
+      if (heading.classList.contains('no-anchor')) continue
+      heading.classList.add('group')
+      const link = document.createElement('a')
+      link.innerText = '#'
+      link.className =
+        'heading-link hidden group-hover:inline-block ml-3 no-underline'
+      link.href = '#' + heading.id
+      link.ariaHidden = 'true'
+      heading.appendChild(link)
+    }
+  }
+
+  setupHeadingAnchors()
+</script>   </div> </main> <div class="mb-2 flex grow flex-col justify-end"> <div class="my-4 grid grid-cols-5"> <div class="col-span-5 flex flex-col items-start sm:col-span-2">  </div> <div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"> <a href="/posts/a-new-rss-reader/" class="clickable"> <div class="flex items-center justify-end gap-1"> <span>Previous post</span> <span class="iconify tabler--arrow-right text-xl"></span> </div> <span class="mt-2 text-lg underline sm:text-xl"> But, But, I Just Wanted A New Feed Reader! </span> </a> </div> </div> </div> <footer class="mt-auto"> <hr class="border-separate border-accent/75 undefined"> <div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"> <span class="text-base">&#169; 2009 - 2026 Christopher W Lehman</span> <div class="grow"></div> <a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"> <span title="Github" class="iconify clickable tabler--brand-github"></span> </a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"> <span title="RSS feed" class="iconify clickable tabler--rss"></span> </a> </div> </footer> </div> <scroll-progress-bar class="fixed top-0 w-full"> <div class="bg-accent h-1 w-0"></div> </scroll-progress-bar> <script type="module">class o extends HTMLElement{connectedCallback(){const t=this.children[0];function c(){const e=document.body.scrollTop||document.documentElement.scrollTop,l=document.documentElement.scrollHeight-document.documentElement.clientHeight;return e/l*100}document.addEventListener("scroll",()=>{const e=c();t.style.width=`${e}%`})}}customElements.get("scroll-progress-bar")||customElements.define("scroll-progress-bar",o);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"> <button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"> <span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span> </button> </scroll-top-button> <script type="module">class n extends HTMLElement{connectedCallback(){const t=this.querySelector("button");if(!t)return;function e(){const o=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>o}t.addEventListener("click",()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener("scroll",()=>{e()?this.classList.remove("hidden"):this.classList.add("hidden")})}}customElements.get("scroll-top-button")||customElements.define("scroll-top-button",n);</script> <script data-astro-rerun>
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
+
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
+
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
+
+            const languageIcon = iconMap[language]
+
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
+      })
+  }
+
+  setupCodeBlockIcons()
+</script>  <script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_1_lang.OcJCwgsd.js"></script> </body></html>
