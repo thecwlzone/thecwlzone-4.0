@@ -5,14 +5,13 @@
     "**/*"
   ],
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
   },
   "exclude": [
-    "dist"
+    "./dist"
   ]
 }
