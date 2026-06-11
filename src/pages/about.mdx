@@ -4,6 +4,7 @@ title: About
 activeHeaderLink: About
 ---
 import BlockQuote from '@/components/BlockQuote.astro'
+import Details from '@/components/Details.astro'
 import Separator from '@/components/layout/Separator.astro'
 import { Image } from 'astro:assets'
 
@@ -13,63 +14,68 @@ If some peoples pretend that history or geography gives them the right to subjug
 [Ludwig von Mises](https://mises.org)
 </BlockQuote>
 
-## About Me
+<Details summary="About Me" open>
+  <img
+    src="https://www.gravatar.com/avatar/0292764e243bc0ec6c6f81bafa9a955044543a09230f40ae76dafc825f8730e9?s=150"
+    alt="CWL smiling gently at the camera, head and shoulders visible against a neutral background, conveying a calm and approachable mood"
+  />
 
-<img
-  src="https://www.gravatar.com/avatar/0292764e243bc0ec6c6f81bafa9a955044543a09230f40ae76dafc825f8730e9?s=150"
-  alt="CWL smiling gently at the camera, head and shoulders visible against a neutral background, conveying a calm and approachable mood"
-/>
+  I am a retired software developer and IT manager with over 40 years of experience in the semiconductor and telecommunications industries, including Ford Micro Electronics, Cypress Semiconductor, IBM and Comcast.
+</Details>
 
-I am a retired software developer and IT manager with over 40 years of experience in the semiconductor and telecommunications industries, including Ford Micro Electronics, Cypress Semiconductor, IBM and Comcast.
 
-## About My Blog
+<Details summary="About My Blog">
+  I infrequently write about technical issues, home brewing and the depredations of The State.
 
-I infrequently write about technical issues, home brewing and the depredations of The State.
+  To set up a RSS feed, copy the URL by hovering over the RSS feed icon on the lower right hand side of this page.
 
-To set up a RSS feed, copy the URL by hovering over the RSS feed icon on the lower right hand side of this page.
+  For a complete list of my blog entries, click on the RSS feed icon.
 
-For a complete list of my blog entries, click on the RSS feed icon.
+  Blog content varies. You could look in the [tags](/tags) page to view the various subjects on my radar.
 
-Blog content varies. You could look in the [tags](/tags) page to view the various subjects on my radar.
+  No AI tools or Chatbots were used to create any blog content, unless otherwise noted.
 
-No AI tools or Chatbots were used to create any blog content, unless otherwise noted.
+  I don't do Blog Comments. If you see anything interesting, please feel free to [contact](/contact) me.
+</Details>
 
-I don't do Blog Comments. If you see anything interesting, please feel free to [contact](/contact) me.
 
-## About This Site
+<Details summary="About This Site">
+  This is version 4.0 of my web site. It is based upon the [Astro](https://astro.build/) framework with the
+  [Tailwind CSS](https://tailwindcss.com/) integration. The IDE is [Visual Studio Code](https://code.visualstudio.com), using (among other things) the [Github Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) extension.
 
-This is version 4.0 of my web site. It is based upon the [Astro](https://astro.build/) framework with the
-[Tailwind CSS](https://tailwindcss.com/) integration.
+  The site theme is based upon [Nordlys](https://nordlys.fjelloverflow.dev/), created by [FjellOverflow](https://fjelloverflow.dev/).
+</Details>
 
-The site theme is based upon [Nordlys](https://nordlys.fjelloverflow.dev/), created by [FjellOverflow](https://fjelloverflow.dev/).
 
-## Privacy Policy
+<Details summary="Privacy Policy">
+  - I don't run any analytics, i.e. I don't track anything about you, except...
+  - Rotating server logs are maintained to protect the security of the site and to help improve the site by analyzing aggregate data. Your IP address is collected and retained for 30 days.
+  - I don't generate any cookies. Your browser may generate a storage or a permission cookie. I don't control that.
+  - I don't have any financial ties to anything that would matter to you.
+</Details>
 
-- I don't run any analytics, i.e. I don't track anything about you, except...
-- Rotating server logs are maintained to protect the security of the site and to help improve the site by analyzing aggregate data. Your IP address is collected and retained for 30 days.
-- I don't generate any cookies. Your browser may generate a storage or a permission cookie. I don't control that.
-- I don't have any financial ties to anything that would matter to you.
 
-## My Manifesto
+<Details summary="My Manifesto">
+  My politics are simple: I believe in free minds, free markets and peace. See below...
 
-My politics are simple: I believe in free minds, free markets and peace. See below...
+  I believe that the rights of the individual are more important than the goals of the collective.
 
-I believe that the rights of the individual are more important than the goals of the collective.
+  I believe that the biggest impediment to human progress is always The State.
 
-I believe that the biggest impediment to human progress is always The State.
+  I believe in the Golden Rule.
 
-I believe in the Golden Rule.
+  <BlockQuote>
+  I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.
 
-<BlockQuote>
-I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.
+  [H. L. Mencken](https://www.brainyquote.com/authors/h-l-mencken-quotes)
+  </BlockQuote>
+</Details>
 
-[H. L. Mencken](https://www.brainyquote.com/authors/h-l-mencken-quotes)
-</BlockQuote>
 
-## Copyright
+<Details summary="Copyright" open>
+  The CWL Zone © 2009 - 2026 by Christopher W Lehman
+  is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 
-The CWL Zone © 2009 - 2026 by Christopher W Lehman
-is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-
-Photos by Delynne Salley Lehman. All rights reserved.
+  Photos by Delynne Salley Lehman. All rights reserved.
+</Details>
 

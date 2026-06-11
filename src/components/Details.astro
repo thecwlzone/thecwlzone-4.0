@@ -1,0 +1,63 @@
+---
+export interface Props {
+  summary: string
+  open?: boolean
+}
+
+const { summary, open = false } = Astro.props
+---
+
+<details
+  class="group border-accent/25 bg-accent-bg overflow-hidden rounded-sm border"
+  open={open}
+>
+  <summary
+    class="flex cursor-pointer list-none items-center justify-between gap-3 p-4 text-lg font-semibold text-slate-900 dark:text-slate-100"
+    role="button"
+  >
+    <span>{summary}</span>
+    <svg
+      class="chev h-5 w-5 transition-transform duration-200"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </summary>
+
+  <div
+    class="prose dark:prose-invert max-w-none p-4 text-slate-700 dark:text-slate-100"
+  >
+    <slot />
+  </div>
+</details>
+
+<style>
+  details[open] .chev {
+    transform: rotate(180deg);
+  }
+
+  .prose a {
+    color: inherit;
+  }
+
+  [data-mode='dark'] .prose a,
+  [data-mode='dark'] .prose a:visited {
+    color: #93c5fd !important;
+  }
+
+  [data-mode='dark'] .prose a:hover,
+  [data-mode='dark'] .prose a:focus {
+    color: #38bdf8 !important;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
