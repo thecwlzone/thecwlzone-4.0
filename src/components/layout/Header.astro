@@ -6,10 +6,7 @@ import MobileNavToggle from '@/components/layout/MobileNavToggle.astro'
 import Separator from '@/components/layout/Separator.astro'
 import ModeToggle from '@/components/mode/ModeToggle.astro'
 import config from '@/theme.config'
-import type {
-  HeaderItem as HeaderItemType,
-  NavItem as NavItemType
-} from '@/types'
+import { isNavItem } from '@/util/typeGuards'
 import { Image } from 'astro:assets'
 
 export interface Props {
@@ -17,9 +14,6 @@ export interface Props {
 }
 
 const { activeHeaderLink } = Astro.props
-
-export const isNavItem = (item: HeaderItemType): item is NavItemType =>
-  Object.hasOwn(item, 'href')
 ---
 
 <header>
