@@ -9,6 +9,7 @@ import HeadingAnchorsPlugin from '@/plugins/HeadingAnchorsPlugin.astro'
 import { toDateString } from '@/util'
 import { resolveTags } from '@/util/tags'
 import { render, type CollectionEntry } from 'astro:content'
+import readingTimeModule from 'reading-time'
 
 export interface Props {
   post: CollectionEntry<'posts'>
@@ -16,11 +17,9 @@ export interface Props {
 
 const { post } = Astro.props
 
-const {
-  Content,
-  remarkPluginFrontmatter: { readingTime },
-  headings
-} = await render(post)
+const { Content, headings } = await render(post)
+
+const readingTime = readingTimeModule(post.body || '').text
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   ...post.data,
