@@ -108,6 +108,7 @@ function satteriExternalLinksPlugin() {
 
 export default defineConfig({
   site: config.site,
+  trailingSlash: 'ignore',
   integrations: [
     expressiveCode({
       themes: config.expressiveCodeThemes,
