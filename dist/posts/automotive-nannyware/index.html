@@ -1,0 +1,432 @@
+<!DOCTYPE html><html lang="en" class="scheme-aurora"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><link rel="canonical" href="https://www.thecwlzone.com/posts/automotive-nannyware/"><meta name="generator" content="Astro v7.1.3"><title>Automotive Nannyware | The CWL Zone</title><meta name="title" content="Automotive Nannyware | The CWL Zone"><meta name="description" content="A Deep Dive Into Subaru's Current Nagware"><meta name="author" content="Lehman"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Automotive Nannyware" href="https://www.thecwlzone.com/feed.xml"><meta property="og:title" content="Automotive Nannyware | The CWL Zone"><meta property="og:description" content="A Deep Dive Into Subaru's Current Nagware"><meta property="og:url" content="https://www.thecwlzone.com/posts/automotive-nannyware/"><meta property="og:image" content="https://www.thecwlzone.com/posts/automotive-nannyware.png"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-400-normal.CDDApCn2.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-500-normal.6ng42L7E.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-600-normal.CuJfVYMP.woff2" crossorigin="anonymous"><link rel="preload" as="font" type="font/woff2" href="/_astro/ibm-plex-sans-latin-700-normal.Bxkt5Cjx.woff2" crossorigin="anonymous"><meta property="article:published_time" content="2026-07-26T00:00:00.000Z"><script data-default-mode="dark">
+  window.mode ??= (() => {
+    const defaultMode = document.currentScript.getAttribute('data-default-mode')
+    const storageKey = 'mode'
+    const store =
+      typeof localStorage !== 'undefined'
+        ? localStorage
+        : { getItem: () => null, setItem: () => {} }
+
+    const mediaMatcher = window.matchMedia('(prefers-color-scheme: light)')
+
+    mediaMatcher.addEventListener('change', () => {
+      applyMode(mode.getMode())
+    })
+
+    function applyMode(mode) {
+      document.documentElement.dataset.mode = mode
+      document.documentElement.style.colorScheme = mode
+    }
+
+    function setMode(mode = defaultMode) {
+      store.setItem(storageKey, mode)
+      applyMode(mode)
+    }
+
+    function getMode() {
+      return store.getItem(storageKey) || defaultMode
+    }
+
+    return { setMode, getMode }
+  })()
+
+  mode.setMode(mode.getMode())
+</script><script type="module">document.addEventListener(`astro:after-swap`,()=>window.mode.setMode(window.mode.getMode()));</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.aQfDf-Kh.js"></script><style>.medium-zoom-overlay{opacity:0;will-change:opacity;transition:opacity .3s;position:fixed;inset:0}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{cursor:pointer;cursor:zoom-out;will-change:transform;position:relative}
+.prose code:not(.expressive-code code){background-color:color-mix(in oklab, rgb(var(--accent)) 15%, transparent);border-radius:var(--radius-sm);padding-inline:calc(var(--spacing) * 1);padding-top:calc(var(--spacing) * .5)}
+</style><link rel="stylesheet" href="/_astro/BaseLayout.DQUaYJ3s.css"><style>[data-astro-transition-scope="astro-cykaeyu2-1"] { view-transition-name: branding; }@layer astro { ::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(branding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-cykaeyu2-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-cykaeyu2-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-cykaeyu2-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-cykaeyu2-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-cykaeyu2-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-cykaeyu2-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-cykaeyu2-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-cykaeyu2-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body><div class="mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl"><header><a href="#main" class="absolute -top-full left-8 px-2 py-2 focus:top-8">Skip to main content</a><div class="flex justify-between py-4 sm:py-8"><a data-astro-transition-scope="astro-cykaeyu2-1" href="/" class="text-accent flex gap-2 text-2xl font-semibold"><img src="/_astro/logo.CMeXV7G3_t0lC4.svg" alt="The CWL Zone logo, a drawing of a square, a circle and the intials CWL" loading="eager" decoding="async" width="24" height="24">The CWL Zone</a><nav class="hidden flex-col justify-end sm:flex"><ul class="flex gap-6"><li class="flex flex-col justify-center"><a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self"><span class="underline">Blog</span></a></li><li class="flex flex-col justify-center"><a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Photo Gallery</span></a></li><li class="flex flex-col justify-center"><a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Tags</span></a></li><li class="flex flex-col justify-center"><a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>About</span></a></li><li class="flex flex-col justify-center"><a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Contact</span></a></li><li class="text-2xl"><a href="/search/" class="flex items-center" aria-label="Search"><span class="clickable iconify tabler--search"></span></a></li><li class="text-2xl"><dark-light-toggle><button title="Toggle dark &amp; light mode" class="flex items-center"><span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span></button></dark-light-toggle><script type="module">var e=class extends HTMLElement{connectedCallback(){let e=this.querySelector(`button`);e&&(e.setAttribute(`aria-label`,window.mode.getMode()),e.addEventListener(`click`,t=>{let n=window.mode.getMode()===`light`?`dark`:`light`,r=()=>{window.mode.setMode(n),e.setAttribute(`aria-label`,n)};if(!document.startViewTransition){r();return}let i=t.clientX,a=t.clientY,o=Math.hypot(Math.max(i,window.innerWidth-i),Math.max(a,window.innerHeight-a));document.startViewTransition(()=>{r()}).ready.then(()=>{document.documentElement.animate({clipPath:[`circle(0px at ${i}px ${a}px)`,`circle(${o}px at ${i}px ${a}px)`]},{duration:600,easing:`cubic-bezier(.76,.32,.29,.99)`,pseudoElement:`::view-transition-new(root)`})})}))}};customElements.get(`dark-light-toggle`)||customElements.define(`dark-light-toggle`,e);</script></li></ul></nav><div class="flex items-center justify-center gap-4 text-2xl sm:hidden"><dark-light-toggle><button title="Toggle dark &amp; light mode" class="flex items-center"><span aria-hidden="true" class="clickable iconify tabler--moon dark:tabler--sun"></span></button></dark-light-toggle><a href="/search/" aria-label="Search"><span class="clickable iconify tabler--search text-xl"></span></a><mobile-nav-toggle><button class="flex items-center" title="Toggle mobile nav" aria-label="closed"><span aria-hidden="true" id="mobile-nav-icon" class="clickable iconify tabler--menu-2"></span></button></mobile-nav-toggle><script type="module">var e=class extends HTMLElement{connectedCallback(){let e=`tabler--x`,t=`tabler--menu-2`,n=document.querySelector(`#mobile-nav`),r=this.querySelector(`#mobile-nav-icon`),i=this.querySelector(`button`);if(!n||!r||!i)return;let a=()=>!n.classList.contains(`hidden`),o=()=>{n.classList.add(`hidden`),r.classList.replace(e,t),i.setAttribute(`aria-label`,`closed`)},s=()=>{n.classList.remove(`hidden`),r.classList.replace(t,e),i.setAttribute(`aria-label`,`open`)};i.addEventListener(`click`,()=>{a()?o():s()})}};customElements.get(`mobile-nav-toggle`)||customElements.define(`mobile-nav-toggle`,e);</script></div></div><hr class="border-separate border-accent/75 undefined"><div id="mobile-nav" class="hidden"><nav class="flex-col justify-end py-6"><ul class="flex flex-col items-center gap-2"><li class="flex flex-col justify-center"><a href="/posts/" class="flex items-center gap-1 whitespace-nowrap text-accent/100" target="_self"><span class="underline">Blog</span></a></li><li class="flex flex-col justify-center"><a href="/gallery/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Photo Gallery</span></a></li><li class="flex flex-col justify-center"><a href="/tags/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Tags</span></a></li><li class="flex flex-col justify-center"><a href="/about/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>About</span></a></li><li class="flex flex-col justify-center"><a href="/contact/" class="flex items-center gap-1 whitespace-nowrap clickable" target="_self"><span class>Contact</span></a></li></ul></nav><hr class="border-separate border-accent/75 undefined"></div></header><div class="mt-4"><a href="/posts/" class="clickable flex w-fit items-center gap-1"><span class="iconify tabler--arrow-left text-xl"></span>Back to all posts</a></div><aside class="scrollbar-hide fixed h-screen w-fit max-w-sm -translate-x-full overflow-y-auto overscroll-y-none pr-8"><div class="border-accent mt-24 hidden border-r pr-4 opacity-75 transition duration-500 ease-in-out hover:opacity-100 2xl:block"><div class="overflow-x-hidden p-4"><div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 undefined"><h2 class="no-anchor mb-2">Table of Contents</h2><details open><summary>Show more</summary><ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#decisions-decisions" class="no-underline hover:underline toc-el" aria-label="Decisions, Decisions">
+                                Decisions, Decisions
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#the-nagware-factor" class="no-underline hover:underline toc-el" aria-label="The Nagware Factor">
+                                The Nagware Factor
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#the-automobile-as-a-data-collection-revenue-stream" class="no-underline hover:underline toc-el" aria-label="The Automobile As A Data Collection Revenue Stream">
+                                The Automobile As A Data Collection Revenue Stream
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#subarus-privacy-policies" class="no-underline hover:underline toc-el" aria-label="Subaru’s Privacy Policies">
+                                Subaru’s Privacy Policies
+                              </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#subaru-of-america-privacy-policies-3" class="no-underline hover:underline toc-el" aria-label="Subaru of America Privacy Policies 3">
+                                Subaru of America Privacy Policies 3
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#subaru-vehicle-privacy-notice-4" class="no-underline hover:underline toc-el" aria-label="Subaru Vehicle Privacy Notice 4">
+                                Subaru Vehicle Privacy Notice 4
+                              </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#mysubaru-connected-services" class="no-underline hover:underline toc-el" aria-label="MySubaru Connected Services">
+                                MySubaru Connected Services
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#driverfocus-system" class="no-underline hover:underline toc-el" aria-label="DriverFocus System">
+                                DriverFocus System
+                              </a>
+                              
+                            </li>
+          </ul>
+                            </li><li class="mt-1 mb-1">
+                <a href="#subaru-consumer-privacy-rights-6" class="no-underline hover:underline toc-el" aria-label="Subaru Consumer Privacy Rights 6">
+                                Subaru Consumer Privacy Rights 6
+                              </a>
+                              
+                            </li>
+          </ul>
+                            </li><li class="mt-1 mb-1">
+                <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
+                                Discussion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
+                                Conclusion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
+                                References
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#footnote-label" class="no-underline hover:underline toc-el" aria-label="Footnotes">
+                                Footnotes
+                              </a>
+                              
+                            </li>
+          </ul></details></div></div><script type="module">function e(){let e={},t=new IntersectionObserver(t=>{for(let n of t){let t=n.target.querySelector(`h2,h3,h4,h5`)?.id;t&&(e[t]=n.intersectionRatio)}document.querySelectorAll(`.toc-el`).forEach(e=>e.classList.remove(`underline`));let n=Math.max(...Object.values(e)),[r]=Object.entries(e).find(([e,t])=>t==n)||[];document.querySelectorAll(`[href="#${r}"]`).forEach(e=>e.classList.add(`underline`))},{threshold:[.33,.66,1]});document.querySelectorAll(`article section`).forEach(e=>t.observe(e))}document.addEventListener(`astro:page-load`,()=>{e()});</script></div></aside><main id="main" class="mt-6 sm:mt-12"><div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 mb-6 sm:mb-12"><h1 class="mt-2 mb-2 sm:my-4">Automotive Nannyware</h1><div class="flex gap-6 text-base"><a class="clickable no-underline" href="/tags/privacy/"><span class="iconify align-middle text-xl tabler--tag"></span><span class="font-normal">privacy</span></a><a class="clickable no-underline" href="/tags/security/"><span class="iconify align-middle text-xl tabler--tag"></span><span class="font-normal">security</span></a></div><div class="mt-4"><span class="opacity-75">Published on <time datetime="2026-07-26T00:00:00.000Z">Jul 25, 2026</time> by</span><a class="clickable" href="/authors/Lehman/">Lehman</a> · <span class="whitespace-nowrap opacity-75">8 min read </span></div><div class="mt-8 w-fit rounded-sm border 2xl:hidden"><div class="overflow-x-hidden p-4"><div class="prose prose-lg max-w-full dark:prose-invert prose-h1:text-4xl prose-code:before:content-none! prose-code:after:content-none! sm:prose-h1:text-5xl prose-em:pr-0.5 undefined"><h2 class="no-anchor mb-2">Table of Contents</h2><details><summary>Show more</summary><ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#introduction" class="no-underline hover:underline toc-el" aria-label="Introduction">
+                                Introduction
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#decisions-decisions" class="no-underline hover:underline toc-el" aria-label="Decisions, Decisions">
+                                Decisions, Decisions
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#the-nagware-factor" class="no-underline hover:underline toc-el" aria-label="The Nagware Factor">
+                                The Nagware Factor
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#the-automobile-as-a-data-collection-revenue-stream" class="no-underline hover:underline toc-el" aria-label="The Automobile As A Data Collection Revenue Stream">
+                                The Automobile As A Data Collection Revenue Stream
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#subarus-privacy-policies" class="no-underline hover:underline toc-el" aria-label="Subaru’s Privacy Policies">
+                                Subaru’s Privacy Policies
+                              </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#subaru-of-america-privacy-policies-3" class="no-underline hover:underline toc-el" aria-label="Subaru of America Privacy Policies 3">
+                                Subaru of America Privacy Policies 3
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#subaru-vehicle-privacy-notice-4" class="no-underline hover:underline toc-el" aria-label="Subaru Vehicle Privacy Notice 4">
+                                Subaru Vehicle Privacy Notice 4
+                              </a>
+                              <ul class="mt-1 mb-1 list-none">
+          <li class="mt-1 mb-1">
+                <a href="#mysubaru-connected-services" class="no-underline hover:underline toc-el" aria-label="MySubaru Connected Services">
+                                MySubaru Connected Services
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#driverfocus-system" class="no-underline hover:underline toc-el" aria-label="DriverFocus System">
+                                DriverFocus System
+                              </a>
+                              
+                            </li>
+          </ul>
+                            </li><li class="mt-1 mb-1">
+                <a href="#subaru-consumer-privacy-rights-6" class="no-underline hover:underline toc-el" aria-label="Subaru Consumer Privacy Rights 6">
+                                Subaru Consumer Privacy Rights 6
+                              </a>
+                              
+                            </li>
+          </ul>
+                            </li><li class="mt-1 mb-1">
+                <a href="#discussion" class="no-underline hover:underline toc-el" aria-label="Discussion">
+                                Discussion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#conclusion" class="no-underline hover:underline toc-el" aria-label="Conclusion">
+                                Conclusion
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#references" class="no-underline hover:underline toc-el" aria-label="References">
+                                References
+                              </a>
+                              
+                            </li><li class="mt-1 mb-1">
+                <a href="#footnote-label" class="no-underline hover:underline toc-el" aria-label="Footnotes">
+                                Footnotes
+                              </a>
+                              
+                            </li>
+          </ul></details></div></div></div><article data-pagefind-body><section><h2 id="introduction">Introduction</h2>
+<p><em>Note</em>: As a long time <a href="https://www.subaru.com" target="_blank" rel="noopener noreferrer external">Subaru</a> owner, this article is <em>very</em> Subaru specific, but I suspect the generalities apply to most if not all US-based auto sellers… YMMV</p>
+<p>We have been Subaru owners for quite a long time. They are decent snow cars, so they are real popular here in Colorado, they generally have a palatable price point, we have had almost zero maintenance issues over a number of years, and we are fortunate to have a really good <a href="https://www.bestbuysubaru.com" target="_blank" rel="noopener noreferrer external">Subaru dealer</a> in the area.</p>
+<p>We currently own a 2019 Outback Premium, and we are leasing a 2025 Ascent Premium, with a lease termination date of February, 2028.</p>
+<p><img alt="2019 Subaru Outback Premium" loading="lazy" decoding="async" width="815" height="543" src="/_astro/2019_subaru_outback_4dr-suv_25i-premium.D6ONEIT3_1CiKWA.webp" srcset="">
+<em>2019 Subaru Outback. Image copied from edmunds.com</em></p>
+<p><img alt="2025 Subaru Ascent" loading="lazy" decoding="async" width="815" height="543" src="/_astro/2025_subaru_ascent_4dr-suv.DFipmwwa_1FYTyI.webp" srcset="">
+<em>2025 Subaru Ascent. Image copied from edmunds.com</em></p>
+</section><section><h2 id="decisions-decisions">Decisions, Decisions</h2>
+<p>As we are getting on in years, our next vehicle purchase/lease may be the last one (hopefully not, but we’ll see). So: 1) turn in the Ascent and do nothing, 2) turn in the Ascent and purchase or lease a 2028 model, 3) purchase the Ascent.</p>
+<p>We like the size of the Ascent for in town driving, as it provides some extra protection from the <a href="https://www.kktv.com/2026/02/11/el-paso-county-reports-highest-number-impaired-driving-deaths-state-2025/" target="_blank" rel="noopener noreferrer external">brain-dead zombies</a> driving everywhere in El Paso County, but it does get thrown around by the Colorado gale-force winds more than we like, so it’s not a great road-trip vehicle. Also, for 2025, Subaru incorporated all the climate control settings into the touch display panel which we absolutely hate. The display is washed out in bright sunlight while wearing sunglasses, so we end up stabbing at where we <em>think</em> the controls are located. We aren’t the only ones with this complaint, as Subaru reverted back to <em>real</em> climate control buttons in the 2026 Ascent model. But at the end of the lease, we’ll have relatively low milage on the vehicle, we’ll know about its reliability, and the residual cost to purchase will be <em>way</em> less than buying new, so we may have to live with the current model’s “features”.</p>
+<p><img alt="subaru ascent climate control" loading="lazy" decoding="async" width="815" height="543" src="/_astro/2025_subaru_ascent_climate_controls.DgL5k8Se_TSLmW.webp" srcset="">
+<em>Yuk! Gimme back my real buttons! Image copied from edmunds.com</em></p>
+</section><section><h2 id="the-nagware-factor">The Nagware Factor</h2>
+<p>During a recent (July 2026) visit to our dealer, I noticed that every 2026 model on the showroom floor had that God-awful <a href="https://wheelsgreed.com/how-to-turn-off-subaru-auto-start-stop-after-each-restart-and-what-settings-really-persist/" target="_blank" rel="noopener noreferrer external">engine stop/start feature</a>. This is a potential show-stopper, but I’ll save this topic for a separate article.</p>
+<p>Every model also came equipped with something called a DriverFocus Distraction Mitigation System <sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup> in addition to the Eyesight Driver Assist Technology <sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref aria-describedby="footnote-label">2</a></sup>. WTF?</p>
+<p>The Eyesight feature already has a number of annoying reminders, do I really want to add yet another nagware feature? Especially since a <em>lot</em> of people are having <a href="https://www.motor1.com/news/796893/subaru-driver-monitoring-system/" target="_blank" rel="noopener noreferrer external">unhappy experiences with DriverFocus</a>.</p>
+</section><section><h2 id="the-automobile-as-a-data-collection-revenue-stream">The Automobile As A Data Collection Revenue Stream</h2>
+<p>Will our next car be some kind of NSA/FBI/local law enforcement/insurance company data collection endpoint? A lot of people are concerned about that. Here’s a quick survey of recent articles:</p>
+<p><a href="https://www.consumerreports.org/electronics/personal-information/how-to-stop-your-car-from-collecting-sharing-driving-data-a1233378612/" target="_blank" rel="noopener noreferrer external">Consumer Reports: Your Car May Be Spying On You</a></p>
+<p><a href="https://www.nbcchicago.com/consumer/could-your-next-car-watch-you-federal-mandate-faces-scrutiny/3962128/" target="_blank" rel="noopener noreferrer external">NBC Chicago: Could Your Next Car Watch You?</a></p>
+<p><a href="https://www.brookings.edu/articles/maintaining-privacy-and-security-with-connected-cars-the-techtank-podcast/" target="_blank" rel="noopener noreferrer external">Brookings Institution: Maintaining Privacy and Security With Connected Cars</a></p>
+<p><a href="https://www.bbc.com/future/article/20260513-your-car-is-spying-on-you-its-about-to-get-worse" target="_blank" rel="noopener noreferrer external">BBC: Your Car Is Spying On You</a></p>
+<p><a href="https://www.motor1.com/news/794316/new-cars-mandate-impaired-driver-detection-delay/" target="_blank" rel="noopener noreferrer external">Motor1: You Car May Soon Be Monitoring Everything</a></p>
+<p>So with all this in mind, I decided to attempt a deep dive into Subaru’s data collection and privacy policies.</p>
+</section><section><h2 id="subarus-privacy-policies">Subaru’s Privacy Policies</h2>
+<p>An AI search yielded three privacy documents pertaining to Subaru America. Links are in the References section, and I’ll summarize what I found here.</p>
+</section><section><h3 id="subaru-of-america-privacy-policies-3">Subaru of America Privacy Policies <sup><a href="#user-content-fn-3" id="user-content-fnref-3" data-footnote-ref aria-describedby="footnote-label">3</a></sup></h3>
+<p>This is the general boiler-plate legalese you expect from a multi-national entity. If you buy (on credit) or lease a vehicle from <em>anybody</em> you have to fork over a lot of personal and financial data which is routinely shared by various third party affiliates. I didn’t see anything out of the ordinary here. A text search through the document for the keyword “insurance” yielded some kind of Subaru / Liberty Mutual affiliation.</p>
+</section><section><h3 id="subaru-vehicle-privacy-notice-4">Subaru Vehicle Privacy Notice <sup><a href="#user-content-fn-4" id="user-content-fnref-4" data-footnote-ref aria-describedby="footnote-label">4</a></sup></h3>
+<p>Of more interest is the vehicle-specific privacy policies. This document also references the MySubaru Connected Services Terms and Conditions document <sup><a href="#user-content-fn-5" id="user-content-fnref-5" data-footnote-ref aria-describedby="footnote-label">5</a></sup>. I’ll quote the important sections below.</p>
+</section><section><h4 id="mysubaru-connected-services">MySubaru Connected Services</h4>
+<blockquote>
+<p>SOA does not collect any vehicle-generated data unless the vehicle is associated with an active MySubaru Connected Services subscription. To sign up for the MySubaru Connected Services, you must have a MySubaru account.</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>You may change certain data collection settings in the MySubaru app under “Privacy Portal” or on the MySubaru website. To stop all vehicle data collection by SOA, you will need to cancel your MySubaru Connected Services subscription.</p>
+</blockquote>
+<p>The Outback has no active subscription service, so in theory no data is being transmitted to Subaru.</p>
+<p>The Ascent has a complimentary <a href="https://www.subaru.com/vehicle-info/connected-services/mysubaru-connected-services/safety-and-security-plans.html" target="_blank" rel="noopener noreferrer external">MySubaru Safety Plus</a> subscription which includes Enhanced Roadside Assistance and SOS Emergency Assistance and vehicle monitoring of tire pressure, oil pressure and lots more. So, yeah, Subaru is getting a ton of data from the Ascent.</p>
+<blockquote>
+<p>We may disclose the information identified above to law enforcement if we are legally required to do so in response to valid legal process, including for national security purposes. If we are not legally bound to keep the request confidential, we will share the request with you.</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>Other than scenarios that involve an imminent risk to human life, SOA requires a search warrant or court order before disclosing any precise geolocation data to law enforcement agencies. We will also share precise geolocation data to law enforcement agencies upon receiving your written consent to do so.</p>
+</blockquote>
+<p>In theory, a court order is required before our data goes to law enforcement. Of course if you are carrying your cell phone they know where you are anyway. I could find no indication that any data is being sold to third parties such as insurance companies, but I have to assume that “excessive” vehicle speeds, hard braking, sudden lane changes, etc are being recorded. Late model Subarus are probably not suitable for use in <a href="https://www.scca.com/pages/what-is-autocross" target="_blank" rel="noopener noreferrer external">SCCA autocross</a> events.</p>
+<p><img alt="Ford Supercharged T-Bird" loading="lazy" decoding="async" width="700" height="478" src="/_astro/t-bird.B2-r-PBm_Zr5c9H.webp" srcset="">
+<em>Your humble author in a SCCA Solo II event running a 1989 Supercharged T-Bird.</em></p>
+<p>I have to say, though - if the wife is out and about by herself, the emergency assistance and SOS features do give me a bit of comfort…</p>
+</section><section><h4 id="driverfocus-system">DriverFocus System</h4>
+<blockquote>
+<ul>
+<li>DriverFocus Driver Monitoring System (DMS). The DMS system will collect information in two instances: (1) creating a user profile or (2) identifying a potential distracted driver situation. Both scenarios are user activated and optional and opting into one does not require you to opt into the other.</li>
+</ul>
+</blockquote>
+<p>and</p>
+<blockquote>
+<ul>
+<li>User Profile. The DMS can collect personal identifiers (name information) if a driver chooses to create a user profile and enter a name. This is used to identify the driver’s preferred seat, climate, and mirror preferences. These preferences will vary by model. Please consult your owner’s manual for a list of preferences that can be set through DMS. A driver can delete a profile at any time. If the driver chooses to create a profile, a driver-facing camera scans your face to create a computer-generated code linked to certain facial features. This data is not readable by humans and is used only to verify your identity to load the saved profile. User profile information is stored within the vehicle until it is deleted and SOA does not have access to it.</li>
+</ul>
+</blockquote>
+<p>and</p>
+<blockquote>
+<ul>
+<li>Distracted Driver Warnings. DMS collects data to warn drivers if they appear distracted or drowsy. This data does not leave the vehicle and is deleted when the vehicle is turned off. Drivers can disable the DMS distracted driver warnings at any time unless they have certain advanced driving assistance features activated, such as Lane Centering Assist or Hands-Free Assist. Features vary by model. Please consult your owner’s manual for a list of advanced driving assistance features.</li>
+</ul>
+</blockquote>
+<p>OK, the DriverFocus nagware doesn’t leave the vehicle, gets deleted upon engine shutdown, and you can turn off the warnings.</p>
+</section><section><h3 id="subaru-consumer-privacy-rights-6">Subaru Consumer Privacy Rights <sup><a href="#user-content-fn-6" id="user-content-fnref-6" data-footnote-ref aria-describedby="footnote-label">6</a></sup></h3>
+<p>This is a valuable document containing all the links to reduce or eliminate as much data as possible, such as Right to Opt Out, Right to Know and Right to Be Forgotten, among others. I’ll be publishing a future article about my opt out experiences.</p>
+</section><section><h2 id="discussion">Discussion</h2>
+<p>On the surface, it would appear that Subaru of America data collection is relatively benign, and there are ways to minimize the collection process. This could change at any time, due to government pressure or perceived customer requirements.</p>
+<p>The big ethical question of the Common Era is: can we trust businesses to do what they say they are doing? Nobody seems to be accountable anymore, and we know governments lie all the time, so what is to stop multi-nationals from misbehaving? I will need to ponder this dilemma over a couple of beers…</p>
+</section><section><h2 id="conclusion">Conclusion</h2>
+<p>I don’t want an iPhone on wheels telling Google where I’m going. This is nuts, and I hate paying extra for intrusive nannyware that I do not want and will not use. The only recourse We The People have is to stop buying this crap, but that’s a tough sell for most folks.</p>
+<p>From a personal standpoint, we won’t have to make any automotive decisions just yet, so I’ll be watching for new developments in the meantime.</p>
+</section><section><h2 id="references">References</h2>
+<section data-footnotes class="footnotes"><section><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p><a href="https://media.subaru.com/pressrelease/2392/1/subaru-debuts-next-generation-technology-all-new-2026" target="_blank" rel="noopener noreferrer external">DriverFocus Distraction Mitigation System</a> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-2">
+<p><a href="https://www.subaru.com/eyesight.html" target="_blank" rel="noopener noreferrer external">Subaru Eyesight Driver Assist Technology</a> <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-3">
+<p><a href="https://www.subaru.com/support/privacy-policies.html" target="_blank" rel="noopener noreferrer external">Subaru of America Privacy Policies</a> <a href="#user-content-fnref-3" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-4">
+<p><a href="https://www.subaru.com/support/privacy-policies/vehicle-privacy-notice.html" target="_blank" rel="noopener noreferrer external">Subaru Vehicle Privacy Notice</a> <a href="#user-content-fnref-4" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-5">
+<p><a href="https://www.subaru.com/vehicle-info/connected-services/mysubaru-connected-services.html" target="_blank" rel="noopener noreferrer external">MySubaru Connected Services</a> <a href="#user-content-fnref-5" data-footnote-backref="" aria-label="Back to reference 5" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-6">
+<p><a href="https://www.subaru.com/support/consumer-privacy.html" target="_blank" rel="noopener noreferrer external">Subaru Consumer Privacy Rights</a> <a href="#user-content-fnref-6" data-footnote-backref="" aria-label="Back to reference 6" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></section></section>
+</article><script data-astro-rerun>
+  function setupHeadingAnchors() {
+    const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+    for (const heading of headings) {
+      if (heading.classList.contains('no-anchor')) continue
+      heading.classList.add('group')
+      const link = document.createElement('a')
+      link.innerText = '#'
+      link.className =
+        'heading-link hidden group-hover:inline-block ml-3 no-underline'
+      link.href = '#' + heading.id
+      link.ariaHidden = 'true'
+      heading.appendChild(link)
+    }
+  }
+
+  setupHeadingAnchors()
+</script></div></main><div class="mb-2 flex grow flex-col justify-end"><div class="my-4 grid grid-cols-5"><div class="col-span-5 flex flex-col items-start sm:col-span-2"></div><div class="col-span-5 mt-8 flex flex-col items-end sm:col-span-2 sm:col-start-4 sm:mt-0"><a href="/posts/new-privacy-tag/" class="clickable"><div class="flex items-center justify-end gap-1"><span>Previous post</span><span class="iconify tabler--arrow-right text-xl"></span></div><span class="mt-2 text-lg underline sm:text-xl">New Privacy Tag</span></a></div></div></div><footer class="mt-auto"><hr class="border-separate border-accent/75 undefined"><div class="flex items-center justify-between gap-2 py-4 text-2xl sm:py-8"><span class="text-base">&#169; 2009 - 2026 Christopher W Lehman</span><div class="grow"></div><a class="flex flex-col justify-center" href="https://github.com/thecwlzone/thecwlzone-4.0" target="_blank" aria-label="Github" rel="noopener noreferrer"><span title="Github" class="iconify clickable tabler--brand-github"></span></a><a class="flex flex-col justify-center" href="/feed.xml" target="_self" aria-label="RSS feed" rel="noopener noreferrer"><span title="RSS feed" class="iconify clickable tabler--rss"></span></a></div></footer></div><scroll-progress-bar class="fixed top-0 w-full"><div class="bg-accent h-1 w-0"></div></scroll-progress-bar><script type="module">var e=class extends HTMLElement{connectedCallback(){let e=this.children[0];function t(){return(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100}document.addEventListener(`scroll`,()=>{let n=t();e.style.width=`${n}%`})}};customElements.get(`scroll-progress-bar`)||customElements.define(`scroll-progress-bar`,e);</script><scroll-top-button class="fixed! right-4 bottom-4 z-10 hidden pr-2 sm:right-8 sm:bottom-8 lg:right-16 lg:bottom-16"><button class="clickable flex items-center gap-2" title="Scroll to top" aria-label="Scroll to top"><span aria-hidden="true" class="iconify tabler--arrow-up text-4xl"></span></button></scroll-top-button><script type="module">var e=class extends HTMLElement{connectedCallback(){let e=this.querySelector(`button`);if(!e)return;function t(){let e=document.documentElement.clientHeight;return(document.body.scrollTop||document.documentElement.scrollTop)>e}e.addEventListener(`click`,()=>{document.body.scrollTop=0,document.documentElement.scrollTop=0}),document.addEventListener(`scroll`,()=>{t()?this.classList.remove(`hidden`):this.classList.add(`hidden`)})}};customElements.get(`scroll-top-button`)||customElements.define(`scroll-top-button`,e);</script><script data-astro-rerun>
+  function setupCodeBlockIcons() {
+    const iconMap = {
+      'angular-html': 'tabler--brand-angular',
+      'angular-ts': 'tabler--brand-angular',
+      astro: 'tabler--brand-astro',
+      cpp: 'tabler--brand-cpp',
+      csharp: 'tabler--brand-c-sharp',
+      cs: 'tabler--brand-c-sharp',
+      css: 'tabler--brand-css3',
+      csv: 'tabler--csv',
+      diff: 'tabler--file-diff',
+      docker: 'tabler--brand-docker',
+      dockerfile: 'tabler--brand-docker',
+      go: 'tabler--brand-golang',
+      graphql: 'tabler--brand-graphql',
+      gql: 'tabler--brand-graphql',
+      html: 'tabler--brand-html5',
+      javascript: 'tabler--brand-javascript',
+      js: 'tabler--brand-javascript',
+      json: 'tabler--json',
+      jsonc: 'tabler--json',
+      jsx: 'tabler--brand-react',
+      kotlin: 'tabler--brand-kotlin',
+      kt: 'tabler--brand-kotlin',
+      kts: 'tabler--brand-kotlin',
+      markdown: 'tabler--markdown',
+      md: 'tabler--markdown',
+      mdx: 'tabler--markdown',
+      php: 'tabler--brand-php',
+      powershell: 'tabler--brand-powershell',
+      ps: 'tabler--brand-powershell',
+      ps1: 'tabler--brand-powershell',
+      python: 'tabler--brand-python',
+      py: 'tabler--brand-python',
+      rust: 'tabler--brand-rust',
+      rs: 'tabler--brand-rust',
+      sass: 'tabler--brand-sass',
+      shellscript: 'tabler--terminal',
+      bash: 'tabler--terminal',
+      sh: 'tabler--terminal',
+      shell: 'tabler--terminal',
+      zsh: 'tabler--terminal',
+      sql: 'tabler--sql',
+      svelte: 'tabler--brand-svelte',
+      swift: 'tabler--brand-swift',
+      tsx: 'tabler--brand-typescript',
+      typescript: 'tabler--brand-typescript',
+      ts: 'tabler--brand-typescript',
+      vue: 'tabler--brand-vue',
+      'vue-html': 'tabler--brand-vue',
+      xml: 'tabler--file-type-xml'
+    }
+
+    document
+      .querySelectorAll('.expressive-code')
+      .forEach((expressiveCodeBlock) => {
+        expressiveCodeBlock
+          .querySelectorAll('figure.has-title > pre[data-language]')
+          .forEach((codeBlock) => {
+            const language = codeBlock.getAttribute('data-language') || ''
+
+            if (!Object.prototype.hasOwnProperty.call(iconMap, language)) return
+
+            const languageIcon = iconMap[language]
+
+            const wrapperDiv = document.createElement('div')
+            wrapperDiv.classList.add('relative')
+            const iconSpan = document.createElement('span')
+            iconSpan.classList.add(
+              'iconify',
+              languageIcon,
+              'text-2xl',
+              'absolute',
+              'top-[6px]',
+              'right-[6px]',
+              'z-1',
+              'opacity-75'
+            )
+
+            expressiveCodeBlock.replaceWith(wrapperDiv)
+
+            wrapperDiv.appendChild(expressiveCodeBlock)
+            wrapperDiv.appendChild(iconSpan)
+          })
+      })
+  }
+
+  setupCodeBlockIcons()
+</script><script type="module" src="/_astro/MediumZoomPlugin.astro_astro_type_script_index_1_lang.CtWb18lL.js"></script></body></html>
