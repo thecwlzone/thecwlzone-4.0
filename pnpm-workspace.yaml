@@ -1,4 +1,4 @@
-minimum-release-age: 1440
+minimumReleaseAge: 1440
 allowBuilds:
   '@tailwindcss/oxide': true
   esbuild: true
