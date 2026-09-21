@@ -33,17 +33,15 @@ const { album } = Astro.props
 
 <PageLayout {frontmatter}>
   <div class="text-center">
-    <h1 class="text-5xl font-bold">
-      {album.data.title}
-    </h1>
-    <p class="my-4 text-xl">
-      {album.data.description}
-    </p>
+    <h1 class="text-5xl font-bold">{album.data.title}</h1>
+    <p class="my-4 text-xl">{album.data.description}</p>
 
     <PhotoSwipe imageFolder=`${album.id}` />
 
     <p class="my-4 text-center text-lg">
-      <a href="/gallery/" class="hover:underline">View other albums</a>
+      <a href="/gallery/" class="hover:underline">
+        View other albums
+      </a>
     </p>
   </div>
 </PageLayout>

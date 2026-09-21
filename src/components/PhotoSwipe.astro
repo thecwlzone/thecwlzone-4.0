@@ -19,33 +19,31 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
   id="gallery"
   class="container mx-auto grid grid-cols-2 gap-2 px-2 pb-2 md:grid-cols-3"
 >
-  {
-    imagePaths.map(async (imagePath) => {
-      let image = images[imagePath]()
-      let optimizedImage = await getImage({
-        src: image,
-        width: 1920
-      })
-
-      return (
-        <a
-          href={optimizedImage.src}
-          data-pswp-width={optimizedImage.attributes.width}
-          data-pswp-height={optimizedImage.attributes.height}
-          class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
-        >
-          <Image
-            src={image}
-            alt={`Image`}
-            format="avif"
-            quality={50}
-            class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
-            loading="lazy"
-          />
-        </a>
-      )
+  {imagePaths.map(async (imagePath) => {
+    let image = images[imagePath]()
+    let optimizedImage = await getImage({
+      src: image,
+      width: 1920
     })
-  }
+
+    return (
+      <a
+        href={optimizedImage.src}
+        data-pswp-width={optimizedImage.attributes.width}
+        data-pswp-height={optimizedImage.attributes.height}
+        class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
+      >
+        <Image
+          src={image}
+          alt={`Image`}
+          format="avif"
+          quality={50}
+          class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
+          loading="lazy"
+        />
+      </a>
+    )
+  })}
 </div>
 
 <script>

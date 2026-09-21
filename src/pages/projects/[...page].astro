@@ -29,9 +29,7 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
 ---
 
 <PageLayout {frontmatter}>
-  <h1>
-    {frontmatter.title}
-  </h1>
+  <h1>{frontmatter.title}</h1>
   <ProjectsList projects={page.data} />
 
   <Pagination slot="bottom" page={page} />
