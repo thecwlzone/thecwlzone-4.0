@@ -40,7 +40,7 @@
     "@expressive-code/plugin-collapsible-sections": "^0.44.2",
     "@expressive-code/plugin-line-numbers": "^0.44.2",
     "@fontsource/ibm-plex-sans": "^5.3.0",
-    "@iconify-json/tabler": "^1.2.38",
+    "@iconify-json/tabler": "^1.2.39",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
@@ -59,9 +59,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@iconify-json/simple-icons": "^1.2.97",
     "@iconify/tailwind4": "^1.2.3",
     "@typescript-eslint/parser": "^8.70.0",
-    "eslint": "^10.10.0",
+    "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -77,5 +78,5 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.70.0"
   },
-  "packageManager": "pnpm@12.4.2"
+  "packageManager": "pnpm@12.5.1"
 }
