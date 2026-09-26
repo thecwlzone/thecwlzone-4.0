@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro'
 
 const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: AddSearchBot
+User-agent: AgentDataBot
 User-agent: AgentTimes
 User-agent: AI2Bot
 User-agent: AI2Bot-DeepResearchEval
@@ -27,6 +28,7 @@ User-agent: Awario
 User-agent: AzureAI-SearchBot
 User-agent: bedrockbot
 User-agent: bigsur.ai
+User-agent: BixelBot
 User-agent: Bravebot
 User-agent: Brightbot
 User-agent: Brightbot 1.0
@@ -43,6 +45,7 @@ User-agent: Claude-User
 User-agent: Claude-Web
 User-agent: ClaudeBot
 User-agent: Cloudflare-AutoRAG
+User-agent: CloudflareBrowserRenderingCrawler
 User-agent: CloudVertexBot
 User-agent: Code
 User-agent: cohere-ai
@@ -56,9 +59,12 @@ User-agent: Datenbank Crawler
 User-agent: DeepSeekBot
 User-agent: Devin
 User-agent: Diffbot
+User-agent: Diffbot-User
+User-agent: DoubaoBot
 User-agent: DuckAssistBot
 User-agent: Echobot Bot
 User-agent: EchoboxBot
+User-agent: ERNIEBot
 User-agent: ExaBot
 User-agent: ExaSearchBot
 User-agent: FacebookBot
@@ -91,7 +97,10 @@ User-agent: img2dataset
 User-agent: ISSCyberRiskCrawler
 User-agent: kagi-fetcher
 User-agent: Kangaroo Bot
+User-agent: Kimi-Agent
+User-agent: Kimi-SearchBot
 User-agent: Kimi-User
+User-agent: KimiBot
 User-agent: KlaviyoAIBot
 User-agent: KunatoCrawler
 User-agent: laion-huggingface-processor
@@ -107,6 +116,8 @@ User-agent: Meta-ExternalAgent
 User-agent: meta-externalfetcher
 User-agent: Meta-ExternalFetcher
 User-agent: meta-webindexer
+User-agent: MistralAI-Index
+User-agent: MistralAI-Training
 User-agent: MistralAI-User
 User-agent: MistralAI-User/1.0
 User-agent: Mozilla-Tabstack
@@ -116,6 +127,7 @@ User-agent: netEstate Imprint Crawler
 User-agent: newsai
 User-agent: NotebookLM
 User-agent: NovaAct
+User-agent: OAI-AdsBot
 User-agent: OAI-SearchBot
 User-agent: omgili
 User-agent: omgilibot
@@ -131,11 +143,13 @@ User-agent: PetalBot
 User-agent: PhindBot
 User-agent: Poggio-Citations
 User-agent: Poseidon Research Crawler
+User-agent: qodercli
 User-agent: QualifiedBot
 User-agent: Querit-SearchBot
 User-agent: QueritBot
 User-agent: QuillBot
 User-agent: quillbot.com
+User-agent: QwenBot
 User-agent: Reflectionbot
 User-agent: SBIntuitionsBot
 User-agent: Scrapy
