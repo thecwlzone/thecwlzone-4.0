@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro'
 
 const getRobotsTxt = (sitemapURL: URL) => `
+User-agent: __usage_ai-training
 User-agent: AddSearchBot
 User-agent: AgentDataBot
 User-agent: AgentTimes
@@ -41,6 +42,7 @@ User-agent: Channel3Bot
 User-agent: ChatGLM-Spider
 User-agent: ChatGPT Agent
 User-agent: ChatGPT-User
+User-agent: Claude-Agent
 User-agent: Claude-Code
 User-agent: Claude-SearchBot
 User-agent: Claude-User
@@ -70,6 +72,7 @@ User-agent: DuckAssistBot
 User-agent: Echobot Bot
 User-agent: EchoboxBot
 User-agent: ElevenlabsBot
+User-agent: ElevenlabsCrawler
 User-agent: ERNIEBot
 User-agent: ExaBot
 User-agent: ExaSearchBot
@@ -86,6 +89,7 @@ User-agent: Google-CloudVertexBot
 User-agent: Google-Extended
 User-agent: Google-Firebase
 User-agent: Google-Gemini-CLI
+User-agent: Google-GeminiNotebook
 User-agent: Google-NotebookLM
 User-agent: GoogleAgent-Mariner
 User-agent: GoogleAgent-URLContext
@@ -96,7 +100,9 @@ User-agent: GPTBot
 User-agent: Grok Bot
 User-agent: GrokAppAndroid
 User-agent: GrokBot
+User-agent: Haiku-SearchBot
 User-agent: HarkBot
+User-agent: HatchFeed
 User-agent: HenkBot
 User-agent: Hunyuan
 User-agent: iAskBot
@@ -121,6 +127,7 @@ User-agent: laion-huggingface-processor
 User-agent: LAIONDownloader
 User-agent: LCC
 User-agent: Lightpanda
+User-agent: Liner-User
 User-agent: LinerBot
 User-agent: Linguee Bot
 User-agent: LinkupBot
@@ -130,6 +137,7 @@ User-agent: Meta-ExternalAgent
 User-agent: meta-externalfetcher
 User-agent: Meta-ExternalFetcher
 User-agent: meta-webindexer
+User-agent: MiniMaxAgent
 User-agent: MistralAI-Index
 User-agent: MistralAI-Training
 User-agent: MistralAI-User
@@ -171,6 +179,7 @@ User-agent: QwenBot
 User-agent: Reflectionbot
 User-agent: SBIntuitionsBot
 User-agent: Scrapy
+User-agent: ScryBot
 User-agent: SemrushBot-OCOB
 User-agent: SemrushBot-SWA
 User-agent: Shap-User
@@ -201,10 +210,10 @@ User-agent: YiBot
 User-agent: YiyanBot
 User-agent: YouBot
 User-agent: ZanistaBot
+Disallow: /
 
 Sitemap: ${sitemapURL.href}
 `
-
 export const GET: APIRoute = ({ site }) => {
   const sitemapURL = new URL('sitemap-index.xml', site)
   return new Response(getRobotsTxt(sitemapURL))
